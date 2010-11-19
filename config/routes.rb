@@ -1,4 +1,27 @@
 Jdrampage::Application.routes.draw do
+	resources :articles, :has_many => :comments
+	resources :sections
+	resources :pages
+	resources :subscribers#, :collection => { :thank_you => :get }
+	
+	resources :users
+	resource :user_session
+	
+	namespace :admin do
+		resources :articles
+		resources :sections#, :collection => { :sort => :post }
+		resources :pages#, :collection => { :sort => :post }
+		resources :subscribers
+		resources :comments
+	end
+	
+	match 'backside' => 'static#index'
+	
+	# match ':controller(/:action(/:id(.:format)))'
+	root :to => "articles#index"
+	
+	# NOTES BELOW - - - - - - -
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
