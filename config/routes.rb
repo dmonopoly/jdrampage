@@ -18,7 +18,7 @@ Jdrampage::Application.routes.draw do
 	match 'backside' => 'static#index'
 	
 	# match ':controller(/:action(/:id(.:format)))'
-	root :to => "articles#index"
+	root :to => 'articles#index'
 	
 	# NOTES BELOW - - - - - - -
 	
