@@ -16,6 +16,14 @@
 		<li><%= section.name %></li>
 		<% end %>
 	</ul>
+	<% if current_user %>
+		<div id="login_area">
+			Logged in as <b><%= current_user.login %></b> |
+			<%= link_to 'Frontside', '/', :style=>"text-decoration:underline" %> | 
+			<%= link_to 'Backside', '/backside' %> | 
+			<%= link_to 'Logout', '/logout' %>
+		</div>
+	<% end %>
 </div>
 
 <div class="container">
@@ -31,6 +39,10 @@
 </div>
 	
 <div id="footer">
+
+</div>
+
+<div id="login_form">
 
 </div>
 

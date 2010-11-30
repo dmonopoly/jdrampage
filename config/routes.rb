@@ -16,6 +16,7 @@ Jdrampage::Application.routes.draw do
 	end
 	
 	match 'backside' => 'static#index'
+	match 'logout' => 'user_sessions#destroy'
 	
 	# match ':controller(/:action(/:id(.:format)))'
 	root :to => 'articles#index'
