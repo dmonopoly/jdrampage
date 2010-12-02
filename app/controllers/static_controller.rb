@@ -1,10 +1,9 @@
 # This is an ad hoc controller
 class StaticController < ApplicationController
-	before_filter :require_user
-	layout 'backside'
-	
+	before_filter :require_user, :only => :backside_home
+	layout 'backside', :only => :backside_home
 	# backside home
-	def index
+	def backside_home
 	end
 	
 end
