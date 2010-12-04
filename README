@@ -1,7 +1,2 @@
-Jdrampage application v2 by David Zhang
-
-TODO:
--JS files
--CSS files
--helpers?
--views!
+Online student newspaper for JDHS by David Zhang
+Uses Rails 3.0.3
