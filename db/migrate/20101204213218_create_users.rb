@@ -2,7 +2,7 @@ class CreateUsers < ActiveRecord::Migration
   def self.up
 		create_table :users do |t|
 			# Basic necessities (note that :null is really "null_allowed")
-			t.string 		:login								:null => false
+			t.string 		:login,								:null => false
 			t.string 		:full_name
 			t.string    :email,               :null => false
 			t.string    :crypted_password,    :null => false
