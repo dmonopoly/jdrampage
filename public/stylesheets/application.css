@@ -23,11 +23,7 @@ sienna #8A4117
 /*  2. GRID
 /*  3. HEADER
 /*  4. FOOTER
-/*  5. MAIN
-/*  6. SIDEBAR
-/*  7. BOX and ALTBOX
-/*  8. FORMS
-/*  9. MESSAGES 
+/*  5. MISC
 /*========================================================*/
 
 /* =============================================== */
@@ -44,15 +40,6 @@ a:hover {
 color: #FDD44A;
 text-decoration: none;
 }
-p {margin: 0 0 1em 0;}
-fieldset {
-border:0 none;
-padding:0;
-}
-.clear {clear: both;}
-.right {float: right;}
-.left {float:left;}
-.centered {text-align:center; }
 ul li.leftComponent{
 	display: inline;
 	position: absolute;
@@ -62,46 +49,35 @@ ul li.rightComponent{
 	margin-left: 200px;
 	position: relative;
 }
-.myBorder {
+.myBorder { /* beware: borders can impact widths */
 	border: 1px solid black;
 }
 /* =============================================== */
 /*  2. GRID 
 /* =============================================== */
-.container{
-background: white;
-margin-top: 20px;
-border: 1px solid black;
-}
-#container_hd{
-width: 950px;
-height: 60px;
-margin: 0 auto;
-}
-#container_bd {
-width: 950px;
-margin: 0 auto;
-}
-#container_ft {
-width: 950px;
-margin: 0 auto;
-}
+
+
 /* =============================================== */
 /*  3. HEADER
 /* =============================================== */
-#hd{
+#header{
 width: 950px;
 height: 60px;
 margin: 0 20px;
 }
-div#hd_left{
+#header ul#sections_list {
+
 }
-div#hd_right{
+#header ul#sections_list li {
+display: inline;
+}
+#login_area{
+
 }
 /* =============================================== */
 /*  4. FOOTER
 /* =============================================== */
-#ft { 
+#footer { 
 width: 950px;
 background:white;
 margin:0;
@@ -121,188 +97,8 @@ color: #C35617;
 color: #C35617;
 }
 /* =============================================== */
-/*  5. MAIN 
+/*  5. MISC
 /* =============================================== */
+#login_form{
 
-#main { 
-width: 910px;
-margin: 0;
-margin-left: 20px;
-padding: 0;
-}
-#main_content {
-margin-top: 10px;
-width:910px;
-float: left;
-}
-/* =============================================== */
-/* 7. BOX and ALTBOX
-/* =============================================== */
-
-.box{
-background: none;
-margin:0 0 1em;
-padding:0;
-}
-
-.box h2{
-margin-bottom: .5em;
-font-weight: bold;
-font-size: 153.9%;
-}
-
-.box h3{
-font-size: 123.1%;
-font-weight: bold;
-text-transform: uppercase;
-border-bottom: 1px solid #ffd735;
-margin:1.5em 0 1em 0;
-}
-
-.alt{
-border: 1px solid #94beff;
-background: #e1ecff;
-padding: 1em;
-}
-
-.alt h3{
-border: none;
-margin: 0 0 .5em 0;
-padding: .5em;
-background: #94beff;
-color: #38465b;
-}
-
-.first_alt {
-margin-top:3.25em;
-}
-	
-/* =============================================== */
-/*  8. FORMS 
-/* =============================================== */
-
-.MainForm{
-color: #696565; /* dark gray */
-}
-
-input.MainForm:focus { color: black; }
-
-.MainForm label{
-display: block;
-margin: 1em 0 2px 0;
-}
-
-.MainForm label em{
-font-style: italic;
-font-family: Georgia, Times, serif;
-color: gray;
-}
-
-.MainForm select{
-border:1px solid #ccc;
-}
-
-.MainForm input, .MainForm textarea{
-border: 1px solid #ccc;
-padding: 5px;
-font-size: 123.1%;
-font-weight: bold;
-color: gray;
-width: 250px;
-background: #f8f8f8;
-}
-
-.MainForm input:focus{
-color: black;	
-}
-
-.MainForm textarea:focus{
-color: gray;
-border-color: parent;
-background: parent;
-}
-
-.MainForm input.wrong, .MainForm .fieldWithErrors input {
-border-color: #f00;
-color: #f00;
-background: #ffd5d5;
-}
-
-/* submit */
-.MainForm p input, .MainForm p button {
-padding-left: 1em;
-padding-right: 1em;
-background: #0066CC;
-border: 4px solid blue;
-color: white;
-margin: 1em 0;
-width: auto;
-cursor: pointer;
-}
-
-.MainForm button:focus{
-	color: white
-}
-
-.MainForm p input:hover{
-background:#0099CC;} 
-
-.MainForm strong{color: #f00;}
-
-.MainForm strong.ok{color: #008000;}
-
-.MainForm strong em{
-text-decoration: underline;
-font-weight: bold;}
-
-.MainForm textarea{
-width: 550px;
-color: gray;
-}
-
-/* checkboxes */
-
-.MainForm fieldset {margin: 1em 0 0 0;}
-
-.MainForm fieldset label{
-margin: 4px 0;
-color: gray;
-}
-
-.MainForm fieldset input{
-border: none;
-width: auto;
-vertical-align: bottom;
-}
-
-.MainForm fieldset.inline label{
-display: inline;
-margin-right: 1em;
-}
-
-/* =============================================== */
-/*  9. MESSAGES 
-/* =============================================== */
-
-.error, .notice, .warning, .message, .success {
-padding:.8em;
-margin-bottom:1em;
-border:2px solid #ddd;
-font-size:123.1%;
-}
-
-.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
-.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
-.message {background:#FFF6BF;color:#514721;border-color:#FFD324;}
-.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
-.error a {color:#8a1f11;}
-.notice a {color:#514721;}
-.success a {color:#264409;}
-
-.warning, #errorExplanation, .errorExplanation{
-padding: 1em 1em 1em 1em;
-margin: 1em 0;
-border: 1px solid #fc0;
-background: #fff3c5;
-color: #6b5e2b;
 }

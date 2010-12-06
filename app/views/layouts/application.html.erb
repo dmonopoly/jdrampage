@@ -10,10 +10,11 @@
 <body>
 
 <div id="header">
-	<%= image_tag "rampage_banner.png" %>
+	<%= image_tag "rails.png" %>
+	<b>RAMPAGE - The JDHS Student Newspaper</b>
 	<ul id="sections_list">
-		<% for section in Section.all(:order => "position") %>
-		<li><%= section.name %></li>
+		<% for section in Section.all %>
+			<li><%= section.name %></li>
 		<% end %>
 	</ul>
 	<% if current_user %>
@@ -28,22 +29,24 @@
 
 <div class="container">
 	<div class="span-4 colborder">
-	
+		I am some sidebar content.
 	</div>
 	<div class="span-15 colborder">
+		The main content should be here...
 		<%= yield %>
+		... :D
 	</div>
 	<div class="span-5 last">
-	
+		I am some sidebar content.
 	</div>
 </div>
 	
 <div id="footer">
-
+	I am in the footer.
 </div>
 
 <div id="login_form">
-
+	I will be the login form.
 </div>
 
 </body>

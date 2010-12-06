@@ -1,9 +1,24 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+sports:
+  name: Sports
+  free_space: free_space_text
+  position: 1
 
-one:
-  name: MyString
-  description: MyText
+news:
+  name: News
+  free_space: free_space_text
+  position: 2
 
-two:
-  name: MyString
-  description: MyText
+commentary:
+  name: Commentary
+  free_space: free_space_text
+  position: 3
+	
+entertainment:
+  name: Entertainment
+  free_space: free_space_text
+  position: 4
+
+features:
+  name: Features
+  free_space: free_space_text
+  position: 5
