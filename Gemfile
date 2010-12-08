@@ -7,6 +7,10 @@ gem 'paperclip'
 #gem 'ckeditor', '3.4.2.pre' - later
 gem 'acts_as_list'
 
+group :development, :test do
+	gem 'factory_girl_rails'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
