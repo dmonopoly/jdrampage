@@ -9,6 +9,7 @@ gem 'acts_as_list'
 
 group :development, :test do
 	gem 'factory_girl_rails'
+	gem 'forgery'
 end
 
 # Use unicorn as the web server
