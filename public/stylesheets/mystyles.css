@@ -24,9 +24,7 @@ jquery button yellow #FED54D
 /*  1. SECTION
 /*  2. HEADER
 /*  3. USER
-/*  4. NAVBAR
-/*  5. PANELS & PAGES
-/*  6. SIDEBAR
+/*  4. SIDEBAR
 /*========================================================*/
 
 /* =============================================== */
@@ -39,10 +37,6 @@ border: 5px outset #464337;
 margin-top: 25px;
 padding: 10px;
 margin: 0;
-}
-div.rightArea{
-	position:absolute;
-	margin-left: 400px;
 }
 .handle {
   font-size: 12px;
@@ -60,12 +54,6 @@ float: left;
 height: 100%;
 border-left: 1px solid black;
 padding-left: 10px;
-}
-#bread_crumbs{
-font-size: 24px;
-font-family: Lucida, sans-serif;
-font-style: italic;
-line-height: 30px;
 }
 a.myButton{
 background: #FED54D;
@@ -134,69 +122,15 @@ div#login_area{
 /* =============================================== */
 /*  3. USER
 /* =============================================== */
-div#users_index{}
-/* =============================================== */
-/*  4. NAVBAR
-/* =============================================== */
-div#navbar{
-}
-ul.navbarlist {
-list-style-type: none;
-margin: 10px 0;
-padding-left: 0;
-}
-ul.navbarlist li {
-display: inline;
-margin: 0;
-}
-ul.navbarlist a {
-color: black;
-background: #C35617;
-padding: 10px;
-font-size: 16px;
-font-weight: 750;
-font-family: Lucida, sans-serif;
-/*border: 1px solid black;*/
-}
-ul.navbarlist a:hover {
-color: #FDD44A;
-background: #DC7130;
-}
-ul.navbarlist li.highlight {
-background: pink;
+div#users_index{
+
 }
 /* =============================================== */
-/*  5. PANELS & PAGES
+/*  4. SIDEBAR
 /* =============================================== */
-div.panels_container{
-padding-top: 4px;
-/*width: 930px;*/
+#left_sidebar{
+
 }
-div#show_page{ /* if you add a border here, oddly, the div will not be a right col */
-}
-/* =============================================== */
-/*  6. SIDEBAR
-/* =============================================== */
-div#sidebar_div{
-}
-#sidebar_div ul.sidebar_list{
-margin: 0;
-padding-left: 0;
-}
-#sidebar_div ul.sidebar_list li{
-list-style-type: none;
-margin: 18px 0;
-}
-#sidebar_div ul.sidebar_list a{
-color: black;
-background: #C35617;
-font-size: 14px;
-font-weight: 750;
-font-family: Lucida, sans-serif;
-padding: 9px;
-margin: 0;
-}
-#sidebar_div ul.sidebar_list a:hover{
-color: #FDD44A;
-background: #DC7130;
+#right_sidebar{
+
 }

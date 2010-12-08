@@ -8,46 +8,47 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<div id="header">
-	<%= image_tag "rails.png" %>
-	<b>RAMPAGE - The JDHS Student Newspaper</b>
-	<ul id="sections_list">
-		<% for section in Section.all %>
-			<li><%= section.name %></li>
+<div class="container myBorder" >
+	<div id="header">
+		<%= image_tag "rails.png" %>
+		<b>RAMPAGE - The JDHS Student Newspaper</b>
+		<ul id="sections_list">
+			<% for section in Section.all %>
+				<li><%= section.name %></li>
+			<% end %>
+		</ul>
+		<% if current_user %>
+			<div id="login_area">
+				Logged in as <b><%= current_user.login %></b> |
+				<%= link_to 'Frontside', '/', :style=>"text-decoration:underline" %> | 
+				<%= link_to 'Backside', '/backside' %> | 
+				<%= link_to 'Logout', '/logout' %>
+			</div>
 		<% end %>
-	</ul>
-	<% if current_user %>
-		<div id="login_area">
-			Logged in as <b><%= current_user.login %></b> |
-			<%= link_to 'Frontside', '/', :style=>"text-decoration:underline" %> | 
-			<%= link_to 'Backside', '/backside' %> | 
-			<%= link_to 'Logout', '/logout' %>
+	</div>
+
+	<div id="main">
+		<div id="left_sidebar" class="span-4 colborder">
+			I am some sidebar content.
 		</div>
-	<% end %>
-</div>
-
-<div class="container">
-	<div class="span-4 colborder">
-		I am some sidebar content.
+		<div class="span-15 colborder">
+			The main content should be here...
+			<%= yield %>
+			... :D
+		</div>
+		<div id="right_sidebar" class="span-5 last">
+			I am some sidebar content.
+		</div>
 	</div>
-	<div class="span-15 colborder">
-		The main content should be here...
-		<%= yield %>
-		... :D
-	</div>
-	<div class="span-5 last">
-		I am some sidebar content.
-	</div>
-</div>
 	
-<div id="footer">
-	I am in the footer.
-</div>
+	<div id="footer">
+		I am in the footer.
+	</div>
 
-<div id="login_form">
-	I will be the login form.
-</div>
+	<div id="login_form">
+		I will be the login form.
+	</div>
 
+</div>
 </body>
 </html>

@@ -53,9 +53,12 @@ ul li.rightComponent{
 	border: 1px solid black;
 }
 /* =============================================== */
-/*  2. GRID 
+/*  2. MAIN
 /* =============================================== */
-
+#main{
+margin-top: 50px;
+border: 1px dotted green;
+}
 
 /* =============================================== */
 /*  3. HEADER
@@ -64,6 +67,7 @@ ul li.rightComponent{
 width: 950px;
 height: 60px;
 margin: 0 20px;
+background: blue;
 }
 #header ul#sections_list {
 
