@@ -23,14 +23,15 @@ sienna #8A4117
 /*  2. GRID
 /*  3. HEADER
 /*  4. FOOTER
-/*  5. MISC
+/*  5. SIDEBAR
+/*  6. MISC
 /*========================================================*/
 
 /* =============================================== */
 /*  1. COMMON 
 /* =============================================== */
 body { 
-background: #ccc;
+background: #ddd;
 }
 a {
 color: #8A4117;
@@ -56,8 +57,8 @@ ul li.rightComponent{
 /*  2. MAIN
 /* =============================================== */
 #main{
-margin-top: 50px;
-border: 1px dotted green;
+margin: 50px auto 0 auto;
+background: white;
 }
 
 /* =============================================== */
@@ -66,8 +67,9 @@ border: 1px dotted green;
 #header{
 width: 950px;
 height: 60px;
-margin: 0 20px;
-background: blue;
+margin: 0 auto;
+padding: 0;
+background: red;
 }
 #header ul#sections_list {
 
@@ -83,11 +85,9 @@ display: inline;
 /* =============================================== */
 #footer { 
 width: 950px;
-background:white;
-margin:0;
+background:blue;
+margin:0 auto;
 padding:0;
-margin-top: 1em;
-padding-bottom:1em;
 }
 #ft ul{
 margin:0; padding:0;
@@ -101,8 +101,20 @@ color: #C35617;
 color: #C35617;
 }
 /* =============================================== */
-/*  5. MISC
+/*  5. SIDEBAR
+/* =============================================== */
+#left_sidebar{
+
+}
+#right_sidebar{
+
+}
+/* =============================================== */
+/*  6. MISC
 /* =============================================== */
 #login_form{
-
+width: 950px;
+margin: 0 auto;
+padding: 0;
+background: #ddd;
 }
