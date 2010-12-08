@@ -1,22 +1,24 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# If you want to use fixtures:
-#require 'active_record/fixtures'
-#Fixtures.create_fixtures("#{Rails.root}/test/fixtures","table_name_here, like users")
 
-#require 'forgery'
+require 'forgery'
 
+# NOTE:
+# "create" calls save, whereas "create!" calls "save!"
+# The difference? "create!" will raise an exception if the record is invalid.
+# Also: "delete" directly deletes the record, whereas "destroy" triggers callbacks
+# like before_destroy.
+
+# Creating the users - User model specifies it acts_as_authentic, so no duplicates
 User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>"northandsouth",:email=>"dmonopoly10@gmail.com")
 
-# Sections - the problem with this syntax, as opposed to the user creation above,
-# is that running rake db:seed multiple times will create the sections AGAIN
-s = Section.create(:name => "Sports")
-n = Section.create(:name => "News")
-c = Section.create(:name => "Commentary")
-e = Section.create(:name => "Entertainment")
-f = Section.create(:name => "Features")
+# Creating the sections
+%w[ Sports News Commentary Entertainment Features ].each do |section_name|
+	Section.find_or_create_by_name(section_name)
+end
 
-Section.all.each { |s| # done AGAIN if rake db:seed called again...
+# Creating the articles
+Article.delete_all # to prevent duplicate articles if rake db:seed is called > once
+Section.all.each { |s|
 	5.times do Factory.create(:article, :section => s) end
 }

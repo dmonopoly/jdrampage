@@ -1,4 +1,4 @@
-#require 'forgery'
+require 'forgery'
 
 Factory.define :article do |t|
 	t.title {|x| x.section.name + Factory.next(:article_title) }
