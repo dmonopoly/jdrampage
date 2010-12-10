@@ -1,0 +1,12 @@
+<!--user_sessions/new-->
+<h2>Login</h2>
+
+<%= form_for :user_session, :url=>{ :controller=>"user_sessions", :action => "create" } do |f| %>
+	<%= f.label :login %>
+	<%= f.text_field :login, :size => 16 %>
+	
+	<%= f.label :password %>
+	<%= f.password_field :password, :size => 16 %>
+
+	<%= f.submit 'Log in' %>
+<% end %>

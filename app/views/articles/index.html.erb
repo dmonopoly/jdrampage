@@ -1,2 +1,9 @@
 <!--articles/index-->
 I am in articles/index. I might be the front page.
+Articles should be in the order specified by "position."
+
+<div id="front_page">
+	<% for article in @articles %>
+		<%= render :partial => "article_preview", :locals => { :article => article } %>
+	<% end %>
+</div>
