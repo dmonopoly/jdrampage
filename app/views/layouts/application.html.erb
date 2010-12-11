@@ -14,7 +14,7 @@
 	<b>RAMPAGE - The JDHS Student Newspaper</b>
 	<ul id="sections_list">
 		<% for section in Section.all %>
-			<li><%= link_to section.name, section_path(section) %></li>
+			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
 		<% end %>
 	</ul>
 	<% if current_user %>

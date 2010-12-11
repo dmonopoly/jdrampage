@@ -3,12 +3,12 @@ class Section < ActiveRecord::Base
   acts_as_list
 	default_scope :order => 'position'
 	
-  def before_destroy # safety measure: moves all articles to a section called "No section"
+  before_destroy {	# safety measure: moves all articles to a section called "No section"
 		articles.each do |a|
       a.section = Section.default_section
       a.save
     end
-  end
+  }
   
   def self.default_section
     find_or_create_by_name("No section") # deleted section is renamed

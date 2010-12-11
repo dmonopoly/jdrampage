@@ -73,17 +73,17 @@ padding: 0;
 }
 #header ul#sections_list {
 }
-#header ul#sections_list li {
+li.section_item{
 display: inline;
 margin: 0;
 padding: 0;
 }
-#header ul#sections_list li a {
+li.section_item a {
 font-size: 16px;
 text-decoration: none;
 }
-#header ul#sections_list li a:hover {
-
+li.section_item a:hover {
+color: #E9AB17;
 }
 #login_area{
 float: right;

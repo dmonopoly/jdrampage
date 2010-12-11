@@ -1,5 +1,9 @@
 class Article < ActiveRecord::Base
-  has_attached_file :photo, :default_url=>"/system/photos/original/missing.png"
+  has_attached_file :photo, :default_url=>"/system/photos/original/default.jpg",
+										:styles => { 
+											:thumb => "100x100#",
+											:small => "150x150>",
+											:medium => "200x200" }
 
   has_many :comments, :dependent => :destroy
   belongs_to :section

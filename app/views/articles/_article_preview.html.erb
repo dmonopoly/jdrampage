@@ -1,5 +1,8 @@
 <!--articles/article_preview partial; requires variable "article"-->
 <div class="article_preview">
-	<%= image_tag article.photo.url %>
+	<%= image_tag article.photo.url(:thumb) %>
+	
 	<%= article.title %> by <%= article.author %>
+	
+	<%= article.teaser %>
 </div>

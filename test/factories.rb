@@ -5,13 +5,17 @@ Factory.define :article do |t|
 	t.status "status here"
 	t.comments_allowed false
 	t.notes "notes here"
+	#t.position Factory.next(:count)
 	t.teaser "I am a teaser."
 	t.styles "styles here"
 	t.year "10-11"
 	t.association :section # 'belongs to a section'
 end
 
-# Sequences
 Factory.sequence :article_title do |n|
 	"Article#{n}"
+end
+
+Factory.sequence :count do |n|
+	n
 end
