@@ -15,7 +15,7 @@ Jdrampage::Application.routes.draw do
 		resources :comments
 	end
 	
-	match 'backside' => 'static#index'
+	match 'control_panel' => 'static#index'
 	match 'logout' => 'user_sessions#destroy'
 	
 	# match ':controller(/:action(/:id(.:format)))'
