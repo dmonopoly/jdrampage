@@ -12,6 +12,10 @@ group :development, :test do
 	gem 'forgery'
 end
 
+group :test do
+	gem "shoulda"
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
