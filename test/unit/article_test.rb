@@ -1,10 +1,10 @@
 require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
-	
-	#def setup
-		#@article = Factory.create(:article)
-	#end
+=begin
+	def setup
+		@article = Factory.create(:article)
+	end
 	
 	should_belong_to :section
 	should_have_many :comments
@@ -16,5 +16,5 @@ class ArticleTest < ActiveSupport::TestCase
 	should_validate_presence_of :year
 	
 	#should_validate_inclusion_of :year, :in => %w[ 09-10 10-11 ]
-	
+=end	
 end
