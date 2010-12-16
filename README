@@ -1,2 +1,8 @@
 Online student newspaper for JDHS
 Uses Rails 3.0.3
+
+TODO/Ideas:
+-testing:
+	-modify seed data and factories
+-names for subscribers; click button to send message to all subscribers, using their names
+(more personal)
