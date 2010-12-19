@@ -1,13 +1,13 @@
 # Factories
 Factory.define :article do |t|
 	t.association :section # 'belongs to a section'
-	t.title {|x| x.section.name + Factory.next(:article_title) }
+	t.title {|x| "#{x.section.name}Article#{Factory.next(:count)}" }
 	t.author "Author Bob"
 	t.body Forgery::LoremIpsum.paragraphs(5)
 	t.status "status here"
 	t.comments_allowed false
 	t.notes "notes here"
-	#t.position Factory.next(:count) ... maybe need .to_i
+	t.position { Factory.next(:count) } # problems? why only up to 2?
 	t.teaser "I am a teaser."
 	t.styles "styles here"
 	t.year "10-11"
@@ -21,10 +21,10 @@ Factory.define :comment do |t|
 end
 
 Factory.define :page do |t|
-	t.title Factory.next(:page_title)
+	t.title { "Page#{Factory.next(:count)}" } # NEED THE BRACKETS!!!
 	t.styles "styles here"
 	t.body Forgery::LoremIpsum.paragraphs(5)
-	#t.position
+	t.position { Factory.next(:count) }
 end
 
 # Do not need section factory
@@ -35,14 +35,6 @@ Factory.define :user do |t|
 end
 
 # Sequences
-Factory.sequence :article_title do |n|
-	"Article#{n}"
-end
-
-Factory.sequence :page_title do |n|
-	"Page#{n}"
-end
-
 Factory.sequence :count do |n|
-	n # need quotes?
+	n
 end

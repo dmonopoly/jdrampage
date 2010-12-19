@@ -15,6 +15,6 @@ class ArticleTest < ActiveSupport::TestCase
 	
 	should_have_attached_file :photo
 	# the following need shoulda macros plugin installed first
-	should_act_as_list # what about order => 'position'?
+	# should_act_as_list # what about order => 'position'?
 	
 end
