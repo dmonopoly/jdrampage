@@ -1,0 +1,19 @@
+<!--articles/article_preview_top partial; for #1 article; requires variable "article"-->
+<div class="article_preview_top">
+	<div class="article_header_top">
+		<span class="article_title_top"><%= article.title %></span><br>
+		<span class="article_author_top">by <%= article.author %></span>
+	</div>
+	
+	<div class="article_image_top">
+		<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
+	</div>
+	
+	<div class="article_teaser_top">
+		<%= article.teaser %>
+	</div>
+	
+	<div class="article_beginning">
+	
+	</div>
+</div>

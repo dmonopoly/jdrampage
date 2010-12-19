@@ -1,8 +1,15 @@
-<!--articles/article_preview partial; requires variable "article"-->
+<!--articles/article_preview partial; common one; requires variable "article"-->
 <div class="article_preview">
-	<%= image_tag article.photo.url(:thumb) %>
+	<div class="article_header">
+		<span class="article_title"><%= article.title %></span><br>
+		<span class="article_author">by <%= article.author %></span>
+	</div>
 	
-	<%= article.title %> by <%= article.author %>
+	<div class="article_image">
+		<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
+	</div>
 	
-	<%= article.teaser %>
+	<div class="article_teaser">
+		<%= article.teaser %>
+	</div>
 </div>
