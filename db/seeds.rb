@@ -22,3 +22,18 @@ Article.delete_all # to prevent duplicate articles if rake db:seed is called > o
 Section.all.each { |s|
 	5.times do Factory.create(:article, :section => s) end
 }
+
+=begin
+
+# Creating the comments
+Comment.delete_all
+Article.all.each { |a|
+	3.times do Factory.create(:comment, :article => a) end
+}
+
+# Creating the pages
+%w[ Page1 Page2 Page3 ].each do |page_title|
+	Page.find_or_create_by_title(page_title) # note: "title" can be "name" or whatever
+end
+
+=end
