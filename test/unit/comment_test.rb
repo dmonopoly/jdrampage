@@ -6,6 +6,6 @@ class CommentTest < ActiveSupport::TestCase
 	should_validate_presence_of :body
 	should_validate_presence_of :full_name
 	should_validate_presence_of :email
-	should_validate_format_of :email, :with => //
+	#should_validate_format_of :email, :with => //
 	
 end

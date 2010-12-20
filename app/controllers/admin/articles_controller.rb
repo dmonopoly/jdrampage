@@ -1,4 +1,4 @@
-class ArticlesController < AdminController
+class Admin::ArticlesController < AdminController
   
 	# GET /articles
   # GET /articles.xml

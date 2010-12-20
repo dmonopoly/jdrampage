@@ -1,4 +1,4 @@
-class CommentsController < AdminController
+class Admin::CommentsController < AdminController
   def index
     @article = Article.find(params[:article_id])
     if @article.comments_allowed
