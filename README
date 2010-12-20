@@ -3,6 +3,11 @@ Uses Rails 3.0.3
 
 TODO/Ideas:
 -testing:
-	-modify seed data and factories
+	o seed data and factories
+	o unit tests
+	o functional tests (for controllers)
+-ImageMagick - proper installation
+-notifcation area on backside - place to easily post messages, like
+"site will be undergoing changes at 3pm EST"
 -names for subscribers; click button to send message to all subscribers, using their names
 (more personal)

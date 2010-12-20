@@ -3,7 +3,7 @@ class ArticlesController < AdminController
 	# GET /articles
   # GET /articles.xml
   def index
-    @articles = Article.front_page.all(:limit => 6)
+    @articles = Article.all(:limit => 6)
 
     respond_to do |format|
       format.html # index.html.erb
