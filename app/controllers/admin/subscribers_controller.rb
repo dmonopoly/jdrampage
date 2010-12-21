@@ -1,4 +1,4 @@
-class SubscribersController < AdminController
+class Admin::SubscribersController < AdminController
   def create
     @subscriber = Subscriber.find_or_create_by_email(params[:subscriber][:email])
     if @subscriber.save

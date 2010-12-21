@@ -1,4 +1,4 @@
-class SectionsController < AdminController
+class Admin::SectionsController < AdminController
 
   def show
     @section = Section.find(params[:id])

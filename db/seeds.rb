@@ -1,5 +1,11 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# Commands:
+# rake db:seed - load seed data; defaults to development
+# rake db:seed RAILS_ENV=test - load seed data for the test db
+# rake db:setup - set up database by running migrations and then loading seed data
+# rake db:test:prepare - rebuild test db [after destroying it]
+# rake test:units, (...)
+# ruby -I test test/unit/article_test.rb
 
 require 'forgery'
 
