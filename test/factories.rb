@@ -2,6 +2,7 @@
 Factory.define :article do |t|
 	t.association :section # 'belongs to a section'
 	t.title {|x| "#{x.section.name}Article#{Factory.next(:count)}" }
+	#t.sequence(:title)  {|n| "Article#{n}"}
 	t.author "Author Bob"
 	t.body Forgery::LoremIpsum.paragraphs(5)
 	t.status "status here"
@@ -21,7 +22,8 @@ Factory.define :comment do |t|
 end
 
 Factory.define :page do |t|
-	t.title { "Page#{Factory.next(:count)}" } # NEED THE BRACKETS!!!
+	#t.title { "Page#{Factory.next(:count)}" } # NEED THE BRACKETS!!!
+	t.sequence :title { |n| "Page#{n}" }
 	t.styles "styles here"
 	t.body Forgery::LoremIpsum.paragraphs(5)
 	t.position { Factory.next(:count) }
