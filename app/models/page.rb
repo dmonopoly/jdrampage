@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
-  acts_as_list
+  validates_presence_of :title, :body
+	
+	acts_as_list
   default_scope :order => 'position'
 end

@@ -2,7 +2,7 @@
 # Commands:
 # rake db:seed - load seed data; defaults to development
 # rake db:seed RAILS_ENV=test - load seed data for the test db
-# rake db:setup - set up database by running migrations and then loading seed data
+# rake db:setup - set up database by running migrations
 # rake db:test:prepare - rebuild test db [after destroying it]
 # rake test:units, (...)
 # ruby -I test test/unit/article_test.rb
@@ -22,24 +22,34 @@ User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|
 	Section.find_or_create_by_name(section_name)
 end
+puts "---created sections"
 
 # Creating the articles
-Article.delete_all # to prevent duplicate articles if rake db:seed is called > once
-Section.all.each { |s|
-	5.times do Factory.create(:article, :section => s) end
-}
-
-=begin
-
-# Creating the comments
-Comment.delete_all
-Article.all.each { |a|
-	3.times do Factory.create(:comment, :article => a) end
-}
-
-# Creating the pages
-%w[ Page1 Page2 Page3 ].each do |page_title|
-	Page.find_or_create_by_title(page_title) # note: "title" can be "name" or whatever
+if Article.count == 0 # to prevent duplicate articles if rake db:seed is called > once; alternative to Article.delete_all, which causes id issues
+	Section.all.each { |s|
+		5.times do Factory.create(:article, :section => s) end
+	}
+	puts "---created articles"
+else
+	puts "---no need to create articles"
 end
 
-=end
+# Creating the comments
+if Comment.count == 0
+	Article.all.each { |a|
+		3.times do Factory.create(:comment, :article => a) end
+	}
+	puts "---created comments"
+else
+	puts "---no need to create comments"
+end
+
+# Creating the pages
+if Page.count == 0
+	4.times do Factory.create(:page) end
+	puts "---created pages"
+else
+	puts "---no need to create pages"
+end
+
+puts "---Done running seeds.rb!"

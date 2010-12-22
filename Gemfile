@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'authlogic', '2.1.6'
+gem 'authlogic', :git => "git://github.com/radar/authlogic.git"
 gem 'paperclip'
 #gem 'ckeditor', '3.4.2.pre' - later
 gem 'acts_as_list'
@@ -11,7 +11,6 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'forgery'
 	gem 'shoulda'
-	gem 'seanhussey-woulda'
 end
 
 # Use unicorn as the web server

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
 	
-	context "An Article" do
+	context "An article" do
 		setup do
 			# make sure the test db is already filled; that's why setup is unnecessary
 		end
@@ -24,9 +24,9 @@ class ArticleTest < ActiveSupport::TestCase
 		should_not allow_value('11-12').for :year
 		#should ensure_inclusion_of(:year).in_range(%w[ 09-10 10-11 ])
 		
-		
+		# the following need additional methods defined in test_helper
 		should_have_attached_file :photo
-		should_act_as_list # what about order => 'position'?
-
+		should_act_as_list
 	end
+	
 end
