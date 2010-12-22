@@ -24,9 +24,9 @@ class ArticleTest < ActiveSupport::TestCase
 		should_not allow_value('11-12').for :year
 		#should ensure_inclusion_of(:year).in_range(%w[ 09-10 10-11 ])
 		
-		# the following need shoulda macros plugin installed first
-		#should_have_attached_file :photo
-		# should_act_as_list # what about order => 'position'?
+		
+		should_have_attached_file :photo
+		should_act_as_list # what about order => 'position'?
 
 	end
 end

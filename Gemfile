@@ -11,6 +11,7 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'forgery'
 	gem 'shoulda'
+	gem 'seanhussey-woulda'
 end
 
 # Use unicorn as the web server
