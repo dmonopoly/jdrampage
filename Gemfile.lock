@@ -5,6 +5,12 @@ GIT
     authlogic (2.1.6)
       activesupport
 
+GIT
+  remote: https://github.com/haihappen/acts_as_list.git
+  revision: 2ce7d68388d35f297cf0cd65d11343240fd88f58
+  specs:
+    acts_as_list (0.0.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,7 +41,6 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    acts_as_list (0.1.2)
     arel (2.0.6)
     builder (2.1.2)
     erubis (2.6.6)
@@ -86,7 +91,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  acts_as_list
+  acts_as_list!
   authlogic!
   factory_girl_rails
   forgery

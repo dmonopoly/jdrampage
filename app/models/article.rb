@@ -9,8 +9,7 @@ class Article < ActiveRecord::Base
   belongs_to :section
   
   acts_as_list
-	default_scope :order => 'position'
-  #named_scope :front_page, :conditions => {:front_page => true}
+	default_scope :order => :position
   
   validates_presence_of :section, :title, :author, :body, :year
   validates_inclusion_of :year, :in => %w[ 09-10 10-11 ] # restricting :year to be any in the passed in array

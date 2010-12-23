@@ -7,8 +7,8 @@ class SectionTest < ActiveSupport::TestCase
 			# make sure the test db is already filled; that's why setup is unnecessary
 		end
 		
-		should_have_many :articles
-		should_validate_presence_of :name
+		should have_many :articles
+		should validate_presence_of :name
 		
 		# the following need additional methods defined in test_helper
 		should_act_as_list

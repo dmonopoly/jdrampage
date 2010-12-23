@@ -5,7 +5,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'authlogic', :git => "git://github.com/radar/authlogic.git"
 gem 'paperclip'
 #gem 'ckeditor', '3.4.2.pre' - later
-gem 'acts_as_list'
+gem 'acts_as_list', :git => "https://github.com/haihappen/acts_as_list.git"
 
 group :development, :test do
 	gem 'factory_girl_rails'

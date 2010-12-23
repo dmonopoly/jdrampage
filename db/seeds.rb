@@ -3,8 +3,9 @@
 # rake db:seed - load seed data; defaults to development
 # rake db:seed RAILS_ENV=test - load seed data for the test db
 # rake db:setup - set up database by running migrations
-# rake db:test:prepare - rebuild test db [after destroying it]
-# rake test:units, (...)
+# rake db:test:load - recreates the test database from the current db/schema.rb
+# rake db:test:prepare - checks for pending migrations and warns you appropriately (fails schema DNE)
+# rake test:units, (...) - BEWARE: test db will be erased and re-generated from your development database when you run "rake"
 # ruby -I test test/unit/article_test.rb
 
 require 'forgery'
@@ -22,7 +23,7 @@ User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|
 	Section.find_or_create_by_name(section_name)
 end
-puts "---created sections"
+puts "---found or created sections"
 
 # Creating the articles
 if Article.count == 0 # to prevent duplicate articles if rake db:seed is called > once; alternative to Article.delete_all, which causes id issues
@@ -52,4 +53,4 @@ else
 	puts "---no need to create pages"
 end
 
-puts "---Done running seeds.rb!"
+puts "---Done with seeds.rb!"

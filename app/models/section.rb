@@ -1,8 +1,7 @@
 class Section < ActiveRecord::Base
   has_many :articles
   acts_as_list
-	default_scope :order => 'position'
-	
+	default_scope :order => :position
 	validates_presence_of :name
 	
 	

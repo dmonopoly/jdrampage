@@ -23,37 +23,32 @@ class ActiveSupport::TestCase
     end
   end
 	
-	# Copied from http://joshuaclayton.github.com/code/2009/07/14/should-act-as-list.html & slightly modified
-	def self.should_act_as_list(options = {})
-		should have_instance_methods(:scope_condition, :position_column, :insert_at)
-
-		klass = self.name.gsub(/Test$/, "").constantize
-		options[:column] ||= "position"
-		options[:scope] ||= "1 = 1"
-
+	# tests acts as list and default_scope :order => 'position'
+	def self.should_act_as_list(options = {}) # can access parameters with options[:asdf]
+		klass = self.name.gsub(/Test$/, "").constantize # converts string to class
 		context "acting as a list" do
-			should "use the correct column" do
-				instance = get_instance_of(klass)
-				assert_equal options[:column].to_s, instance.position_column
+			setup do # DON'T DO THIS???
+				#@instance = klass.all[0]
 			end
-
-			should "scope by `#{options[:scope].inspect}`" do
-				instance = get_instance_of(klass)
-				if options[:scope].is_a?(Symbol) && options[:scope].to_s !~ /_id$/
-					options[:scope] = "#{options[:scope]}_id".intern
-				end
-
-				if options[:scope].is_a?(Symbol)
-					instance.send("#{options[:scope]}=", nil)
-					assert_equal "#{options[:scope]} IS NULL", instance.scope_condition
-
-					instance.send("#{options[:scope]}=", 5)
-					assert_equal "#{options[:scope]} = 5", instance.scope_condition
-				else
-					assert_equal options[:scope], instance.scope_condition
-				end
+			
+			should "have a position column" do
+				instance = klass.first
+				assert_not_nil instance.position, :message => "If you see me, check out the POSITION."
 			end
+			
+			should "move objects correctly" do
+				instance = klass.first
+				instance.move_to_bottom
+				assert_equal klass.all[-1], instance
+				instance.move_higher
+				assert_equal klass.all[-2], instance
+				instance.move_to_top
+				assert_equal klass.first, instance
+				instance.move_lower
+				assert_equal klass.all[1], instance
+			end
+			
 		end
 	end
-	
+
 end
