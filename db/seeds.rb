@@ -3,8 +3,9 @@
 # rake db:seed - load seed data; defaults to development
 # rake db:seed RAILS_ENV=test - load seed data for the test db
 # rake db:setup - set up database by running migrations
+# rake db:test:purge - empties the test database.
+# rake db:test:prepare - checks for pending migrations and warns you appropriately (fails when schema DNE)
 # rake db:test:load - recreates the test database from the current db/schema.rb
-# rake db:test:prepare - checks for pending migrations and warns you appropriately (fails schema DNE)
 # rake test:units, (...) - BEWARE: test db will be erased and re-generated from your development database when you run "rake"
 # ruby -I test test/unit/article_test.rb
 

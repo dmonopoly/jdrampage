@@ -8,7 +8,7 @@ Factory.define :article do |t|
 	t.status "status here"
 	t.comments_allowed false
 	t.notes "notes here"
-	t.position { Factory.next(:count) } # problems? why only up to 2?
+	t.sequence(:position) { |n| n }
 	t.teaser "I am a teaser."
 	t.styles "styles here"
 	t.year "10-11"
@@ -25,13 +25,21 @@ Factory.define :page do |t|
 	t.sequence(:title) { |n| "Page#{n}" }
 	t.styles "styles here"
 	t.body { Forgery::LoremIpsum.paragraphs(5) }
-	t.position { Factory.next(:count) }
+	t.sequence(:position) { |n| n }
 end
 
-# Do not need section factory
-# Just remember to load seed data into the test db before testing
+# not used by seeds
+Factory.define :section do |t|
+    t.sequence(:name) { |n| "Section#{n}" }
+    t.free_space
+    t.sequence(:position) { |n| n }
+end
 
-# Do not need user factory
+Factory.define :subscriber do |t|
+    t.sequence(:email) { |n| "person#{n}@somewhere.com" }
+end
+
+# not used by seeds
 Factory.define :user do |t|
 	
 end

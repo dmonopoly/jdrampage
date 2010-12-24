@@ -25,17 +25,10 @@ class ActiveSupport::TestCase
 	
 	# tests acts as list and default_scope :order => 'position'
 	def self.should_act_as_list(options = {}) # can access parameters with options[:asdf]
-		klass = self.name.gsub(/Test$/, "").constantize # converts string to class
+		#klass = self.name.gsub(/Test/, "").constantize # converts string to class
 		context "acting as a list" do
-			setup do # DON'T DO THIS???
-				#@instance = klass.all[0]
-			end
-			
-			should "have a position column" do
-				instance = klass.first
-				assert_not_nil instance.position, :message => "If you see me, check out the POSITION."
-			end
-			
+			should have_db_column :position
+=begin This should handle :scope => whatever, too, and you haven't decided on that yet.
 			should "move objects correctly" do
 				instance = klass.first
 				instance.move_to_bottom
@@ -47,8 +40,7 @@ class ActiveSupport::TestCase
 				instance.move_lower
 				assert_equal klass.all[1], instance
 			end
-			
+=end
 		end
 	end
-
 end
