@@ -1,12 +1,7 @@
 require 'test_helper'
 
-class SectionTest < ActiveSupport::TestCase
-	
+class SectionTest < ActiveSupport::TestCase	
 	context "A section" do
-		setup do
-			# make sure the test db is already filled; that's why setup is unnecessary
-		end
-		
 		should have_many :articles
 		should validate_presence_of :name
 		
@@ -15,5 +10,4 @@ class SectionTest < ActiveSupport::TestCase
 
 		# testing before_destroy...?
 	end
-	
 end

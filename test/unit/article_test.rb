@@ -1,12 +1,7 @@
 require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
-	
 	context "An article" do
-		setup do
-			# make sure the test db is already filled; that's why setup is unnecessary
-		end
-		
 		should belong_to :section
 		should have_many :comments
 		
@@ -28,5 +23,4 @@ class ArticleTest < ActiveSupport::TestCase
 		should_have_attached_file :photo
 		should_act_as_list
 	end
-	
 end
