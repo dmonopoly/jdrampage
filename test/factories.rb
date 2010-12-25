@@ -31,7 +31,7 @@ end
 # not used by seeds
 Factory.define :section do |t|
     t.sequence(:name) { |n| "Section#{n}" }
-    t.free_space
+    t.free_space "free space contents here"
     t.sequence(:position) { |n| n }
 end
 

@@ -43,4 +43,18 @@ class ActiveSupport::TestCase
 =end
 		end
 	end
+	
+	def activate_authlogic
+		Authlogic::Session::Base.controller = Authlogic::ControllerAdapters::RailsAdapter.new(self)
+	end
+	
+	def assert_layout(layout)
+		puts "--#{@response.layout}"
+		assert_equal layout, @response.layout
+	end
+	
+	def assert_not_layout(layout)
+		assert_not_equal layout, @response.layout
+	end
+	
 end

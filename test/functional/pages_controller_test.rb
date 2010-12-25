@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class SectionsControllerTest < ActionController::TestCase
-  context "A section" do
+class PagesControllerTest < ActionController::TestCase
+  context "A page" do
 		setup do
 		
 		end

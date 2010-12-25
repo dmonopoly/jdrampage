@@ -15,12 +15,11 @@ Jdrampage::Application.routes.draw do
 		resources :comments
 	end
 	
-	match 'control_panel' => 'static#index'
-	#match 'backside' => 'articles#index', :path => '/admin'
+	match 'backside' => 'static#backside'
 	match 'logout' => 'user_sessions#destroy'
 	
 	# match ':controller(/:action(/:id(.:format)))'
-	root :to => 'articles#index'
+	root :to => 'static#home'
 	
 	# NOTES BELOW - - - - - - -
 	
