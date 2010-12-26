@@ -9,40 +9,32 @@ class StaticControllerTest < ActionController::TestCase
 			}
 			get :home
 		end
-		
-		should "load properly" do
-			assert_response :success
-			assert_template :home
-		end
-		
-		should "use the correct layout" do
-			#assert_layout 'application'
-			puts "--#{@response.layout}---"
-			assert_equal 'application', @response.layout
-			#assert_not_layout 'backside'
-		end
-		
+		should respond_with :success
+		should render_template 'static/home'
+		should render_with_layout 'application'
 		should "have articles available" do
 			assert_not_nil assigns(:articles)
 		end
 	end
 	
-	context "The backside home page" do
+	context "The backside home page" do # maybe you're getting into integration tests?
 		setup do
 			2.times { Factory.create(:section) }
 			Section.all.each { |section|
 				5.times { Factory.create(:article, :section => section) }
 			}
 		end
-		
 		context "without someone logging in" do
 			setup do
 				get :backside
 			end
-			
-			should "not be accessible" do
-				assert_response :error
+			should "redirect to home page" do
+				assert_response :redirect
+				assert_template :home
 			end
+			should respond_with :redirect
+			should render_template 'static/home'
+			should set_the_flash
 		end
 		
 		context "after someone logs in" do
@@ -51,20 +43,10 @@ class StaticControllerTest < ActionController::TestCase
 				UserSession.create(:login => "someone", :password => "my password")
 				get :backside
 			end
-			
-			should "load properly" do
-				assert_response :success
-				assert_template :backside
-			end
-			
-			should "use the correct layout" do
-				#assert_layout 'backside'
-				puts "--#{@response.layout}"
-				assert_equal 'backside', @response.layout
-				#assert_not_layout 'application'
-			end
-			
-			should "have articles available" do
+			should respond_with :redirect
+			should render_template 'static/backside'
+			should render_with_layout 'backside'
+			should "have @articles available" do
 				assert_not_nil assigns(:articles)
 			end
 		end

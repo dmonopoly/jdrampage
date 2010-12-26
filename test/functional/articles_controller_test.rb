@@ -6,9 +6,7 @@ class ArticlesControllerTest < ActionController::TestCase
 			Factory.create(:article, :id => 1, :section => Section.new)
 			get :show, :id => 1
 		end
-		should "show properly" do
-			assert_response :success
-		end
+		should respond_with :success
 		should "have an article variable" do
 			assert_not_nil assigns(:article)
 		end

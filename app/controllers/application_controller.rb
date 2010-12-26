@@ -3,13 +3,9 @@
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
-
-  # See ActionController::RequestForgeryProtection for details
-  # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery # :secret => '95d017212bd5430f8a52adcf50b1aaa7'
+	protect_from_forgery # See ActionController::RequestForgeryProtection for details
   
-  
-  # following code is from authlogic tutorial online:
+  # following code is partly from the authlogic tutorial online:
   helper_method :current_user_session, :current_user
 
   private
@@ -27,7 +23,7 @@ class ApplicationController < ActionController::Base
       unless current_user
         store_location
         flash[:notice] = "You must be logged in to access this page"
-        redirect_to new_user_session_url
+        redirect_to '/'
         return false
       end
     end
@@ -36,13 +32,13 @@ class ApplicationController < ActionController::Base
       if current_user
         store_location
         flash[:notice] = "You must be logged out to access this page"
-        redirect_to control_panel_path
+        redirect_to backside_path
         return false
       end
     end
 
     def store_location
-      session[:return_to] = request.fullpath #request.request_uri
+      session[:return_to] = request.fullpath
     end
 
     def redirect_back_or_default(default)

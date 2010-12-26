@@ -12,12 +12,20 @@ pre {
   font-size: 11px;
 }
 
-div.field, div.actions {
+div.field, div.actions{
   margin-bottom: 10px;
 }
-
+#flashes{
+	cursor: pointer;
+	margin-bottom: 10px;
+}
 #notice {
-  color: green;
+  color: black;
+	background: #fff3c5; /* pale yellow */
+	border: 1px solid #fc0;
+	padding: 1em;
+	font-family: courier;
+	font-size: 16px;
 }
 
 .field_with_errors {
