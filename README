@@ -4,7 +4,6 @@ Uses Rails 3.0.3
 TODO/Ideas:
 -testing:
 	o seed data and factories
-	o unit tests
 	o functional tests (for controllers)
 -ImageMagick - proper installation
 -notifcation area on backside - place to easily post messages, like

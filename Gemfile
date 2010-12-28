@@ -11,6 +11,9 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'forgery'
 	gem 'shoulda'
+	gem 'cucumber-rails'
+	gem 'webrat'
+	gem 'rspec'
 end
 
 # Use unicorn as the web server

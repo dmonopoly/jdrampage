@@ -3,7 +3,7 @@ require 'test_helper'
 class PagesControllerTest < ActionController::TestCase
   context "A page" do
 		setup do
-			Factory.create(:page)
+			@page = Factory.create(:page)
 		end
 		should respond_with :success
 		should "have @page available" do
