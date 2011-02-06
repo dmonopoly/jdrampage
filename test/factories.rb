@@ -2,7 +2,6 @@
 Factory.define :article do |t|
 	t.association :section # belongs to a section
 	t.title {|x| "#{x.section.name}Article#{Factory.next(:count)}" }
-	#t.sequence(:title)  {|n| "Article#{n}"}
 	t.author "Author Bob"
 	t.body { Forgery::LoremIpsum.paragraphs(5) }
 	t.status "status here"
