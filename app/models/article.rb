@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  has_attached_file :photo, :default_url=>"/system/photos/original/default.jpg",#"/system/photos/original/missing.png",
+  has_attached_file :photo, :default_url=>"/system/photos/original/missing.png",#"/system/photos/original/default.jpg"
 										:styles => { 
 											:thumb => "100x100#",
 											:small => "150x150>",
