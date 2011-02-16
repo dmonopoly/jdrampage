@@ -3,8 +3,7 @@ I am the backside's home page. Oh wait.  I might need this to list all articles.
 <br>
 <br>
 <div id="front_page">
-	<%= render :partial => "articles/article_preview_top", :locals => { :article => @articles[0] } %>
-	<% for article in @articles[1..-1] %>
-		<%= render :partial => "articles/article_preview", :locals => { :article => article } %>
+	<% for article in @articles %>
+		<%= render :partial => "article", :locals => { :article => article } %>
 	<% end %>
 </div>

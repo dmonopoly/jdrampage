@@ -1,7 +1,7 @@
 Jdrampage::Application.routes.draw do
-	resources :articles, :has_many => :comments
-	resources :sections
-	resources :pages
+	resources :articles, :only => :show, :has_many => :comments
+	resources :sections, :only => :show
+	resources :pages, :only => :show
 	resources :subscribers#, :collection => { :thank_you => :get }
 	
 	resources :users
