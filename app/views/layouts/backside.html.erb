@@ -18,7 +18,12 @@
 			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
 		<% end %>
 	</ul>
-	<%= link_to 'Articles', admin_articles_path %>
+	<%= link_to 'Articles', admin_articles_path %> | 
+	<%= link_to 'Sections', admin_sections_path %> | 
+	<%= link_to 'Pages', admin_pages_path %> | 
+	<%= link_to 'Pages', admin_comments_path %> | 
+	<%= link_to 'Users', users_path %> | 
+
 	<div id="login_area">
 		Logged in as <b><%= current_user.login %></b> |
 		<%= link_to 'Frontside', root_path %> | 
