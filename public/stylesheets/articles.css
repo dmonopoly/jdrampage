@@ -68,31 +68,36 @@ float: left;
 	list-style-type: none;
 }
 #article_list ul li {
-	display: inline;
+	display: inline-block;
 	margin: 0;
 }
 #article_list li.article_position{
-	position: relative;
+	position: absolute;
 }
 #article_list li.article_title{
 	position: relative;
 	margin-left: 20px;
+	width: 200px;
 }
 #article_list li.article_author{
 	position: relative;
-	margin-left: 130px;
+	margin-left: 20px;
+	width: 100px;
 }
 #article_list li.article_section{
 	position: relative;
-	margin-left: 100px;
+	margin-left: 20px;
+	width: 100px;
 }
 #article_list li.article_date{
 	position: relative;
-	margin-left: 120px;
+	margin-left: 20px;
+	width: 100px;
 }
 #article_list li.article_controls{
 	position: relative;
-	margin-left: 140px;
+	margin-left: 20px;
+	width: 160px;
 }
 #article_list_headers li {
 	font-weight: bold;
