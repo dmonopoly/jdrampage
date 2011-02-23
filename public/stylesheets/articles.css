@@ -58,3 +58,42 @@ float: right;
 div.article_teaser_top{
 float: left;
 }
+/* =============================================== */
+/*  3. Article Index
+/* =============================================== */
+#article_index {
+}
+
+#article_list {
+	list-style-type: none;
+}
+#article_list ul li {
+	display: inline;
+	margin: 0;
+}
+#article_list li.article_position{
+	position: relative;
+}
+#article_list li.article_title{
+	position: relative;
+	margin-left: 20px;
+}
+#article_list li.article_author{
+	position: relative;
+	margin-left: 130px;
+}
+#article_list li.article_section{
+	position: relative;
+	margin-left: 100px;
+}
+#article_list li.article_date{
+	position: relative;
+	margin-left: 120px;
+}
+#article_list li.article_controls{
+	position: relative;
+	margin-left: 140px;
+}
+#article_list_headers li {
+	font-weight: bold;
+}

@@ -1,21 +1,11 @@
-<!--a partial for each article in the list shown in index-->
-<div class="article_item">
-	<div class="article_header">
-		<span class="article_title"><%= article.title %></span><br>
-		<span class="article_author">by <%= article.author %></span>
-	</div>
-	
-	<div class="article_image">
-		<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
-	</div>
-	
-	<div class="article_teaser">
-		<%= article.teaser %>
-	</div>
-	
-	<div class="article_item_controls">
-		<%= link_to 'Edit', edit_admin_article_path(article) %> | 
-		<%= link_to 'View', admin_article_path(article) %>
-	</div>
-</div>
-<br/>
+<!--for the contents of each article in the list shown in index; needs 'article' variable-->
+<li class="article_position">#</li>
+<li class="article_title"><%= article.title  %></li>
+<li class="article_author"><%= article.author %></li>
+<li class="article_section"><%= article.section.name %></li>
+<li class="article_date">Date here</li>
+
+<li class="article_controls">
+	<%= link_to 'Show', admin_article_path(article) %> | 
+	<%= link_to 'Edit', edit_admin_article_path(article) %>
+</li>
