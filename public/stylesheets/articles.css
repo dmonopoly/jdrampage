@@ -1,4 +1,19 @@
 /* =============================================== */
+/*  0. General
+/* =============================================== */
+a.button_like {
+	padding: 2px;
+	border: 1px solid white;
+	background: #ddbbaa;
+	color: black;
+	text-decoration: none;
+}
+a.button_like:hover {
+	border: 1px solid black;
+	background: #eebbaa;
+}
+
+/* =============================================== */
 /*  1. ARTICLE_PREVIEW
 /* =============================================== */
 div.article_preview{
@@ -62,14 +77,19 @@ float: left;
 /*  3. Article Index
 /* =============================================== */
 #article_index {
+	margin: 10px 10px 10px 0;
 }
 
 #article_list {
 	list-style-type: none;
+	margin: 10px 0;
 }
 #article_list ul li {
 	display: inline-block;
-	margin: 0;
+	margin: 4px 0;
+}
+#article_list ul:hover {
+	background: #ffddaa;
 }
 #article_list li.article_position{
 	position: absolute;

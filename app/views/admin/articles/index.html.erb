@@ -1,6 +1,10 @@
 <!--admin/articles/index-->
 <div id="article_index">
 
+<div id="article_new_area">
+	<%= link_to "New Article", new_admin_article_path, :class => "button right" %>
+</div>
+
 <ul id="article_list">
 	<li>
 		<ul id="article_list_headers">
@@ -12,13 +16,16 @@
 			<li class="article_controls">Controls</li>
 		</ul>
 	</li>
-	<% for article in @articles %>
-	<li>
-		<ul id="items_within_article">
-			<%= render :partial => 'article', :locals => { :article => article } %>
-		</ul>
-	</li>
+	<% @articles.each do |article| %>
+		<%= content_tag_for :li, article, :class => "sortable" do %>
+			<ul class="items_within_article">
+				<%= render :partial => 'article', :locals => { :article => article } %>
+			</ul>
+		<% end %>
 	<% end %>
 </ul>
+
+<%= sortable_element("article_list", :url => sort_admin_articles_path, 
+											:only => "sortable", :handle => "handle" ) %>
 
 </div>

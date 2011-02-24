@@ -8,9 +8,11 @@ Jdrampage::Application.routes.draw do
 	resource :user_session
 	
 	namespace :admin do
-		resources :articles
-		resources :sections#, :collection => { :sort => :post }
-		resources :pages#, :collection => { :sort => :post }
+		resources :articles do
+			collection { post 'sort' }
+		end
+		resources :sections
+		resources :pages
 		resources :subscribers
 		resources :comments
 	end

@@ -42,24 +42,30 @@ a:visited {
 color: red;
 text-decoration: underline;
 }
-ul li.leftComponent{
-	display: inline;
-	position: absolute;
-}
-ul li.rightComponent{
-	display: inline;
-	margin-left: 200px;
-	position: relative;
+.right {
+	float: right;
 }
 .myBorder { /* beware: borders can impact widths */
 	border: 1px solid black;
 }
+a.button {
+	padding: 4px;
+	border: 2px solid #aaa;
+	background: #ddbbaa;
+	color: black;
+	text-decoration: none;
+}
+a.button:hover {
+	border: 1px solid black;
+	background: #eebbaa;
+}
+.pointer { cursor: pointer }
 /* =============================================== */
 /*  2. MAIN
 /* =============================================== */
 #main{
 margin: 0 auto 0 auto;
-background: #eee;
+background: white;
 }
 
 /* =============================================== */
