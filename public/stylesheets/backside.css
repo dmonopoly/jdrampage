@@ -59,7 +59,7 @@ ul li.rightComponent{
 /* =============================================== */
 #main{
 margin: 0 auto 0 auto;
-background: #bbb;
+background: #eee;
 }
 
 /* =============================================== */
@@ -93,7 +93,7 @@ float: right;
 /* =============================================== */
 #footer { 
 width: 950px;
-background:#ccc;
+background:#eee;
 margin:0 auto;
 padding:0;
 }

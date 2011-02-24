@@ -1,10 +1,18 @@
 <!--admin/articles/show-->
-<div id="">
-where the article will be
-	<div class="">
-	
+<div id="article_show">
+	<div>
+		<h2><%= @article.title %></h2>
+		<%= @article.author %><br>
+		<%= @article.year %>
 	</div>
-	<div class="">
-	
+	<div class="article_image">
+		<%= image_tag @article.photo.url, :class=>"article_image" %>
 	</div>
+	<div class="article">
+		<%= @article.body %>
+	</div>
+</div>
+
+<div id="article_controls">
+	<%= link_to "Edit", edit_admin_article_path(@article) %>
 </div>

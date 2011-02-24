@@ -1,3 +1,9 @@
 <!--admin/articles/edit-->
+<div id="article_edit">
+	<%= render :partial => "form", :locals => { :article => @article, :button_value => "Update" } %>
+</div>
 
-hello. edit controls here.
+<div id="directions">
+	<%= link_to "<< Back", admin_articles_path %>
+	<%= link_to "Show (changes will not be saved)", admin_article_path(@article) %>
+</div>

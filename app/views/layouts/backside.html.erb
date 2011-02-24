@@ -21,7 +21,6 @@
 	<%= link_to 'Articles', admin_articles_path %> | 
 	<%= link_to 'Sections', admin_sections_path %> | 
 	<%= link_to 'Pages', admin_pages_path %> | 
-	<%= link_to 'Pages', admin_comments_path %> | 
 	<%= link_to 'Users', users_path %> | 
 
 	<div id="login_area">
@@ -38,16 +37,14 @@
 			<div id='notice'><%= flash[:notice] %></div>
 		<% end %>
 	</div>
-	<% if params[:controller] == 'static' %>
+	<% if params[:controller] == 'static' || params[:action] == 'show' %>
 		<div class="span-3 colborder" id="left_sidebar">
 			<h6>La dee dah.</h6>
 			I am some sidebar content.
 		</div>
 		
 		<div class="span-14 colborder">
-			The main content should be here...
 			<%= yield %>
-			... :D
 		</div>
 
 		<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
@@ -56,9 +53,7 @@
 		</div>
 	<% else %>
 		<div class="span-24 last">
-			I am not from the static controller.
 			<%= yield %>
-			... :D
 		</div>
 	<% end %>
 </div>
