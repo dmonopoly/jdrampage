@@ -50,7 +50,7 @@ text-decoration: underline;
 }
 a.button {
 	padding: 4px;
-	border: 2px solid #aaa;
+	border: 1px solid #aaa;
 	background: #ddbbaa;
 	color: black;
 	text-decoration: none;

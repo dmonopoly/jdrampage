@@ -4,10 +4,10 @@ Jdrampage::Application.routes.draw do
 	resources :pages, :only => :show
 	resources :subscribers#, :collection => { :thank_you => :get }
 	
-	resources :users
 	resource :user_session
 	
 	namespace :admin do
+		resources :users
 		resources :articles do
 			collection { post 'sort' }
 		end
