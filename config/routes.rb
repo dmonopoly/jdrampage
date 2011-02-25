@@ -11,7 +11,9 @@ Jdrampage::Application.routes.draw do
 		resources :articles do
 			collection { post 'sort' }
 		end
-		resources :sections
+		resources :sections do
+			collection { post 'sort' }
+		end
 		resources :pages
 		resources :subscribers
 		resources :comments

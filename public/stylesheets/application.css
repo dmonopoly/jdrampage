@@ -31,16 +31,16 @@ sienna #8A4117
 /*  1. COMMON 
 /* =============================================== */
 a {
-color: red;
-text-decoration: underline;
+	color: red;
+	text-decoration: underline;
 }
 a:hover {
-color: #FDD44A;
-text-decoration: none;
+	color: #FDD44A;
+	text-decoration: none;
 }
 a:visited {
-color: red;
-text-decoration: underline;
+	color: red;
+	text-decoration: underline;
 }
 ul li.leftComponent{
 	display: inline;
@@ -58,28 +58,43 @@ ul li.rightComponent{
 /*  2. MAIN
 /* =============================================== */
 #main{
-margin: 0 auto 0 auto;
+	margin: 0 auto 0 auto;
 }
 
 /* =============================================== */
 /*  3. HEADER
 /* =============================================== */
 #header{
-width: 950px;
-height: 60px;
-margin: 0 auto;
-padding: 0;
+	width: 950px;
+	height: 60px;
+	margin: 10px auto;
+	padding: 0;
 }
-#header ul#sections_list {
+a#top_text {
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+a#top_text:hover {
+	color: #FDD44A;
+}
+#top_subtext{
+	display: block;
+	margin-left: 6px;
+	font-weight: 650;
+	font-family: arial, times, serif;
+}
+#header ul#section_header_list {
 }
 li.section_item{
-display: inline;
-margin: 0;
-padding: 0;
+	display: inline;
+	margin: 0 10px;
+	padding: 0;
 }
 li.section_item a {
-font-size: 16px;
-text-decoration: none;
+	font-size: 16px;
+	text-decoration: none;
 }
 li.section_item a:hover {
 color: #E9AB17;
@@ -91,21 +106,21 @@ float: right;
 /*  4. FOOTER
 /* =============================================== */
 #footer { 
-width: 950px;
-background:#ccc;
-margin:0 auto;
-padding:0;
+	width: 950px;
+	background:#ccc;
+	margin:0 auto;
+	padding:0;
 }
 #ft ul{
-margin:0; padding:0;
-margin-left: 20px;
+	margin:0; padding:0;
+	margin-left: 20px;
 }
 #ft ul li {
-list-style-type: none;
-color: #C35617;
+	list-style-type: none;
+	color: #C35617;
 }
 #ft ul li a {
-color: #C35617;
+	color: #C35617;
 }
 /* =============================================== */
 /*  5. SIDEBAR
@@ -120,8 +135,8 @@ color: #C35617;
 /*  6. MISC
 /* =============================================== */
 #login_form{
-width: 950px;
-margin: 0 auto;
-padding: 0;
-background: #ddd;
+	width: 950px;
+	margin: 0 auto;
+	padding: 0;
+	background: #ddd;
 }

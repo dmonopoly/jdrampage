@@ -1,0 +1,14 @@
+div#sections_index {
+}
+ul#section_list {
+	background: #ddd;
+	height: 50px
+}
+#section_list li {
+	border: 1px solid black;
+	margin: 10px;
+	font-size: 18px;
+}
+#section_list li:hover {
+	cursor: pointer;
+}

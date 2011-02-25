@@ -77,12 +77,27 @@ height: 60px;
 margin: 0 auto;
 padding: 0;
 }
+a#top_text {
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+a#top_text:hover {
+	color: #FDD44A;
+}
+#top_subtext{
+	display: block;
+	margin-left: 6px;
+	font-weight: 650;
+	font-family: arial, times, serif;
+}
 #header ul#sections_list {
 }
 li.section_item{
-display: inline;
-margin: 0;
-padding: 0;
+	display: inline;
+	margin: 0 10px;
+	padding: 0;
 }
 li.section_item a {
 font-size: 16px;

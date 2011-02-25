@@ -1,0 +1,11 @@
+<!--sections/index-->
+<div id="sections_index">
+	<ul id="section_list">
+		<% for section in @sections %>
+			<li class="section_item"><%= section.name %></li>
+		<% end %>
+	</ul>
+	
+ 	<%= sortable_element 'section_list', :url => sort_admin_sections_path, :constraint => :horizontal %>
+	<!--incomplete-->
+</div>
