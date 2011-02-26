@@ -5,7 +5,26 @@ class Admin::SectionsController < AdminController
 
   def show
     @section = Section.find(params[:id])
-    @articles = @section.articles.paginate :page => (params[:page] or 1), :order => 'articles.created_at DESC'
+    @articles = @section.articles
+  end
+  
+  def edit
+  	@section = Section.find(params[:id])
+  end
+  
+  def update
+  	@section = Section.find(params[:id])
+
+    respond_to do |format|
+      if @section.update_attributes(params[:section])
+        flash[:notice] = 'Section was successfully updated.'
+        format.html { redirect_to(admin_section_path(@section)) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @section.errors, :status => :unprocessable_entity }
+      end
+    end
   end
   
 	def sort

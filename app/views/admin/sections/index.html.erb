@@ -2,7 +2,7 @@
 <div id="sections_index">
 	<p>Drag left or right to change the order.</p>
 	<ul id="section_list">
-		<% for section in @sections %>
+		<% @sections.each do |section| %>
 			<%= content_tag_for :li, section do %>
 				<span class="handle small">&ltdrag&gt</span><br>
 				<%= link_to section.name, admin_section_path(section), :class=>"no_line" %>

@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
 	<!--[if IE]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
-	<%= stylesheet_link_tag 'scaffold','application','global','articles','sections'%>
+	<%= stylesheet_link_tag 'scaffold','application','global','articles','sections','pages'%>
 	<%= javascript_include_tag "jquery-1.4.2.min.js","jquery-ui-1.8.4.custom.min.js" %>
 	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %> <!-- prevents cross-site request forgery -->
@@ -57,11 +57,20 @@
 </div>
 <hr>
 <div id="footer">
-	I am in the footer.
-	<% if !current_user %>
-	<a href="#" id="login_activator">Login</a>
-	<div id="login_form" style="display:none">
-		<%= render :partial => "user_sessions/new" %>
+	<ul id="pages_row">
+		<% Page.all.each do |page| %>
+			<%= content_tag_for :li, page do %>
+				<%= link_to page.title, page %>
+			<% end %>
+		<% end %>
+	</ul>
+	
+	<% unless logged_in? %>
+	<div class="right">
+		<a href="#" id="login_activator">Login</a>
+		<div id="login_form" style="display:none">
+			<%= render :partial => "user_sessions/new" %>
+		</div>
 	</div>
 	<% end %>
 </div>
