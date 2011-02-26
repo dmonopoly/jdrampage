@@ -1,11 +1,27 @@
+/* =============================================== */
+/*  1. Layout
+/* =============================================== */
+li.section_item{
+	display: inline;
+	margin: 0 10px;
+	padding: 0;
+}
+li.section_item a {
+	font-size: 16px;
+	text-decoration: none;
+}
+li.section_item a:hover {
+	color: #E9AB17;
+}
+/* =============================================== */
+/*  2. Sections Index
+/* =============================================== */
 div#sections_index {
 }
 ul#section_list {
-	background: #ddd;
-	height: 50px
 }
 #section_list li {
-	border: 1px solid black;
+	display: inline-block;
 	margin: 10px;
 	font-size: 18px;
 }

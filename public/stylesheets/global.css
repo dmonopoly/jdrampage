@@ -1,0 +1,57 @@
+/* =============================================== */
+/*  MAIN
+/* =============================================== */
+#main{
+	margin: 0 auto;
+	background: white;
+}
+/* =============================================== */
+/*  Anchors (Links)
+/* =============================================== */
+a {
+	color: red;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FDD44A;
+	text-decoration: none;
+}
+a:visited {
+	color: red;
+	text-decoration: underline;
+}
+a.button_like {
+	padding: 2px;
+	border: 1px solid white;
+	background: #ddbbaa;
+	color: black;
+	text-decoration: none;
+}
+a.button_like:hover {
+	border: 1px solid black;
+	background: #eebbaa;
+}
+a.button {
+	padding: 4px;
+	border: 1px solid #aaa;
+	background: #ddbbaa;
+	color: black;
+	text-decoration: none;
+}
+a.button:hover {
+	border: 1px solid black;
+	background: #eebbaa;
+}
+a.no_line {
+	text-decoration: none;
+}
+/* =============================================== */
+/*  2. Other
+/* =============================================== */
+.right {
+	float: right;
+}
+.my_border { /* beware: borders can impact widths */
+	border: 1px solid black;
+}
+.pointer { cursor: pointer }

@@ -1,66 +1,3 @@
-/*========================================================*/
-/* COLOR GUIDE                                            */
-/*========================================================*/
-/*
-dark grey #464337
-light grey #a2a19b
-gray49 #726E6D
-blue link #06f
-h3 yellow border #ffd735
-alt blue light #e1ecff
-alt blue dark #94beff
-dark orange3 #C35617
-sunny orange #FDD44A
-gold2 #EAC117
-goldenrod2 #E9AB17
-sienna #8A4117
-========================================================= */
-
-/*========================================================*/
-/*                  Table of Contents                     */
-/*========================================================*/
-/*  1. COMMON
-/*  2. GRID
-/*  3. HEADER
-/*  4. FOOTER
-/*  5. SIDEBAR
-/*  6. MISC
-/*========================================================*/
-
-/* =============================================== */
-/*  1. COMMON 
-/* =============================================== */
-a {
-	color: red;
-	text-decoration: underline;
-}
-a:hover {
-	color: #FDD44A;
-	text-decoration: none;
-}
-a:visited {
-	color: red;
-	text-decoration: underline;
-}
-ul li.leftComponent{
-	display: inline;
-	position: absolute;
-}
-ul li.rightComponent{
-	display: inline;
-	margin-left: 200px;
-	position: relative;
-}
-.myBorder { /* beware: borders can impact widths */
-	border: 1px solid black;
-}
-/* =============================================== */
-/*  2. MAIN
-/* =============================================== */
-#main{
-	margin: 0 auto 0 auto;
-}
-
 /* =============================================== */
 /*  3. HEADER
 /* =============================================== */
@@ -85,22 +22,8 @@ a#top_text:hover {
 	font-weight: 650;
 	font-family: arial, times, serif;
 }
-#header ul#section_header_list {
-}
-li.section_item{
-	display: inline;
-	margin: 0 10px;
-	padding: 0;
-}
-li.section_item a {
-	font-size: 16px;
-	text-decoration: none;
-}
-li.section_item a:hover {
-color: #E9AB17;
-}
 #login_area{
-float: right;
+	float: right;
 }
 /* =============================================== */
 /*  4. FOOTER

@@ -1,11 +1,14 @@
 <!--sections/index-->
 <div id="sections_index">
+	<p>Drag left or right to change the order.</p>
 	<ul id="section_list">
 		<% for section in @sections %>
-			<li class="section_item"><%= section.name %></li>
+			<%= content_tag_for :li, section do %>
+				<span class="handle small">&ltdrag&gt</span><br>
+				<%= link_to section.name, admin_section_path(section), :class=>"no_line" %>
+			<% end %>
 		<% end %>
 	</ul>
-	
- 	<%= sortable_element 'section_list', :url => sort_admin_sections_path, :constraint => :horizontal %>
-	<!--incomplete-->
+ 	<%= sortable_element 'section_list', :url => sort_admin_sections_path, :constraint => :horizontal,
+ 												:handle => 'handle' %>
 </div>
