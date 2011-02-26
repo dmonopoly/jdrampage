@@ -1,0 +1,8 @@
+<!--admin/section/edit-->
+<h3>Edit Section: <%= @section.name %></h3>
+<%= form_for [:admin, @section] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+<% end %>
+
+If you want more functionality, contact the jdrampage application developer.

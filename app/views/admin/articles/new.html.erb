@@ -1,0 +1,8 @@
+<!--admin/articles/new-->
+<div id="article_new">
+	<%= render :partial => "form", :locals => { :article => @article, :button_value => "Create" } %>
+</div>
+
+<div id="directions">
+	<%= link_to "<< Back", admin_articles_path %>
+</div>

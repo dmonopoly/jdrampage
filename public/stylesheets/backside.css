@@ -1,112 +1,49 @@
-/*========================================================*/
-/* COLOR GUIDE                                            */
-/*========================================================*/
-/*
-dark grey #464337
-light grey #a2a19b
-gray49 #726E6D
-blue link #06f
-h3 yellow border #ffd735
-alt blue light #e1ecff
-alt blue dark #94beff
-dark orange3 #C35617
-sunny orange #FDD44A
-gold2 #EAC117
-goldenrod2 #E9AB17
-sienna #8A4117
-========================================================= */
-
-/*========================================================*/
-/*                  Table of Contents                     */
-/*========================================================*/
-/*  1. COMMON
-/*  2. GRID
-/*  3. HEADER
-/*  4. FOOTER
-/*  5. SIDEBAR
-/*  6. MISC
-/*========================================================*/
-
 /* =============================================== */
-/*  1. COMMON 
-/* =============================================== */
-a {
-color: red;
-text-decoration: underline;
-}
-a:hover {
-color: #FDD44A;
-text-decoration: none;
-}
-a:visited {
-color: red;
-text-decoration: underline;
-}
-ul li.leftComponent{
-	display: inline;
-	position: absolute;
-}
-ul li.rightComponent{
-	display: inline;
-	margin-left: 200px;
-	position: relative;
-}
-.myBorder { /* beware: borders can impact widths */
-	border: 1px solid black;
-}
-/* =============================================== */
-/*  2. MAIN
-/* =============================================== */
-#main{
-margin: 0 auto 0 auto;
-background: #bbb;
-}
-
-/* =============================================== */
-/*  3. HEADER
+/* HEADER
 /* =============================================== */
 #header{
-width: 950px;
-height: 60px;
-margin: 0 auto;
-padding: 0;
+	width: 950px;
+	height: 60px;
+	margin: 10px auto;
+	padding: 0;
 }
-#header ul#sections_list {
+a#top_text {
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
 }
-li.section_item{
-display: inline;
-margin: 0;
-padding: 0;
+a#top_text:hover {
+	color: #FDD44A;
 }
-li.section_item a {
-font-size: 16px;
-text-decoration: none;
-}
-li.section_item a:hover {
-color: #E9AB17;
+#top_subtext{
+	display: block;
+	margin-left: 6px;
+	font-weight: 650;
+	font-family: arial, times, serif;
 }
 #login_area{
-float: right;
+	float: right;
 }
 /* =============================================== */
 /*  4. FOOTER
 /* =============================================== */
 #footer { 
-width: 950px;
-background:#ccc;
-margin:0 auto;
-padding:0;
+	width: 950px;
+	background: white;
+	margin:0 auto;
+	padding:0;
 }
 #ft ul{
-margin:0; padding:0;
-margin-left: 20px;
+	margin:0; padding:0;
+	margin-left: 20px;
 }
 #ft ul li {
-list-style-type: none;
-color: #C35617;
+	list-style-type: none;
+	color: #C35617;
 }
 #ft ul li a {
-color: #C35617;
+	color: #C35617;
 }
 /* =============================================== */
 /*  5. SIDEBAR
@@ -117,6 +54,3 @@ color: #C35617;
 #right_sidebar{
 
 }
-/* =============================================== */
-/*  6. MISC
-/* =============================================== */

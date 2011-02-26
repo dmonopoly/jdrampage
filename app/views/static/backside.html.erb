@@ -1,8 +1,4 @@
 <!--static#backside - the backside home page-->
-<b>This is the BACKSIDE homepage!</b>
-Articles should be in the order specified by "position."
-<br>
-<br>
 <div id="front_page">
 	<%= render :partial => "articles/article_preview_top", :locals => { :article => @articles[0] } %>
 	<% for article in @articles[1..-1] %>

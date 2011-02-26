@@ -1,16 +1,20 @@
 Jdrampage::Application.routes.draw do
-	resources :articles, :has_many => :comments
-	resources :sections
-	resources :pages
+	resources :articles, :only => :show, :has_many => :comments
+	resources :sections, :only => :show
+	resources :pages, :only => :show
 	resources :subscribers#, :collection => { :thank_you => :get }
 	
-	resources :users
 	resource :user_session
 	
 	namespace :admin do
-		resources :articles
-		resources :sections#, :collection => { :sort => :post }
-		resources :pages#, :collection => { :sort => :post }
+		resources :users
+		resources :articles do
+			collection { post 'sort' }
+		end
+		resources :sections do
+			collection { post 'sort' }
+		end
+		resources :pages
 		resources :subscribers
 		resources :comments
 	end

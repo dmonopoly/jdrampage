@@ -2,11 +2,12 @@ Online student newspaper for JDHS
 Uses Rails 3.0.3
 
 TODO/Ideas:
--testing:
-	o seed data and factories
-	o functional tests (for controllers)
--ImageMagick - proper installation
+-testing
 -notification area on backside - place to easily post messages, like
 "site will be undergoing changes at 3pm EST"
 -names for subscribers; click button to send message to all subscribers, using their names
 (more personal)
+-types of accounts:
+  o see notes in dropbox
+-paginate
+-run migration to change year:string to date:string "2011-01-14"

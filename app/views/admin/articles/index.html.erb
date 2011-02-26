@@ -1,10 +1,31 @@
-<!--admin/articles/index - backside front page-->
-I am the backside's home page. Oh wait.  I might need this to list all articles... right?
-<br>
-<br>
-<div id="front_page">
-	<%= render :partial => "articles/article_preview_top", :locals => { :article => @articles[0] } %>
-	<% for article in @articles[1..-1] %>
-		<%= render :partial => "articles/article_preview", :locals => { :article => article } %>
+<!--admin/articles/index-->
+<div id="article_index">
+
+<div id="article_new_area">
+	<%= link_to "New Article", new_admin_article_path, :class => "button right" %>
+</div>
+
+<ul id="article_list">
+	<li>
+		<ul id="article_list_headers">
+			<li class="article_position">#</li>
+			<li class="article_title">Article Title</li>
+			<li class="article_author">Author</li>
+			<li class="article_section">Section</li>
+			<li class="article_date">Date Posted</li>
+			<li class="article_controls">Controls</li>
+		</ul>
+	</li>
+	<% @articles.each do |article| %>
+		<%= content_tag_for :li, article, :class => "sortable" do %>
+			<ul class="items_within_article">
+				<%= render :partial => 'article', :locals => { :article => article } %>
+			</ul>
+		<% end %>
 	<% end %>
+</ul>
+
+<%= sortable_element("article_list", :url => sort_admin_articles_path, 
+											:only => "sortable", :handle => "handle" ) %>
+
 </div>
