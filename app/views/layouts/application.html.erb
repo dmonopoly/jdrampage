@@ -37,7 +37,8 @@
 	</div>
 	<div class="span-3 colborder" id="left_sidebar">
 		<h6>Sidebar content 1</h6>
-		<% Article.all.sample(5).each do |article| %>
+		<% sidebar_articles = Article.all.sample(16) %> <!--variable declaration...-->
+		<% sidebar_articles[0..7].each do |article| %>
 			<%= render :partial => "articles/article_no_image_preview", :locals => { :article => article } %>
 		<% end %>
 	</div>
@@ -46,7 +47,7 @@
 	</div>
 	<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
 		<h6>Sidebar content 2</h6>
-		<% Article.all.sample(5).each do |article| %>
+		<% sidebar_articles[8..15].each do |article| %>
 			<% if rand(2) == 0 %>
 				<%= render :partial => "articles/article_sidebar_image_preview", :locals => { :article => article } %>
 			<% else %>
@@ -57,6 +58,15 @@
 </div>
 <hr>
 <div id="footer">
+	<% unless logged_in? %>
+	<div id="login_area">
+		<a href="#" id="login_activator">Login</a>
+		<div id="login_form" style="display:none">
+			<%= render :partial => "user_sessions/new" %>
+		</div>
+	</div>
+	<% end %>
+
 	<ul id="pages_row">
 		<% Page.all.each do |page| %>
 			<%= content_tag_for :li, page do %>
@@ -64,15 +74,6 @@
 			<% end %>
 		<% end %>
 	</ul>
-	
-	<% unless logged_in? %>
-	<div class="right">
-		<a href="#" id="login_activator">Login</a>
-		<div id="login_form" style="display:none">
-			<%= render :partial => "user_sessions/new" %>
-		</div>
-	</div>
-	<% end %>
 </div>
 
 </body>

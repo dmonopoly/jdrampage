@@ -4,7 +4,7 @@
 	<ul id="section_list">
 		<% @sections.each do |section| %>
 			<%= content_tag_for :li, section do %>
-				<span class="handle small">&ltdrag&gt</span><br>
+				<span class="handle small">[drag]</span><br>
 				<%= link_to section.name, admin_section_path(section), :class=>"no_line" %>
 			<% end %>
 		<% end %>

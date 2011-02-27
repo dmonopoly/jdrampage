@@ -1,5 +1,5 @@
 /* =============================================== */
-/*  1. Layout
+/* Layout																					 */
 /* =============================================== */
 li.section_item{
 	display: inline;
@@ -14,7 +14,7 @@ li.section_item a:hover {
 	color: #E9AB17;
 }
 /* =============================================== */
-/*  2. Sections Index
+/* Sections Index																	 */
 /* =============================================== */
 div#sections_index {
 }
@@ -27,4 +27,13 @@ ul#section_list {
 }
 #section_list li:hover {
 	cursor: pointer;
+}
+/* =============================================== */
+/* Sections Show																	 */
+/* =============================================== */
+ul#section_articles {
+	list-style-type: none;	
+}
+ul#section_articles li {
+
 }

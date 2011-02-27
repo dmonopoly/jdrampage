@@ -1,12 +1,12 @@
 /* =============================================== */
-/*  MAIN
+/*  MAIN                                           */
 /* =============================================== */
 #main{
 	margin: 0 auto;
 	background: white;
 }
 /* =============================================== */
-/*  Anchors (Links)
+/*  Anchors (Links) 															 */
 /* =============================================== */
 a {
 	color: red;
@@ -46,7 +46,7 @@ a.no_line {
 	text-decoration: none;
 }
 /* =============================================== */
-/*  2. Other
+/* Other																					 */
 /* =============================================== */
 .right {
 	float: right;
@@ -55,3 +55,5 @@ a.no_line {
 	border: 1px solid black;
 }
 .pointer { cursor: pointer }
+li.inline { display: inline }
+li.no_bullet { list-style-type: none }

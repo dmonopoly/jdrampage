@@ -1,5 +1,5 @@
 /* =============================================== */
-/*  1. ARTICLE_PREVIEW
+/* ARTICLE_PREVIEW																 */
 /* =============================================== */
 div.article_preview{
 	display: block;
@@ -29,7 +29,7 @@ div.article_teaser{
 
 }
 /* =============================================== */
-/*  2. ARTICLE_PREVIEW_TOP
+/* ARTICLE_PREVIEW_TOP		 												 */
 /* =============================================== */
 div.article_preview_top{
 display: block;
@@ -59,7 +59,7 @@ div.article_teaser_top{
 float: left;
 }
 /* =============================================== */
-/*  3. Article Index
+/* Article Index															 		 */
 /* =============================================== */
 #article_index {
 	margin: 10px 10px 10px 0;

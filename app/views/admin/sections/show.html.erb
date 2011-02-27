@@ -1,12 +1,11 @@
 <!--sections/show-->
 <div id="sections_show">
 	<h3><%= @section.name %> <%= link_to 'Edit', edit_admin_section_path(@section), :style=>'font-size:10px' %></h3>
-	<ul>
+	<ul id="section_articles">
 	<% @articles.each do |article| %>
-		<%= content_tag_for :li, article do %>
-			<%= article.title %>
+		<%= content_tag_for :li, article, :class=>"arhaer" do %>
+			<%= link_to article.title, admin_article_path(article) %>
 		<% end %>
 	<% end %>
 	</ul>
-	<!--...-->
 </div>

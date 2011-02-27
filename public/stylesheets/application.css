@@ -1,5 +1,5 @@
 /* =============================================== */
-/*  3. HEADER
+/* HEADER																					 */
 /* =============================================== */
 #header{
 	width: 950px;
@@ -26,7 +26,7 @@ a#top_text:hover {
 	float: right;
 }
 /* =============================================== */
-/*  4. FOOTER
+/* FOOTER																					 */
 /* =============================================== */
 #footer { 
 	width: 950px;
@@ -45,21 +45,26 @@ a#top_text:hover {
 #ft ul li a {
 	color: #C35617;
 }
+#login_area{
+	margin: 0 auto;
+	float: right;
+}
+#login_form{
+	width: 950px;
+	margin: 0 auto;
+	padding: 0;
+	background: #ddd;
+}
+a#login_activator:hover {
+	color: #FDD44A;
+	text-decoration: none;
+}
 /* =============================================== */
-/*  5. SIDEBAR
+/* SIDEBAR																				 */
 /* =============================================== */
 #left_sidebar{
 
 }
 #right_sidebar{
 
-}
-/* =============================================== */
-/*  6. MISC
-/* =============================================== */
-#login_form{
-	width: 950px;
-	margin: 0 auto;
-	padding: 0;
-	background: #ddd;
 }
