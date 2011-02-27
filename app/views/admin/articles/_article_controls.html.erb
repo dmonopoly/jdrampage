@@ -1,0 +1,5 @@
+<!--articles/article_controls partial; requires variable 'article'-->
+<%= link_to "Show", admin_article_path(article), :class => "button_like" %>
+<%= link_to 'Edit', edit_admin_article_path(article), :class => "button_like" %>
+<%= link_to 'Delete', admin_article_path(article), :class => "button_like", :method => :delete, :confirm => "Are you sure you want to delete this article?" %>
+<span class="handle pointer">[drag]</span>

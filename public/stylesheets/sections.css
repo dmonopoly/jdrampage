@@ -14,12 +14,8 @@ li.section_item a:hover {
 	color: #E9AB17;
 }
 /* =============================================== */
-/* Sections Index																	 */
+/* Section Index																	 */
 /* =============================================== */
-div#sections_index {
-}
-ul#section_list {
-}
 #section_list li {
 	display: inline-block;
 	margin: 10px;
@@ -31,9 +27,44 @@ ul#section_list {
 /* =============================================== */
 /* Sections Show																	 */
 /* =============================================== */
-ul#section_articles {
-	list-style-type: none;	
+div#section_show {
+	margin: 10px 10px 10px 0;
 }
-ul#section_articles li {
+#section_article_list {
+	list-style-type: none;
+	margin: 10px 0;
+}
+#section_article_list ul li{
+	display: inline-block;
+	margin: 4px 0;
+}
+#section_article_list ul:hover {
+	background: #ffddaa;
+}
+#section_article_list li.article_position{
+	position: absolute;
+}
+#section_article_list li.article_title{
+	position: relative;
+	margin-left: 20px;
+	width: 200px;
+}
+#section_article_list li.article_author{
+	position: relative;
+	margin-left: 20px;
+	width: 100px;
+}
+#section_article_list li.article_date{
+	position: relative;
+	margin-left: 20px;
+	width: 100px;
+}
+#section_article_list li.article_controls{
+	position: relative;
+	margin-left: 20px;
+	width: 160px;
+}
+#section_article_list_headers li {
+	font-weight: bold;
+}
 
-}

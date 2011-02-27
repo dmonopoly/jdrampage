@@ -64,7 +64,6 @@ float: left;
 #article_index {
 	margin: 10px 10px 10px 0;
 }
-
 #article_list {
 	list-style-type: none;
 	margin: 10px 0;
@@ -107,3 +106,4 @@ float: left;
 #article_list_headers li {
 	font-weight: bold;
 }
+

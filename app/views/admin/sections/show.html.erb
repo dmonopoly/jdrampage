@@ -1,11 +1,26 @@
 <!--sections/show-->
-<div id="sections_show">
+<div id="section_show">
 	<h3><%= @section.name %> <%= link_to 'Edit', edit_admin_section_path(@section), :style=>'font-size:10px' %></h3>
-	<ul id="section_articles">
-	<% @articles.each do |article| %>
-		<%= content_tag_for :li, article, :class=>"arhaer" do %>
-			<%= link_to article.title, admin_article_path(article) %>
+	<ul id="section_article_list">
+		<li>
+			<ul id="article_list_headers">
+				<li class="article_position">#</li>
+				<li class="article_title">Article Title</li>
+				<li class="article_author">Author</li>
+				<li class="article_date">Date Posted</li>
+				<li class="article_controls">Controls</li>
+			</ul>
+		</li>
+
+		<% @articles.each do |article| %>
+			<%= content_tag_for :li, article, :class=>"sortable" do %>
+				<ul class="items_within_article">
+					<%= render :partial => 'section_article', :locals => { :article => article } %>
+				</ul>
+			<% end %>
 		<% end %>
-	<% end %>
 	</ul>
+
+	<!--need to add sort functionality here-->
 </div>
+
