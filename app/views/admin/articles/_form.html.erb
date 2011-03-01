@@ -5,13 +5,13 @@
 		<%= f.text_field :title %><br><br>
 		<%= f.label :author %>
 		<%= f.text_field :author %><br>
-		<%= f.label :year %>
-		<%= f.text_field :year %>
+		<%= f.label :date %>
+		<%= f.text_field :date %>
 	</p>
-	
+
 	<label>Section this article belongs to: </label>
 	<%= collection_select :article, :section_id, Section.all, :id, :name, { :prompt => "[Select section]" } %>
-	
+
 	<p>
 		<%= f.label :body %><br>
 		<%= f.text_area :body %>
@@ -26,3 +26,4 @@
 		<%= f.submit button_value %>
 	</p>
 <% end %>
+

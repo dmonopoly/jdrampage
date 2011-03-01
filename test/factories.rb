@@ -10,7 +10,7 @@ Factory.define :article do |t|
 	t.sequence(:position) { |n| n }
 	t.teaser "I am a teaser."
 	t.styles "styles here"
-	t.year "10-11"
+	t.date "#{DateTime.now.to_s[0..9]}"
 end
 
 Factory.define :comment do |t|
@@ -40,10 +40,11 @@ end
 
 # not used by seeds
 Factory.define :user do |t|
-	
+
 end
 
 # Sequences
 Factory.sequence :count do |n|
 	n
 end
+

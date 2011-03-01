@@ -3,9 +3,9 @@ Jdrampage::Application.routes.draw do
 	resources :sections, :only => :show
 	resources :pages, :only => :show
 	resources :subscribers#, :collection => { :thank_you => :get }
-	
+
 	resource :user_session
-	
+
 	namespace :admin do
 		resources :users
 		resources :articles do
@@ -14,19 +14,21 @@ Jdrampage::Application.routes.draw do
 		resources :sections do
 			collection { post 'sort' }
 		end
-		resources :pages
+		resources :pages do
+		  collection { post 'sort' }
+    end
 		resources :subscribers
 		resources :comments
 	end
-	
+
 	match 'backside' => 'static#backside'
 	match 'logout' => 'user_sessions#destroy'
-	
+
 	# match ':controller(/:action(/:id(.:format)))'
 	root :to => 'static#home'
-	
+
 	# NOTES BELOW - - - - - - -
-	
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -84,3 +86,4 @@ Jdrampage::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+

@@ -1,5 +1,5 @@
 /* =============================================== */
-/* HEADER																					 */
+/* HEADER									       */
 /* =============================================== */
 #header{
 	width: 950px;
@@ -26,9 +26,9 @@ a#top_text:hover {
 	float: right;
 }
 /* =============================================== */
-/* FOOTER																					 */
+/* FOOTER  										   */
 /* =============================================== */
-#footer { 
+#footer {
 	width: 950px;
 	background: white;
 	margin:0 auto;
@@ -60,7 +60,7 @@ a#login_activator:hover {
 	text-decoration: none;
 }
 /* =============================================== */
-/* SIDEBAR																				 */
+/* SIDEBAR						                   */
 /* =============================================== */
 #left_sidebar{
 
@@ -68,3 +68,4 @@ a#login_activator:hover {
 #right_sidebar{
 
 }
+

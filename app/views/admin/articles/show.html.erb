@@ -3,7 +3,7 @@
 	<div>
 		<h2><%= @article.title %></h2>
 		<%= @article.author %><br>
-		<%= @article.year %>
+		<%= @article.date %>
 	</div>
 	<div class="article_image">
 		<%= image_tag @article.photo.url, :class=>"article_image" %>
@@ -16,3 +16,4 @@
 <div id="article_controls">
 	<%= link_to "Edit", edit_admin_article_path(@article) %>
 </div>
+

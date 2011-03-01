@@ -1,0 +1,25 @@
+<!--admin/pages/index-->
+<div id="page_index">
+	<p>Drag left or right to change the order.</p>
+	<ul id="page_list">
+		<% @pages.each do |page| %>
+			<%= content_tag_for :li, page do %>
+				<span class="handle pointer small">[drag]</span><br>
+				<%= link_to page.title, admin_page_path(page), :class=>"no_line" %>
+			<% end %>
+		<% end %>
+	</ul>
+ 	<%= sortable_element 'page_list', :url => sort_admin_pages_path, :constraint => :horizontal,
+ 												:handle => 'handle' %>
+  <ul id="page_controls">
+    <% @pages.each do |page| %>
+      <%= content_tag_for :li, page do %>
+        <ul class="page_row_in_index">
+          <li><%= page.title %></li>
+          <li><%= link_to 'Edit', edit_admin_page_path(page) %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+

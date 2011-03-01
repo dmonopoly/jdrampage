@@ -10,4 +10,5 @@ TODO/Ideas:
 -types of accounts:
   o see notes in dropbox
 -paginate
--run migration to change year:string to date:string "2011-01-14"
+-sort functionality within scope of section, so you can order articles within a section
+

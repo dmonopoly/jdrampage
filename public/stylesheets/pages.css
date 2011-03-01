@@ -1,4 +1,23 @@
+/* =============================================== */
+/* Layout						                   */
+/* =============================================== */
 ul#pages_row li {
 	display: inline;
 	margin: 0 10px;
 }
+/* =============================================== */
+/* Page Index                                      */
+/* =============================================== */
+ul#page_list li {
+    display: inline-block;
+    margin: 10px;
+	font-size: 18px;
+}
+ul#page_controls {
+	list-style-type: none;
+}
+ul.page_row_in_index li {
+    display: inline;
+    margin: 10px;
+}
+

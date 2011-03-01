@@ -1,5 +1,5 @@
 /* =============================================== */
-/* Layout																					 */
+/* Layout						                   */
 /* =============================================== */
 li.section_item{
 	display: inline;
@@ -14,18 +14,15 @@ li.section_item a:hover {
 	color: #E9AB17;
 }
 /* =============================================== */
-/* Section Index																	 */
+/* Section Index                                   */
 /* =============================================== */
 #section_list li {
 	display: inline-block;
 	margin: 10px;
 	font-size: 18px;
 }
-#section_list li:hover {
-	cursor: pointer;
-}
 /* =============================================== */
-/* Sections Show																	 */
+/* Sections Show								   */
 /* =============================================== */
 div#section_show {
 	margin: 10px 10px 10px 0;
@@ -66,5 +63,12 @@ div#section_show {
 }
 #section_article_list_headers li {
 	font-weight: bold;
+}
+
+/* =============================================== */
+/* Sections Edit								   */
+/* =============================================== */
+div#section_edit {
+    margin-bottom: 25px;
 }
 
