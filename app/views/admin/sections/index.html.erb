@@ -1,5 +1,6 @@
 <!--sections/index-->
 <div id="section_index">
+  <h3>All Sections</h3>
 	<p>Drag left or right to change the order.</p>
 	<ul id="section_list">
 		<% @sections.each do |section| %>
@@ -11,5 +12,8 @@
 	</ul>
  	<%= sortable_element 'section_list', :url => sort_admin_sections_path, :constraint => :horizontal,
  												:handle => 'handle' %>
+  <p>
+    Go to a section for more section controls.
+  </p>
 </div>
 

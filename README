@@ -11,4 +11,7 @@ TODO/Ideas:
   o see notes in dropbox
 -paginate
 -sort functionality within scope of section, so you can order articles within a section
+-only OLD articles in sidebars
+-sidebar reload AJAX
+-change "backside and frontside" to "back and front"
 

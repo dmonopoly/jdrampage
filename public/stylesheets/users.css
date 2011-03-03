@@ -1,0 +1,26 @@
+/* =============================================== */
+/* Users Index                                     */
+/* =============================================== */
+ul#user_list {
+	list-style-type: none;
+}
+#user_list ul li {
+	display: inline-block;
+	margin: 4px 0;
+}
+#user_list ul:hover {
+	background: #ffddaa;
+}
+#user_list li.user_login{
+	position: absolute;
+}
+#user_list li.user_controls{
+	position: relative;
+	margin-left: 200px;
+	width: 200px;
+}
+
+#user_list_headers li {
+	font-weight: bold;
+}
+

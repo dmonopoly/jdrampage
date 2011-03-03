@@ -1,0 +1,10 @@
+<!--partial for heading/title of article show; used by front and back-->
+<h2>
+  <%= @article.title %>
+  <% if logged_in? %>
+    <%= link_to "Edit", edit_admin_article_path(@article), :style => "font-size: 10px" %>
+  <% end %>
+</h2>
+<%= @article.author %><br>
+<%= @article.date %>
+

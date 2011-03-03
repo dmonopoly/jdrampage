@@ -1,7 +1,8 @@
 <!--admin/pages/show-->
-<h2><%= @page.title %></h2>
+<div id="page-show">
+  <h2><%= @page.title %></h2>
 
-<%= @page.body %>
-
-<p><%= link_to 'Edit', edit_admin_page_path(@page) %></p>
+  <%= @page.body %>
+</div>
+<%= link_to 'Edit', edit_admin_page_path(@page) %>
 

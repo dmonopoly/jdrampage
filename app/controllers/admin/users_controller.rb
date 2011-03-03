@@ -1,16 +1,14 @@
-class UsersController < ApplicationController
-  layout 'admin'
-  before_filter :require_user, :except => [:new, :create]
-  
+class Admin::UsersController < AdminController
+
   def index
     @users = User.all
   end
-  
+
   def new
     require_user unless User.none?
     @user = User.new
   end
-  
+
   def create
     require_user unless User.none?
     @user = User.new(params[:user])
@@ -21,7 +19,7 @@ class UsersController < ApplicationController
       render :action => "new"
     end
   end
-  
+
   def show
     @user = @current_user
   end
@@ -39,12 +37,13 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
-  
+
   def destroy
     #@user = @current_user
     @user = User.find(params[:id])
     @user.destroy
     redirect_to admin_users_path
   end
-  
+
 end
+

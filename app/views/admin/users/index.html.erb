@@ -1,20 +1,24 @@
 <!--admin/users/index-->
 <div id="users_index">
-
-<ul id="user_list">
-	<li>
-		<ul id="user_list_headers">
-			<li class="">#</li>
-			<li class="">asdf</li>
-		</ul>
-	</li>
-	<% @users.each do |user| %>
-		<%= content_tag_for :li, user do %>
-			<ul class="items_within_user">
-			
-			</ul>
-		<% end %>
-	<% end %>
-</ul>
+  <h3>All Users</h3>
+  <ul id="user_list">
+	  <li>
+		  <ul id="user_list_headers">
+			  <li class="user_login">Login</li>
+			  <li class="user_controls">Controls</li>
+		  </ul>
+	  </li>
+	  <% @users.each do |user| %>
+		  <%= content_tag_for :li, user do %>
+			  <ul class="items_within_user">
+			    <li class="user_login"><%= user.login %></li>
+			    <li class="user_controls">
+            <%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
+			    </li>
+			  </ul>
+		  <% end %>
+	  <% end %>
+  </ul>
 
 </div>
+

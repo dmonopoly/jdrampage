@@ -1,5 +1,5 @@
 class Admin::ArticlesController < AdminController
-  
+
   def index
     @articles = Article.all(:limit => 6)
 
@@ -9,7 +9,7 @@ class Admin::ArticlesController < AdminController
     end
   end
 
-  def show
+  def show # render the front's article#show template
     @article = Article.find(params[:id])
     @section = @article.section
 
@@ -71,7 +71,7 @@ class Admin::ArticlesController < AdminController
       format.xml  { head :ok }
     end
   end
-  
+
 	def sort
 		params[:article_list].each_with_index do |id, index|
 			Article.update_all ['position=?', index+1], ['id=?', id]
@@ -79,3 +79,4 @@ class Admin::ArticlesController < AdminController
 		render :nothing => true
 	end
 end
+

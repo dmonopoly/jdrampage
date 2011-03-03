@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
 	<!--[if IE]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
-	<%= stylesheet_link_tag 'scaffold','backside','global','articles','sections','pages' %>
+	<%= stylesheet_link_tag 'scaffold','backside','global','articles','sections','pages','users' %>
 	<%= javascript_include_tag "jquery-1.4.2.min.js","jquery-ui-1.8.4.custom.min.js" %>
 	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %> <!-- prevents cross-site request forgery -->
@@ -19,15 +19,15 @@
 			<li class="section_item"><%= link_to section.name, admin_section_path(section) %></li>
 		<% end %>
 	</ul>
-	<%= link_to 'Articles', admin_articles_path %> | 
-	<%= link_to 'Sections', admin_sections_path %> | 
-	<%= link_to 'Pages', admin_pages_path %> | 
-	<%= link_to 'Users', admin_users_path %> | 
+	<%= link_to 'Articles', admin_articles_path %> |
+	<%= link_to 'Sections', admin_sections_path %> |
+	<%= link_to 'Pages', admin_pages_path %> |
+	<%= link_to 'Users', admin_users_path %> |
 
 	<div id="login_area">
 		Logged in as <b><%= current_user.login %></b> |
-		<%= link_to 'Frontside', root_path %> | 
-		<%= link_to 'Backside', backside_path, :style=>"font-weight:bold" %> | 
+		<%= link_to 'Frontside', root_path %> |
+		<%= link_to 'Backside', backside_path, :style => "font-weight:bold" %> |
 		<%= link_to 'Logout', logout_path %>
 	</div>
 </div>
@@ -43,7 +43,7 @@
 			<h6>La dee dah.</h6>
 			I am some sidebar content.
 		</div>
-		
+
 		<div class="span-14 colborder">
 			<%= yield %>
 		</div>
@@ -60,8 +60,15 @@
 </div>
 <hr>
 <div id="footer">
-	I am in the footer.
+	<ul id="pages_row">
+		<% Page.all.each do |page| %>
+			<%= content_tag_for :li, page do %>
+				<%= link_to page.title, admin_page_path(page) %>
+			<% end %>
+		<% end %>
+	</ul>
 </div>
 
 </body>
 </html>
+

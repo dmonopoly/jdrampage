@@ -1,0 +1,17 @@
+<!--form partial for admin/pages; assumes page and button_value variables-->
+<%= form_for [:admin, page] do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_area :body %>
+	</p>
+  <!-- styles? -->
+	<br>
+	<p>
+		<%= f.submit button_value %>
+	</p>
+<% end %>
+
