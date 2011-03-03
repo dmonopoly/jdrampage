@@ -1,0 +1,8 @@
+<!--partial for header of page#show; needs variable 'page'; used by front and back-->
+<h2>
+  <%= page.title %>
+  <% if logged_in? %>
+    <%= link_to 'Edit', edit_admin_page_path(page), :style => 'font-size: 10px' %>
+  <% end %>
+</h2>
+

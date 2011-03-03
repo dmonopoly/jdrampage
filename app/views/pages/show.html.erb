@@ -1,5 +1,10 @@
 <!--pages/show-->
-<h2><%= @page.title %></h2>
-
-<%= @page.body %>
+<div id="page_show">
+	<div id="page_show_header">
+    <%= render :partial => "pages/partials/page_show_header", :locals => { :page => @page } %>
+  </div>
+  <div id="page_body">
+    <%= @page.body %>
+  </div>
+</div>
 

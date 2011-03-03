@@ -1,12 +1,12 @@
 <!--articles/show-->
 <div id="article_show">
-	<div class="article_show_header">
+	<div id="article_show_header">
 	  <%= render :partial => 'articles/partials/article_show_header', :locals => { :article => @article } %>
 	</div>
-	<div class="article_image">
+	<div id="article_image">
 		<%= image_tag @article.photo.url, :class=>"article_image" %>
 	</div>
-	<div class="article">
+	<div id="article_show">
 		<%= @article.body %>
 	</div>
 </div>
