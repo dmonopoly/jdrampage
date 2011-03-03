@@ -1,9 +1,10 @@
 <!--admin/articles/edit-->
 <div id="article_edit">
-	<%= render :partial => "form", :locals => { :article => @article, :button_value => "Update" } %>
+	<%= render :partial => "admin/articles/partials/form", :locals => { :article => @article, :button_value => "Update" } %>
 </div>
 
 <div id="directions">
 	<%= link_to "<< Back", admin_articles_path %>
 	<%= link_to "Show", admin_article_path(@article) %> (changes will not be saved)
 </div>
+

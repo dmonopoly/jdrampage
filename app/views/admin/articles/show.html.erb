@@ -1,7 +1,7 @@
 <!--admin/articles/show-->
 <div id="article_show">
 	<div class="article_show_header">
-	  <%= render :partial => 'articles/article_show_header', :locals => { :article => @article } %>
+	  <%= render :partial => 'articles/partials/article_show_header', :locals => { :article => @article } %>
 	</div>
 	<div class="article_image">
 		<%= image_tag @article.photo.url, :class=>"article_image" %>

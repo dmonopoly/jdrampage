@@ -39,7 +39,7 @@
 		<h6>Past Articles</h6>
 		<% sidebar_articles = Article.all.sample(16) %> <!--variable declaration...-->
 		<% sidebar_articles[0..7].each do |article| %>
-			<%= render :partial => "articles/article_no_image_preview", :locals => { :article => article } %>
+			<%= render :partial => "articles/partials/article_no_image_preview", :locals => { :article => article } %>
 		<% end %>
 	</div>
 	<div class="span-14 colborder">
@@ -49,9 +49,9 @@
 		<h6>Past Articles</h6>
 		<% sidebar_articles[8..15].each do |article| %>
 			<% if rand(2) == 0 %>
-				<%= render :partial => "articles/article_sidebar_image_preview", :locals => { :article => article } %>
+				<%= render :partial => "articles/partials/article_sidebar_image_preview", :locals => { :article => article } %>
 			<% else %>
-				<%= render :partial => "articles/article_no_image_preview", :locals => { :article => article } %>
+				<%= render :partial => "articles/partials/article_no_image_preview", :locals => { :article => article } %>
 			<% end%>
 		<% end %>
 	</div>

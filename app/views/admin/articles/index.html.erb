@@ -19,7 +19,7 @@
 		<% @articles.each do |article| %>
 			<%= content_tag_for :li, article, :class => "sortable" do %>
 				<ul class="items_within_article">
-					<%= render :partial => 'article', :locals => { :article => article } %>
+					<%= render :partial => 'admin/articles/partials/article', :locals => { :article => article } %>
 				</ul>
 			<% end %>
 		<% end %>
