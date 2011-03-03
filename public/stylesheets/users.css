@@ -11,15 +11,19 @@ ul#user_list {
 #user_list ul:hover {
 	background: #ffddaa;
 }
-#user_list li.user_login{
+#user_list li.user_login {
 	position: absolute;
 }
-#user_list li.user_controls{
+#user_list li.user_full_name {
 	position: relative;
 	margin-left: 200px;
 	width: 200px;
 }
-
+#user_list li.user_controls {
+	position: relative;
+	margin-left: 200px;
+	width: 200px;
+}
 #user_list_headers li {
 	font-weight: bold;
 }

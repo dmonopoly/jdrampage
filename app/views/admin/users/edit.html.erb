@@ -1,0 +1,14 @@
+<!--admin/users/edit-->
+<%= form_for [:admin, @user] do |f| %>
+  <p>
+    <%= f.label :login %><br>
+    <%= f.text_field :login, :disabled => 'disabled' %> <!--or pass :readOnly => 'readOnly'-->
+    Modification of this is disabled.
+  </p>
+  <p>
+    <%= f.label :full_name, "Full Name" %><br>
+    <%= f.text_field :full_name %>
+  </p>
+  <%= f.submit "Update" %>
+<% end %>
+

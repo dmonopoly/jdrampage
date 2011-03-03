@@ -5,6 +5,7 @@
 	  <li>
 		  <ul id="user_list_headers">
 			  <li class="user_login">Login</li>
+		    <li class="user_full_name">Name</li>
 			  <li class="user_controls">Controls</li>
 		  </ul>
 	  </li>
@@ -12,6 +13,7 @@
 		  <%= content_tag_for :li, user do %>
 			  <ul class="items_within_user">
 			    <li class="user_login"><%= user.login %></li>
+			    <li class="user_full_name"><%= user.full_name %></li>
 			    <li class="user_controls">
             <%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
 			    </li>
