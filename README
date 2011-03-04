@@ -1,18 +1,34 @@
 Online student newspaper for JDHS
 Uses Rails 3.0.3
 
-TODO/Ideas:
--testing
--notification area on backside - place to easily post messages, like
-"site will be undergoing changes at 3pm EST"
--names for subscribers; click button to send message to all subscribers, using their names
-(more personal)
--types of accounts:
-  o see notes in dropbox
--paginate
+-TODO/Ideas-
+Prioritized
+-get the minimum of everything working
+    -remove preview notion
+        o remove admin/articles/show, make the show go to the front, add front controls
+        o remove admin/pages/show, make the show go to the front, add front controls
+        o add link to admin/sections/show to sections/show up front (conflicts with paginate...)
+    -paginate for articles index, sections show
+    -sections show - automatically show most recent first
+    -types of accounts:
+        o see notes in dropbox
+    -image upload
+    -deal with subscribers (see below)
+    -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
+-notification area on the back home - place to easily post messages, like "site will be undergoing changes at 3pm EST"
+-free space for sections
 -sort functionality within scope of section, so you can order articles within a section
 -only OLD articles in sidebars
--sidebar reload AJAX
 -change "backside and frontside" to "back and front"
+-testing
 -users have images of their faces
+-sidebar reload AJAX
+-comments
+
+Unorganized
+-names for subscribers; click button to send message to all subscribers, using their names (more personal)
+-decide what you want on the back home. For now, it is just a redundant front page with controls.
+    o maybe: after login, you see the front page with login controls
+        o welcome screen?
+        o messages to posters? notes box in general?
 

@@ -1,8 +1,8 @@
 <!--static#backside - the backside home page-->
-<div id="front_page">
-	<%= render :partial => "articles/partials/article_preview_top", :locals => { :article => @articles[0] } %>
-	<% for article in @articles[1..-1] %>
-		<%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
-	<% end %>
+<div id="back_home">
+  <h2>Welcome, <%= current_user.full_name %>.</h2>
+  <p>
+    You can modify X Y and Z here.
+  </p>
 </div>
 
