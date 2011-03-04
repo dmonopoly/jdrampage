@@ -9,16 +9,6 @@ class Admin::ArticlesController < AdminController
     end
   end
 
-  def show # render the front's article#show template
-    @article = Article.find(params[:id])
-    @section = @article.section
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @article }
-    end
-  end
-
   def new
     @article = Article.new
 

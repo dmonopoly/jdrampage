@@ -3,3 +3,4 @@ class AdminController < ApplicationController
 	layout "backside"
 	before_filter :require_user # method defined in ApplicationController
 end
+

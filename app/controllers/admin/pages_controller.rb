@@ -4,10 +4,6 @@ class Admin::PagesController < AdminController
 		@pages = Page.all
 	end
 
-  def show
-    @page = Page.find(params[:id])
-  end
-
   def new
     @page = Page.new
 

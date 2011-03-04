@@ -26,8 +26,8 @@
 
 	<div id="login_area">
 		Logged in as <b><%= current_user.login %></b> |
-		<%= link_to 'Front', root_path %> |
-		<%= link_to 'Back', backside_path, :style => "font-weight:bold" %> |
+		<%= link_to 'The Back', backside_path, :style => "font-weight:bold" %> |
+		<%= link_to 'The Front', root_path %> |
 		<%= link_to 'Logout', logout_path %>
 	</div>
 </div>
@@ -63,7 +63,7 @@
 	<ul id="pages_row">
 		<% Page.all.each do |page| %>
 			<%= content_tag_for :li, page do %>
-				<%= link_to page.title, admin_page_path(page) %>
+				<%= link_to page.title, page %>
 			<% end %>
 		<% end %>
 	</ul>

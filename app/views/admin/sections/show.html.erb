@@ -1,6 +1,10 @@
 <!--sections/show-->
 <div id="section_show">
-	<h3><%= @section.name %> <%= link_to 'Edit', edit_admin_section_path(@section), :style=>'font-size:10px' %></h3>
+	<h3>
+	  <%= @section.name %>
+	  <%= link_to 'Edit', edit_admin_section_path(@section), :style=>'font-size:10px' %>
+	  <%= link_to '>>', @section, :style=>'font-size:10px' %>
+	</h3>
 	<ul id="section_article_list">
 		<li>
 			<ul id="article_list_headers">

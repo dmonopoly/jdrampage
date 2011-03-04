@@ -4,10 +4,6 @@ Uses Rails 3.0.3
 -TODO/Ideas-
 Prioritized
 -get the minimum of everything working
-    -remove preview notion
-        o remove admin/articles/show, make the show go to the front, add front controls
-        o remove admin/pages/show, make the show go to the front, add front controls
-        o add link to admin/sections/show to sections/show up front (conflicts with paginate...)
     -paginate for articles index, sections show
     -sections show - automatically show most recent first
     -types of accounts:
@@ -19,7 +15,6 @@ Prioritized
 -free space for sections
 -sort functionality within scope of section, so you can order articles within a section
 -only OLD articles in sidebars
--change "backside and frontside" to "back and front"
 -testing
 -users have images of their faces
 -sidebar reload AJAX

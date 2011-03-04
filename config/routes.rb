@@ -8,17 +8,17 @@ Jdrampage::Application.routes.draw do
 
 	namespace :admin do
 		resources :users
-		resources :articles do
+		resources :articles, :except => :show do
 			collection { post 'sort' }
 		end
 		resources :sections do
 			collection { post 'sort' }
 		end
-		resources :pages do
+		resources :pages, :except => :show do
 		  collection { post 'sort' }
     end
 		resources :subscribers
-		resources :comments
+#		resources :comments
 	end
 
 	match 'backside' => 'static#backside'
