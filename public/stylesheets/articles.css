@@ -12,9 +12,9 @@ div.article_header{
 a.article_title{
 	color: black;
 	font-size: 20px;
-	font-weight: bold;
+/*	font-weight: bold;*/
 }
-.article_author{
+span.article_author{
 	color: #aaa;
 }
 div.article_image{

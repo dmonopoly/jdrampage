@@ -1,0 +1,13 @@
+<!--subscribers/new-->
+<p>Subscribing will let you stay in touch with JD Rampage.</p>
+<p>
+Whenever we have a major release of articles (typically once a month), you'll get a friendly email.
+You may always unsubscribe if you want.
+</p>
+<%= form_for :subscriber do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.submit 'Submit' %>
+<% end %>
+

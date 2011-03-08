@@ -12,7 +12,7 @@ Prioritized
     -types of accounts:
         o see notes in dropbox
     -image upload
-    -deal with subscribers (see below)
+    -deal with subscribers
     -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
 -notification area on the back home - place to easily post messages, like "site will be undergoing changes at 3pm EST"
 -free space for sections
@@ -24,7 +24,6 @@ Prioritized
 -comments
 
 Unorganized
--names for subscribers; click button to send message to all subscribers, using their names (more personal)
 -decide what you want on the back home. For now, it is just a redundant front page with controls.
     o maybe: after login, you see the front page with login controls
         o welcome screen?

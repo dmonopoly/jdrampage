@@ -1,0 +1,25 @@
+<!--admin/subscribers/index-->
+<div id="subscriber_index">
+	<h3>Subscribers</h3>
+
+	<ul id="subscriber_list">
+		<li>
+			<ul id="subscriber_list_headers">
+				<li class="subscriber_email">Email</li>
+				<li class="subscriber_controls">Controls</li>
+			</ul>
+		</li>
+		<% @subscribers.each do |s| %>
+			<%= content_tag_for :li, article, :class => "sortable" do %>
+				<ul class="items_within_subscriber">
+					<li class="subscriber_email"><%= s.email %></li>
+  				<li class="subscriber_controls">
+  				  <%= link_to 'Edit', edit_admin_subscriber_path(s), :class => 'button_like' %>
+  				  <%= link_to 'Delete', admin_subscriber_path(s), :class => 'button_like', :method => :delete, :confirm => 'Are you sure?' %>
+  				</li>
+				</ul>
+			<% end %>
+		<% end %>
+	</ul>
+</div>
+
