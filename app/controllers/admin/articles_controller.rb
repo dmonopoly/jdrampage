@@ -1,7 +1,7 @@
 class Admin::ArticlesController < AdminController
 
   def index
-    @articles = Article.all(:limit => 6)
+    @articles = Article.all
 
     respond_to do |format|
       format.html # index.html.erb

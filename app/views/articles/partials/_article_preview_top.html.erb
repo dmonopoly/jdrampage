@@ -1,19 +1,21 @@
 <!--articles/article_preview_top partial; for #1 article; requires variable "article"-->
-<div class="article_preview_top">
-	<div class="article_header_top">
-		<span class="article_title_top"><%= article.title %></span><br>
-		<span class="article_author_top">by <%= article.author %></span>
+<div id="article_preview_top">
+	<div id="article_header_top">
+	  <%= link_to article.title, article, :id => "article_title_top" %><br>
+		<span id="article_author_top">by <%= article.author %></span>
 	</div>
-	
-	<div class="article_image_top">
-		<%= image_tag article.photo.url(:medium), :class=>"article_image" %>
+
+	<div id="article_image_top">
+		<%= link_to ( image_tag article.photo.url(:medium), :id => "article_image_top" ), article %>
 	</div>
-	
-	<div class="article_teaser_top">
+
+	<div id="article_teaser_top">
 		<%= article.teaser %>
 	</div>
-	
-	<div class="article_beginning">
-	
+
+	<div id="article_beginning">
+    The beginning of the article is here.<br>
+    <%= article.body[0..150] %>...
 	</div>
 </div>
+

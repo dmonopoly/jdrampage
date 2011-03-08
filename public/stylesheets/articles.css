@@ -9,12 +9,12 @@ div.article_preview{
 div.article_header{
 	font-family: serif;
 }
-span.article_title{
+a.article_title{
 	color: black;
 	font-size: 20px;
 	font-weight: bold;
 }
-span.article_author{
+.article_author{
 	color: #aaa;
 }
 div.article_image{
@@ -31,31 +31,31 @@ div.article_teaser{
 /* =============================================== */
 /* ARTICLE_PREVIEW_TOP	      					   */
 /* =============================================== */
-div.article_preview_top{
+div#article_preview_top{
 display: block;
 width: 400px;
 height: 300px;
 }
-div.article_header_top{
+div#article_header_top{
 font-family: serif;
 }
-span.article_title_top{
+#article_title_top{
 color: black;
 font-size: 26px;
 font-weight: bold;
 }
-span.article_author_top{
+#article_author_top{
 color: gray;
 }
-div.article_image_top{
+div#article_image_top{
 display: inline;
 width: 80px;
 height: 60px;
 }
-img.article_image_top{
+img#article_image_top{
 float: right;
 }
-div.article_teaser_top{
+div#article_teaser_top{
 float: left;
 }
 /* =============================================== */

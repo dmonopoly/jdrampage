@@ -1,0 +1,11 @@
+<!--partial for header of section#show; needs variable 'section'; used by front and back-->
+<h3>
+  <%= section.name %>
+  <% if on_back %>
+    <%= link_to 'Edit', edit_admin_section_path(section), :style=>'font-size:10px' %>
+    <%= link_to '>>', section, :style=>'font-size:10px' %>
+  <% elsif logged_in? %><!--must be on front-->
+    <%= link_to '<<', admin_section_path(section), :style=>'font-size:10px' %>
+  <% end %>
+</h3>
+

@@ -4,7 +4,7 @@ module ApplicationHelper
 	end
 
 	# used by backside
-	def sidebar?
+	def sidebar? # probably should change this - it doesn't follow rails conventions
 		params[:controller] == 'static' ||
 		(params[:controller] == 'admin/articles' && params[:action] == 'show') ||
 		(params[:controller] == 'admin/pages' && params[:action] == 'show')

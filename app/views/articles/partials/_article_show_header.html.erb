@@ -3,7 +3,6 @@
   <%= @article.title %>
   <% if logged_in? %>
     <%= link_to "Edit", edit_admin_article_path(@article), :style => "font-size: 10px" %>
-    <%= link_to "<<", admin_articles_path, :style => "font-size: 10px" %>
   <% end %>
 </h2>
 <%= @article.author %><br>

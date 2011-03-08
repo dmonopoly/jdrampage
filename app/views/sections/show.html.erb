@@ -1,1 +1,13 @@
 <!--sections/show-->
+<div id="section_show">
+  <div id="section_show_header">
+    <%= render :partial => "sections/partials/section_show_header", :locals => { :section => @section, :on_back => false } %>
+  </div>
+  <hr>
+  <div id="section_content">
+    <% @articles.each do |article| %>
+      <%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
+    <% end %>
+  </div>
+</div>
+

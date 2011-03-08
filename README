@@ -5,6 +5,9 @@ Uses Rails 3.0.3
 Prioritized
 -get the minimum of everything working
     -paginate for articles index, sections show
+        o actually, no paginate for articles index... just show 6 on front, all on back
+            o have the 'show more' thing for articles index on the back
+        o @articles in sections/show should paginate
     -sections show - automatically show most recent first
     -types of accounts:
         o see notes in dropbox

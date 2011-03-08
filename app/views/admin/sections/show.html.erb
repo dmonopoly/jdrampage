@@ -1,10 +1,9 @@
-<!--sections/show-->
+<!--admin/sections/show-->
 <div id="section_show">
-	<h3>
-	  <%= @section.name %>
-	  <%= link_to 'Edit', edit_admin_section_path(@section), :style=>'font-size:10px' %>
-	  <%= link_to '>>', @section, :style=>'font-size:10px' %>
-	</h3>
+  <div id="section_show_header">
+    <%= render :partial => "sections/partials/section_show_header", :locals => { :section => @section, :on_back => true } %>
+  </div>
+
 	<ul id="section_article_list">
 		<li>
 			<ul id="article_list_headers">
@@ -24,6 +23,8 @@
 			<% end %>
 		<% end %>
 	</ul>
+
+  <%= will_paginate @articles %><!--fix this-->
 
 	<!--need to add sort functionality here-->
 </div>
