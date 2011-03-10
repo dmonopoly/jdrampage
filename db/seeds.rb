@@ -54,4 +54,13 @@ else
 	puts "---no need to create pages"
 end
 
+# Creating the subscribers
+if Subscriber.count == 0
+  25.times do Factory.create(:subscriber) end
+  puts "---created subscribers"
+else
+  puts "---no need to create subscribers"
+end
+
 puts "---Done with seeds.rb!"
+

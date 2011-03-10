@@ -5,7 +5,8 @@ class SubscribersController < ApplicationController
       flash[:notice] = "Thank you for subscribing!"
       redirect_to '/'
     else
-      render :action => "new"
+      flash[:notice] = "We're sorry - something went wrong.  Please try again."
+      redirect_to new_subscriber_path # fix!!
     end
   end
 

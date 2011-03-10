@@ -1,0 +1,11 @@
+<!--admin/subscribers/edit-->
+<h3>Edit Subscriber</h3>
+
+<%= form_for [:admin, @subscriber] do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+  <%= f.submit "Update" %>
+<% end %>
+

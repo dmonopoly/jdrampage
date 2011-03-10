@@ -13,7 +13,7 @@ Factory.define :article do |t|
 	t.date "#{DateTime.now.to_s[0..9]}"
 end
 
-Factory.define :comment do |t|
+Factory.define :comment do |t| # not used yet
 	t.association :article
 	t.body { Forgery::LoremIpsum.sentence }
 	t.full_name "Commenter Bob"
@@ -35,7 +35,7 @@ Factory.define :section do |t|
 end
 
 Factory.define :subscriber do |t|
-    t.sequence(:email) { |n| "person#{n}@somewhere.com" }
+    t.sequence(:email) { |n| "subscriber#{n}@somewhere.com" }
 end
 
 # not used by seeds

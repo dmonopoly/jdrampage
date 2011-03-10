@@ -14,6 +14,7 @@ Prioritized
     -image upload
     -deal with subscribers
     -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
+        o use content_for to clean up layout
 -notification area on the back home - place to easily post messages, like "site will be undergoing changes at 3pm EST"
 -free space for sections
 -sort functionality within scope of section, so you can order articles within a section

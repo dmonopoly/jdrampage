@@ -1,4 +1,6 @@
 <!--admin/articles/edit-->
+<h3>Edit Article: <%= @article.title %></h3>
+
 <div id="article_edit">
 	<%= render :partial => "admin/articles/partials/form", :locals => { :article => @article, :button_value => "Update" } %>
 </div>

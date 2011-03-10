@@ -10,7 +10,7 @@
 			</ul>
 		</li>
 		<% @subscribers.each do |s| %>
-			<%= content_tag_for :li, article, :class => "sortable" do %>
+			<%= content_tag_for :li, s, :class => "sortable" do %>
 				<ul class="items_within_subscriber">
 					<li class="subscriber_email"><%= s.email %></li>
   				<li class="subscriber_controls">
@@ -21,5 +21,12 @@
 			<% end %>
 		<% end %>
 	</ul>
+
+	<div id="subscriber_text_area">
+    <%= text_area_tag :subscriber, "(Subscribers' emails here.)" %><br>
+    <p>
+      A text area of all subscribers' emails separated by commas.
+    </p>
+	</div>
 </div>
 

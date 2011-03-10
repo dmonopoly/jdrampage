@@ -1,0 +1,40 @@
+/* =============================================== */
+/* Layout						                   */
+/* =============================================== */
+
+
+/* =============================================== */
+/* Subscriber Index                                */
+/* =============================================== */
+div#subscriber_index {
+	margin: 10px 10px 10px 0;
+}
+ul#subscriber_list {
+    list-style-type: none;
+	margin: 10px 0;
+	width: 400px;
+	display: inline-block;
+}
+#subscriber_list ul:hover {
+    background: #ffddaa;
+}
+#subscriber_list ul li {
+    display: inline-block;
+    margin: 4px 0;
+}
+#subscriber_list ul#subscriber_list_headers {
+    font-weight: bold;
+}
+#subscriber_list li.subscriber_email {
+    position: absolute;
+}
+#subscriber_list li.subscriber_controls {
+	position: relative;
+	margin-left: 300px;
+	width: 160px;
+}
+#subscriber_text_area {
+    display: inline-block;
+	float: right;
+}
+

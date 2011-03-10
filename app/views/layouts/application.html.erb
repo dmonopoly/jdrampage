@@ -19,6 +19,8 @@
 			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
 		<% end %>
 	</ul>
+  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe", :class => "left button" %>
+
 	<% if current_user %>
 		<div id="login_area">
 			Logged in as <b><%= current_user.login %></b> |
@@ -46,8 +48,6 @@
 		<%= yield %>
 	</div>
 	<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
-	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe", :class => "right button" %>
-
 		<h6>Past Articles</h6>
 		<% sidebar_articles[8..15].each do |article| %>
 			<% if rand(2) == 0 %>
