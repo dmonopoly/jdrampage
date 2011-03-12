@@ -8,6 +8,9 @@
     <% @articles.each do |article| %>
       <%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
     <% end %>
+
+    <%= will_paginate @articles %><!--fix this-->
+
   </div>
 </div>
 
