@@ -1,0 +1,2 @@
+module FreeSpacesHelper
+end

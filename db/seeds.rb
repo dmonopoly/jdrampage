@@ -62,5 +62,16 @@ else
   puts "---no need to create subscribers"
 end
 
+# Creating the free spaces
+if FreeSpace.count == 0
+  # create them
+  Factory.create(:free_space, :name => 'Notification', :content => 'The site is currently undergoing changes.')
+  Factory.create(:free_space, :name => 'Sidebar1')
+  Factory.create(:free_space, :name => 'Sidebar2')
+  puts "---created free spaces"
+else
+  puts "---no need to create free spaces"
+end
+
 puts "---Done with seeds.rb!"
 

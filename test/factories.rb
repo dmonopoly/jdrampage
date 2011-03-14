@@ -43,6 +43,10 @@ Factory.define :user do |t|
 
 end
 
+Factory.define :free_space do |t|
+  t.sequence(:name) { |n| "FreeSpace#{n}" }
+end
+
 # Sequences
 Factory.sequence :count do |n|
 	n

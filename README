@@ -6,7 +6,6 @@ Prioritized
 -get the minimum of everything working
     -paginate for articles index, sections show
         o actually, no paginate for articles index... just show 6 on front, all on back
-            o have the 'show more' thing for articles index on the back
         o @articles in sections/show should paginate
     -sections show - automatically show most recent first
     -types of accounts:
@@ -17,6 +16,9 @@ Prioritized
         o use content_for to clean up layout
 -notification area on the back home - place to easily post messages, like "site will be undergoing changes at 3pm EST"
 -free space for sections
+    -run "rails g migration create_free_space_table content:string is_active:boolean name:string"
+    -free spaces are disbursed at certain spots in the code with a simple "FreeSpace.find_by_name('notification').show"
+    -this could be in a model method to make it easier
 -sort functionality within scope of section, so you can order articles within a section
 -only OLD articles in sidebars
 -testing

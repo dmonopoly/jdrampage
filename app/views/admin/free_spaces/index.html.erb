@@ -1,0 +1,23 @@
+<!--admin/free_spaces/index-->
+<h3>Listing free_spaces</h3>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @free_spaces.each do |free_space| %>
+  <tr>
+    <td><%= link_to 'Show', admin_free_space_path(free_space) %></td>
+    <td><%= link_to 'Edit', edit_admin_free_space_path(free_space) %></td>
+    <td><%= link_to 'Destroy', admin_free_space_path(free_space), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New', new_admin_free_space_path %>
+

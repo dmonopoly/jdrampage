@@ -1,4 +1,6 @@
 Jdrampage::Application.routes.draw do
+  resources :free_spaces, :only => :show
+
 	resources :articles, :only => :show, :has_many => :comments
 	resources :sections, :only => :show
 	resources :pages, :only => :show
@@ -18,6 +20,7 @@ Jdrampage::Application.routes.draw do
 		  collection { post 'sort' }
     end
 		resources :subscribers
+	  resources :free_spaces
 #		resources :comments
 	end
 

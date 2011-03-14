@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301160626) do
+ActiveRecord::Schema.define(:version => 20110314010323) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20110301160626) do
     t.text     "notes"
     t.text     "teaser"
     t.text     "styles"
-    t.string   "date",
+    t.string   "date",               :default => "2011-03-01"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20110301160626) do
     t.integer  "article_id"
     t.string   "full_name"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "free_spaces", :force => true do |t|
+    t.string   "content",    :default => "Insert free space content here."
+    t.string   "name",       :default => "Untitled"
+    t.boolean  "is_active",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -85,4 +93,3 @@ ActiveRecord::Schema.define(:version => 20110301160626) do
   end
 
 end
-

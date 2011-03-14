@@ -1,0 +1,8 @@
+<!--admin/free_spaces/edit-->
+<h1>Edit Free Space: <%= @free_space.name %></h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [:admin, @free_space] %> |
+<%= link_to 'Back', admin_free_spaces_path %>
+
