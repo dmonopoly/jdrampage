@@ -66,8 +66,8 @@ end
 if FreeSpace.count == 0
   # create them
   Factory.create(:free_space, :name => 'Notification', :content => 'The site is currently undergoing changes.')
-  Factory.create(:free_space, :name => 'Sidebar1')
-  Factory.create(:free_space, :name => 'Sidebar2')
+  Factory.create(:free_space, :name => 'Sidebar1', :content => 'Put desired sidebar content here.')
+  Factory.create(:free_space, :name => 'Sidebar2', :content => 'Put desired sidebar content here.')
   puts "---created free spaces"
 else
   puts "---no need to create free spaces"

@@ -9,5 +9,14 @@ module ApplicationHelper
 		(params[:controller] == 'admin/articles' && params[:action] == 'show') ||
 		(params[:controller] == 'admin/pages' && params[:action] == 'show')
 	end
+
+	# used by free spaces index
+	def yes_or_no(boolean)
+	  if boolean
+	    'Yes'
+    else
+      'No'
+    end
+  end
 end
 

@@ -1,23 +1,31 @@
 <!--admin/free_spaces/index-->
-<h3>Listing free_spaces</h3>
+<div id="free_space_index">
+  <h3>Free Spaces</h3>
+  <div id="free_space_new_area">
+    <%= link_to 'New Free Space', new_admin_free_space_path, :class => "button right" %>
+  </div>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Active?</th>
+      <th>Controls</th>
+    </tr>
 
-<% @free_spaces.each do |free_space| %>
-  <tr>
-    <td><%= link_to 'Show', admin_free_space_path(free_space) %></td>
-    <td><%= link_to 'Edit', edit_admin_free_space_path(free_space) %></td>
-    <td><%= link_to 'Destroy', admin_free_space_path(free_space), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New', new_admin_free_space_path %>
+  <% @free_spaces.each do |free_space| %>
+    <tr>
+      <td><%= free_space.name %></td>
+      <td><%= free_space.content[0..40] %></td>
+      <td><%= yes_or_no(free_space.is_active) %></td>
+      <td>
+        <%= link_to 'Show', admin_free_space_path(free_space), :class => 'button_like' %>
+        <%= link_to 'Edit', edit_admin_free_space_path(free_space), :class => 'button_like' %>
+        <%= link_to 'Destroy', admin_free_space_path(free_space),  :class => 'button_like',
+            :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
 

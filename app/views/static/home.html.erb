@@ -1,8 +1,12 @@
 <!--static#home - the home page-->
 <div id="front_page">
 	<%= render :partial => "articles/partials/article_preview_top", :locals => { :article => @articles[0] } %>
-	<% for article in @articles[1..-1] %>
-		<%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
+	<% @articles[1..-1].each_with_index do |article, index| %> <!--modify-->
+	  <% if index % 2 == 0 %>
+		  <%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
+		<% else %>
+  		<%= render :partial => "articles/partials/article_preview", :locals => { :article => article }, :class => "right" %>
+		<% end %>
 	<% end %>
 </div>
 

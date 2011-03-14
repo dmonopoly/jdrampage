@@ -1,5 +1,5 @@
 <!--admin/free_spaces/show - previews the content (e.g. to test code)-->
-<p id="notice"><%= notice %></p>
+<h3>Free Space: <%= @free_space.name %></h3>
 
 <p>This is what the free space would look like.</p>
 
@@ -7,6 +7,8 @@
   <%= @free_space.content %>
 </div>
 
-<%= link_to 'Edit', edit_admin_free_space_path(@free_space) %> |
-<%= link_to 'Back', admin_free_spaces_path %>
+<div id="directions">
+  <%= link_to 'Edit', edit_admin_free_space_path(@free_space) %> |
+  <%= link_to 'Back', admin_free_spaces_path %>
+</div>
 

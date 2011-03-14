@@ -1,0 +1,14 @@
+/* Show */
+div#free_space_content {
+    margin: 20px;
+    padding: 10px;
+    border: 1px dotted black;
+}
+/* Index */
+div#free_space_index tr {
+
+}
+div#free_space_index tr:hover {
+
+}
+

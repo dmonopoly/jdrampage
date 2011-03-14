@@ -1,7 +1,10 @@
 <!--admin/free_spaces/edit-->
 <h3>New Free Space</h3>
+<div id="free_space_new">
+  <%= render :partial => 'form', :locals => { :free_space => @free_space, :button_name => 'Create' } %>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', admin_free_spaces_path %>
+<div id="directions">
+  <%= link_to '<< Back', admin_free_spaces_path %>
+</div>
 

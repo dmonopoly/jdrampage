@@ -12,7 +12,7 @@ div#subscriber_index {
 ul#subscriber_list {
     list-style-type: none;
 	margin: 10px 0;
-	width: 400px;
+	width: 500px;
 	display: inline-block;
 }
 #subscriber_list ul:hover {

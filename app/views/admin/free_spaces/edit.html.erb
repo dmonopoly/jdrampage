@@ -1,8 +1,13 @@
 <!--admin/free_spaces/edit-->
-<h1>Edit Free Space: <%= @free_space.name %></h1>
+<h3>Edit Free Space: <%= @free_space.name %></h3>
 
-<%= render 'form' %>
+<div id="free_space_edit">
+  <%= render :partial => 'form', :locals => { :free_space => @free_space, :button_name => 'Update' } %>
+</div>
 
-<%= link_to 'Show', [:admin, @free_space] %> |
-<%= link_to 'Back', admin_free_spaces_path %>
+
+<div id="directions">
+  <%= link_to '<< Back', admin_free_spaces_path %> |
+  <%= link_to 'Show', [:admin, @free_space] %> (changes will not be saved)
+</div>
 
