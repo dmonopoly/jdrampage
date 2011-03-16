@@ -8,6 +8,7 @@
   <table>
     <tr>
       <th>Name</th>
+      <th>Notes</th>
       <th>Content</th>
       <th>Active?</th>
       <th>Controls</th>
@@ -16,7 +17,8 @@
   <% @free_spaces.each do |free_space| %>
     <tr>
       <td><%= free_space.name %></td>
-      <td><%= free_space.content[0..40] %></td>
+      <td><%= free_space.notes %></td> <!--Find a method for this. There must be one.-->
+      <td><%= strip_tags(free_space.content[0..50])+'..' %></td>
       <td><%= yes_or_no(free_space.is_active) %></td>
       <td>
         <%= link_to 'Show', admin_free_space_path(free_space), :class => 'button_like' %>

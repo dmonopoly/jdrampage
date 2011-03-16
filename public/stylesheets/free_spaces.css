@@ -11,4 +11,7 @@ div#free_space_index tr {
 div#free_space_index tr:hover {
 
 }
+div#free_space_index a.button_like, div#free_space_index a.button {
+    background: #E5ECF9;
+}
 

@@ -54,7 +54,7 @@
 	<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
 	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe", :class => "right button" %>
 		<!--<h6>Past Articles</h6>-->
-		<%= show_free_space_if_active('Sidebar1') %>
+		<%= show_free_space_if_active('Sidebar2') %>
 		<% sidebar_articles[8..15].each do |article| %>
 			<% if rand(2) == 0 %>
 				<%= render :partial => "articles/partials/article_sidebar_image_preview", :locals => { :article => article } %>

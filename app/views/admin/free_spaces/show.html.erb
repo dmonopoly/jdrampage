@@ -1,10 +1,19 @@
 <!--admin/free_spaces/show - previews the content (e.g. to test code)-->
 <h3>Free Space: <%= @free_space.name %></h3>
 
-<p>This is what the free space would look like.</p>
+<p class='right'>
+  <label>Active:</label> <%= yes_or_no(@free_space.is_active) %>
+</p>
+
+<p>
+  <label>Notes:</label><br>
+  <%= @free_space.notes %>
+</p>
+
+<p>This is what the free space would look like:</p>
 
 <div id="free_space_content">
-  <%= @free_space.content %>
+  <%= show_free_space(@free_space.name) %>
 </div>
 
 <div id="directions">

@@ -31,7 +31,7 @@ a.button_like:hover {
 	border: 1px solid black;
 	background: #eebbaa;
 }
-a.button {
+a.button { /* a little larger than button_like */
 	padding: 4px;
 	border: 1px solid #aaa;
 	background: #ddbbaa;
