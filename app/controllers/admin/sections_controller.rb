@@ -5,8 +5,7 @@ class Admin::SectionsController < AdminController
 
   def show
     @section = Section.find(params[:id])
-#    @articles = @section.articles
-    @articles = @section.articles.paginate :page => (params[:page])#, :order => 'articles.created_at DESC'
+    @articles = @section.articles.paginate :page => params[:page], :per_page => 10, :order => 'articles.created_at DESC'
   end
 
   def edit

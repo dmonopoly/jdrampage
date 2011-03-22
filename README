@@ -4,19 +4,18 @@ Uses Rails 3.0.3
 -TODO/Ideas-
 Prioritized
 -get the minimum of everything working
-    -paginate for articles index, sections show
-        o actually, no paginate for articles index... just show 6 on front, all on back
-        o @articles in sections/show should paginate
+		-sort functionality within scope of section, so you can order articles within a section / most recent = 1st
+				o accomplish this by creating a position_in_section:integer column in the articles table
+				o a newly created article should have this variable be 0, +1 to others
     -sections show - automatically show most recent first
     -types of accounts:
         o see notes in dropbox
     -image upload
-    -deal with subscribers
     -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
         o use content_for to clean up layout
     -free space for sections
         o get styles working
--sort functionality within scope of section, so you can order articles within a section
+
 -only OLD articles in sidebars
 -testing
 -users have images of their faces
@@ -29,3 +28,8 @@ Unorganized
         o welcome screen?
         o messages to posters? notes box in general?
 
+Accomplished
+-deal with subscribers
+-pagination
+	o for sections show, articles appear and it's all good.
+	o consider some "show more" thing later so no sorting issues...

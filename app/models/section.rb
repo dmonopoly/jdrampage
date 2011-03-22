@@ -1,7 +1,8 @@
 class Section < ActiveRecord::Base
   has_many :articles
   acts_as_list
-	default_scope :order => :position
+	default_scope :order => :position # for the ordering of sections
+	
 	validates_presence_of :name
 
   before_destroy {	# safety measure: moves all articles to a section called "No section"

@@ -18,7 +18,8 @@ require 'forgery'
 # like before_destroy.
 
 # Creating the users - User model specifies it acts_as_authentic, so no duplicates
-User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>"northandsouth",:email=>"dmonopoly10@gmail.com")
+User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>"northandsouth",
+						:email=>"dmonopoly10@gmail.com", :full_name => "David Zhang")
 
 # Creating the sections
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|
@@ -29,7 +30,7 @@ puts "---found or created sections"
 # Creating the articles
 if Article.count == 0 # to prevent duplicate articles if rake db:seed is called > once; alternative to Article.delete_all, which causes id issues
 	Section.all.each { |s|
-		5.times do Factory.create(:article, :section => s) end
+		25.times do Factory.create(:article, :section => s) end
 	}
 	puts "---created articles"
 else

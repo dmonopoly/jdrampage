@@ -43,7 +43,7 @@ div#admin_section_show {
 }
 #admin_section_article_list li.article_title{
 	position: relative;
-	margin-left: 20px;
+	margin-left: 40px;
 	width: 200px;
 }
 #admin_section_article_list li.article_author{
@@ -53,13 +53,13 @@ div#admin_section_show {
 }
 #admin_section_article_list li.article_date{
 	position: relative;
-	margin-left: 20px;
+	margin-left: 10px;
 	width: 100px;
 }
 #admin_section_article_list li.article_controls{
 	position: relative;
 	margin-left: 20px;
-	width: 160px;
+	width: 180px;
 }
 #admin_section_article_list_headers li {
 	font-weight: bold;

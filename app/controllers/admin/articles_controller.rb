@@ -28,11 +28,10 @@ class Admin::ArticlesController < AdminController
     respond_to do |format|
       if @article.save
         flash[:notice] = 'Article was successfully created.'
+				Article.all.last.move_to_top # move article to first by changing its position value to 1
         format.html { redirect_to(admin_article_path(@article)) }
-        format.xml  { render :xml => @article, :status => :created, :location => admin_article_path(@article) }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -44,10 +43,8 @@ class Admin::ArticlesController < AdminController
       if @article.update_attributes(params[:article])
         flash[:notice] = 'Article was successfully updated.'
         format.html { redirect_to(admin_article_path(@article)) }
-        format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @article.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -58,7 +55,6 @@ class Admin::ArticlesController < AdminController
 
     respond_to do |format|
       format.html { redirect_to(admin_articles_path) }
-      format.xml  { head :ok }
     end
   end
 

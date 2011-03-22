@@ -80,7 +80,7 @@ float: left;
 }
 #article_list li.article_title{
 	position: relative;
-	margin-left: 20px;
+	margin-left: 40px;
 	width: 200px;
 }
 #article_list li.article_author{
@@ -95,13 +95,13 @@ float: left;
 }
 #article_list li.article_date{
 	position: relative;
-	margin-left: 20px;
+	margin-left: 10px;
 	width: 100px;
 }
 #article_list li.article_controls{
 	position: relative;
 	margin-left: 20px;
-	width: 160px;
+	width: 180px;
 }
 #article_list_headers li {
 	font-weight: bold;

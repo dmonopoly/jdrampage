@@ -13,7 +13,5 @@ class Article < ActiveRecord::Base
   validates_presence_of :section, :title, :author, :body, :date
   validates_format_of :date, :with => /\d\d\d\d-\d\d-\d\d/
 
-  def self.per_page; 10; end # only if you paginate articles, which you don't
-
 end
 
