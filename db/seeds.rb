@@ -37,6 +37,14 @@ else
 	puts "---no need to create articles"
 end
 
+# Sorting articles by section_position within each section
+Section.all.each do |section|
+	section.articles.each_with_index do |article, index|
+		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
+	end
+end
+puts "---guaranteed article position within each section"
+
 # Creating the comments
 if Comment.count == 0
 	Article.all.each { |a|

@@ -28,7 +28,9 @@ class Admin::ArticlesController < AdminController
     respond_to do |format|
       if @article.save
         flash[:notice] = 'Article was successfully created.'
-				Article.all.last.move_to_top # move article to first by changing its position value to 1
+				@article.move_to_top # move article to first of all articles by changing its position to 1
+				move_to_top_in_section(@article) # defined in admin article helper
+				
         format.html { redirect_to(admin_article_path(@article)) }
       else
         format.html { render :action => "new" }
