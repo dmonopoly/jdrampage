@@ -12,6 +12,7 @@ Jdrampage::Application.routes.draw do
 		resources :users
 		resources :articles, :except => :show do
 			collection { post 'sort' }
+			collection { post 'sort_in_section' }
 		end
 		resources :sections do
 			collection { post 'sort' }

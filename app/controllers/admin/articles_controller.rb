@@ -61,13 +61,20 @@ class Admin::ArticlesController < AdminController
     end
   end
 
-	def sort
+	def sort # for articles in general
 		params[:article_list].each_with_index do |id, index|
 			Article.update_all ['position=?', index+1], ['id=?', id]
 		end
 		render :nothing => true
 	end
-	
+
+	def sort_in_section
+		params[:admin_section_article_list].each_with_index do |id, index|
+			Article.update_all ['section_position=?', index+1], ['id=?', id]
+		end
+		render :nothing => true
+  end
+
 	private
 		def move_to_top_in_section(article)
 			articles = article.section.articles.all
@@ -76,7 +83,7 @@ class Admin::ArticlesController < AdminController
 				Article.update_all ['section_position=?', index+1], ['id=?', art.id]
 			end
 		end
-		
+
 		def update_section_positions(section) # updates all section positions for articles in the given section
 			articles = section.articles.all
 			articles.each_with_index do |art, index|

@@ -4,10 +4,6 @@ Uses Rails 3.0.3
 -TODO/Ideas-
 Prioritized
 -get the minimum of everything working
-		-sort functionality within scope of section, so you can order articles within a section / most recent = 1st
-				o accomplish this by creating a section_position:integer column in the articles table
-				o a newly created article should have this variable be 1, +1 to others
-    -sections show - automatically show most recent first
     -types of accounts:
         o see notes in dropbox
     -image upload
@@ -30,5 +26,9 @@ Unorganized
 Accomplished
 -deal with subscribers
 -pagination
-	o for sections show, articles appear and it's all good.
+	o for sections show, articles appear and it is all good.
 	o consider some "show more" thing later so no sorting issues...
+-sort functionality within scope of section, so you can order articles within a section / most recent = 1st
+	o accomplish this by creating a section_position:integer column in the articles table
+	o a newly created article should have this variable be 1, +1 to others
+

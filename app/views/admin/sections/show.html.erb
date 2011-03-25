@@ -22,10 +22,11 @@
 				</ul>
 			<% end %>
 		<% end %>
-		
+
 	</ul>
 	<%= will_paginate @articles %>
-	
-	<!--need to add sort functionality here-->
+
+	<%= sortable_element("admin_section_article_list", :url => sort_in_section_admin_articles_path,
+												:only => "sortable", :handle => "handle" ) %>
 </div>
 
