@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StaticControllerTest < ActionController::TestCase
 	context "The home page" do
-		setup do 
+		setup do
 			2.times { Factory.create(:section) }
 			Section.all.each { |section|
 				5.times { Factory.create(:article, :section => section) }
@@ -16,8 +16,8 @@ class StaticControllerTest < ActionController::TestCase
 			assert_not_nil assigns(:articles)
 		end
 	end
-	
-	context "The backside home page" do # maybe you're getting into integration tests?
+
+	context "The admin home page" do # maybe you're getting into integration tests?
 		setup do
 			2.times { Factory.create(:section) }
 			Section.all.each { |section|
@@ -26,7 +26,7 @@ class StaticControllerTest < ActionController::TestCase
 		end
 		context "without someone logging in" do
 			setup do
-				get :backside
+				get :admin
 			end
 			should "redirect to home page" do
 				assert_response :redirect
@@ -36,20 +36,21 @@ class StaticControllerTest < ActionController::TestCase
 			should render_template 'static/home'
 			should set_the_flash
 		end
-		
+
 		context "after someone logs in" do
 			setup do
 				activate_authlogic
 				UserSession.create(:login => "someone", :password => "my password")
-				get :backside
+				get :admin
 			end
 			should respond_with :redirect
-			should render_template 'static/backside'
-			should render_with_layout 'backside'
+			should render_template 'static/admin_home'
+			should render_with_layout 'admin'
 			should "have @articles available" do
 				assert_not_nil assigns(:articles)
 			end
 		end
-		
+
 	end
 end
+

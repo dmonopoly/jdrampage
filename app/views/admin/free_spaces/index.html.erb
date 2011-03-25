@@ -1,9 +1,6 @@
 <!--admin/free_spaces/index-->
 <div id="free_space_index">
   <h3>Free Spaces</h3>
-  <div id="free_space_new_area">
-    <%= link_to 'New Free Space', new_admin_free_space_path, :class => "button right" %>
-  </div>
 
   <table>
     <tr>
@@ -21,10 +18,8 @@
       <td><%= strip_tags(free_space.content[0..50])+'..' %></td>
       <td><%= yes_or_no(free_space.is_active) %></td>
       <td>
-        <%= link_to 'Show', admin_free_space_path(free_space), :class => 'button_like' %>
+        <%= link_to 'Preview', admin_free_space_path(free_space), :class => 'button_like' %>
         <%= link_to 'Edit', edit_admin_free_space_path(free_space), :class => 'button_like' %>
-        <%= link_to 'Destroy', admin_free_space_path(free_space),  :class => 'button_like',
-            :confirm => 'Are you sure?', :method => :delete %>
       </td>
     </tr>
   <% end %>

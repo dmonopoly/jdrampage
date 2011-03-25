@@ -1,6 +1,6 @@
 # This is an ad hoc controller
 class StaticController < ApplicationController
-	before_filter :require_user, :only => :backside
+	before_filter :require_user, :only => :admin_home
 
 	# front homepage
 	def home
@@ -9,9 +9,9 @@ class StaticController < ApplicationController
 	end
 
 	# back homepage
-	def backside
+	def admin_home
 		@articles = Article.all(:limit => 6)
-		render :layout => 'backside'
+		render :layout => 'admin'
 	end
 
 end

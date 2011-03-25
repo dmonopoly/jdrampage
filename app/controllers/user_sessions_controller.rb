@@ -6,7 +6,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_to backside_path
+      redirect_to admin_path
     else
       redirect_to '/', :notice => "Incorrect login."
     end
@@ -17,3 +17,4 @@ class UserSessionsController < ApplicationController
     redirect_back_or_default root_url
   end
 end
+

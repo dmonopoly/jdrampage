@@ -73,11 +73,23 @@ end
 
 # Creating the free spaces
 if FreeSpace.count == 0
-  # create them
+  content = 'Put desired content here.'
+  # Front free spaces
   Factory.create(:free_space, :name => 'Notification', :content => 'The site is currently undergoing changes.',
-                  :styles => '', :notes => "This is the front page's notification area.")
-  Factory.create(:free_space, :name => 'Sidebar1', :content => 'Put desired sidebar content here.')
-  Factory.create(:free_space, :name => 'Sidebar2', :content => 'Put desired sidebar content here.')
+                  :styles => '', :notes => "This is the home page's notification area.")
+  Factory.create(:free_space, :name => 'HomeLeftSidebar', :content => content,
+                  :notes => "This is the home page's left sidebar content.")
+  Factory.create(:free_space, :name => 'HomeRightSidebar', :content => content,
+                  :notes => "This is the home page's right sidebar content.")
+  # Section free spaces
+  Section.all.each do |section|
+    Factory.create(:free_space, :name => "#{section.name}LeftSidebar", :content => content,
+                    :notes => "This is the left sidebar content for the #{section.name} section.")
+    Factory.create(:free_space, :name => "#{section.name}RightSidebar", :content => content,
+                    :notes => "This is the right sidebar content for the #{section.name} section.")
+    Factory.create(:free_space, :name => "#{section.name}TopArea", :content => content,
+                    :notes => "This is the top-area-content for the #{section.name} section.")
+  end
   puts "---created free spaces"
 else
   puts "---no need to create free spaces"

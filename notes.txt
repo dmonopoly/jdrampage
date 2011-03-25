@@ -1,0 +1,68 @@
+(in /home/daze/Documents/Workspace/jdrampage)
+                    free_space GET    /free_spaces/:id(.:format)                {:action=>"show", :controller=>"free_spaces"}
+                       article GET    /articles/:id(.:format)                   {:action=>"show", :controller=>"articles"}
+                       section GET    /sections/:id(.:format)                   {:action=>"show", :controller=>"sections"}
+                          page GET    /pages/:id(.:format)                      {:action=>"show", :controller=>"pages"}
+                   subscribers POST   /subscribers(.:format)                    {:action=>"create", :controller=>"subscribers"}
+                new_subscriber GET    /subscribers/new(.:format)                {:action=>"new", :controller=>"subscribers"}
+                  user_session POST   /user_session(.:format)                   {:action=>"create", :controller=>"user_sessions"}
+              new_user_session GET    /user_session/new(.:format)               {:action=>"new", :controller=>"user_sessions"}
+             edit_user_session GET    /user_session/edit(.:format)              {:action=>"edit", :controller=>"user_sessions"}
+                               GET    /user_session(.:format)                   {:action=>"show", :controller=>"user_sessions"}
+                               PUT    /user_session(.:format)                   {:action=>"update", :controller=>"user_sessions"}
+                               DELETE /user_session(.:format)                   {:action=>"destroy", :controller=>"user_sessions"}
+                   admin_users GET    /admin/users(.:format)                    {:action=>"index", :controller=>"admin/users"}
+                               POST   /admin/users(.:format)                    {:action=>"create", :controller=>"admin/users"}
+                new_admin_user GET    /admin/users/new(.:format)                {:action=>"new", :controller=>"admin/users"}
+               edit_admin_user GET    /admin/users/:id/edit(.:format)           {:action=>"edit", :controller=>"admin/users"}
+                    admin_user GET    /admin/users/:id(.:format)                {:action=>"show", :controller=>"admin/users"}
+                               PUT    /admin/users/:id(.:format)                {:action=>"update", :controller=>"admin/users"}
+                               DELETE /admin/users/:id(.:format)                {:action=>"destroy", :controller=>"admin/users"}
+           sort_admin_articles POST   /admin/articles/sort(.:format)            {:action=>"sort", :controller=>"admin/articles"}
+sort_in_section_admin_articles POST   /admin/articles/sort_in_section(.:format) {:action=>"sort_in_section", :controller=>"admin/articles"}
+                admin_articles GET    /admin/articles(.:format)                 {:action=>"index", :controller=>"admin/articles"}
+                               POST   /admin/articles(.:format)                 {:action=>"create", :controller=>"admin/articles"}
+             new_admin_article GET    /admin/articles/new(.:format)             {:action=>"new", :controller=>"admin/articles"}
+            edit_admin_article GET    /admin/articles/:id/edit(.:format)        {:action=>"edit", :controller=>"admin/articles"}
+                 admin_article PUT    /admin/articles/:id(.:format)             {:action=>"update", :controller=>"admin/articles"}
+                               DELETE /admin/articles/:id(.:format)             {:action=>"destroy", :controller=>"admin/articles"}
+           sort_admin_sections POST   /admin/sections/sort(.:format)            {:action=>"sort", :controller=>"admin/sections"}
+                admin_sections GET    /admin/sections(.:format)                 {:action=>"index", :controller=>"admin/sections"}
+                               POST   /admin/sections(.:format)                 {:action=>"create", :controller=>"admin/sections"}
+             new_admin_section GET    /admin/sections/new(.:format)             {:action=>"new", :controller=>"admin/sections"}
+            edit_admin_section GET    /admin/sections/:id/edit(.:format)        {:action=>"edit", :controller=>"admin/sections"}
+                 admin_section GET    /admin/sections/:id(.:format)             {:action=>"show", :controller=>"admin/sections"}
+                               PUT    /admin/sections/:id(.:format)             {:action=>"update", :controller=>"admin/sections"}
+                               DELETE /admin/sections/:id(.:format)             {:action=>"destroy", :controller=>"admin/sections"}
+              sort_admin_pages POST   /admin/pages/sort(.:format)               {:action=>"sort", :controller=>"admin/pages"}
+                   admin_pages GET    /admin/pages(.:format)                    {:action=>"index", :controller=>"admin/pages"}
+                               POST   /admin/pages(.:format)                    {:action=>"create", :controller=>"admin/pages"}
+                new_admin_page GET    /admin/pages/new(.:format)                {:action=>"new", :controller=>"admin/pages"}
+               edit_admin_page GET    /admin/pages/:id/edit(.:format)           {:action=>"edit", :controller=>"admin/pages"}
+                    admin_page PUT    /admin/pages/:id(.:format)                {:action=>"update", :controller=>"admin/pages"}
+                               DELETE /admin/pages/:id(.:format)                {:action=>"destroy", :controller=>"admin/pages"}
+             admin_subscribers GET    /admin/subscribers(.:format)              {:action=>"index", :controller=>"admin/subscribers"}
+                               POST   /admin/subscribers(.:format)              {:action=>"create", :controller=>"admin/subscribers"}
+          new_admin_subscriber GET    /admin/subscribers/new(.:format)          {:action=>"new", :controller=>"admin/subscribers"}
+         edit_admin_subscriber GET    /admin/subscribers/:id/edit(.:format)     {:action=>"edit", :controller=>"admin/subscribers"}
+              admin_subscriber GET    /admin/subscribers/:id(.:format)          {:action=>"show", :controller=>"admin/subscribers"}
+                               PUT    /admin/subscribers/:id(.:format)          {:action=>"update", :controller=>"admin/subscribers"}
+                               DELETE /admin/subscribers/:id(.:format)          {:action=>"destroy", :controller=>"admin/subscribers"}
+             admin_free_spaces GET    /admin/free_spaces(.:format)              {:action=>"index", :controller=>"admin/free_spaces"}
+                               POST   /admin/free_spaces(.:format)              {:action=>"create", :controller=>"admin/free_spaces"}
+          new_admin_free_space GET    /admin/free_spaces/new(.:format)          {:action=>"new", :controller=>"admin/free_spaces"}
+         edit_admin_free_space GET    /admin/free_spaces/:id/edit(.:format)     {:action=>"edit", :controller=>"admin/free_spaces"}
+              admin_free_space GET    /admin/free_spaces/:id(.:format)          {:action=>"show", :controller=>"admin/free_spaces"}
+                               PUT    /admin/free_spaces/:id(.:format)          {:action=>"update", :controller=>"admin/free_spaces"}
+                               DELETE /admin/free_spaces/:id(.:format)          {:action=>"destroy", :controller=>"admin/free_spaces"}
+                         admin        /admin(.:format)                          {:action=>"admin_home", :controller=>"static"}
+                        logout        /logout(.:format)                         {:action=>"destroy", :controller=>"user_sessions"}
+                          root        /(.:format)                               {:controller=>"static", :action=>"home"}
+Loaded suite /home/daze/.rvm/gems/ruby-1.9.2-p136/bin/rake
+Started
+
+Finished in 0.004042 seconds.
+
+0 tests, 0 assertions, 0 failures, 0 errors, 0 skips
+
+Test run options: --seed 1999

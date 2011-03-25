@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
 	<!--[if IE]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
-	<%= stylesheet_link_tag 'scaffold','backside','global','articles','sections','pages','users','subscribers','free_spaces' %>
+	<%= stylesheet_link_tag 'scaffold','admin','global','articles','sections','pages','users','subscribers','free_spaces' %>
 	<%= javascript_include_tag "jquery-1.4.2.min.js","jquery-ui-1.8.4.custom.min.js" %>
 	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %> <!-- prevents cross-site request forgery -->
@@ -13,7 +13,7 @@
 <body>
 <div id="header">
 	<%= link_to "rampage", '/', :id => 'top_text' %>
-	<div id="top_subtext">Admin side</div>
+	<div id="top_subtext">Admin Side</div>
 	<ul id="section_header_list">
 		<% for section in Section.all %>
 			<li class="section_item"><%= link_to section.name, admin_section_path(section) %></li>
@@ -28,7 +28,7 @@
 
 	<div id="login_area">
 		Logged in as <b><%= current_user.login %></b> |
-		<%= link_to 'The Back', backside_path, :style => "font-weight:bold" %> |
+		<%= link_to 'The Back', admin_path, :style => "font-weight:bold" %> |
 		<%= link_to 'The Front', root_path %> |
 		<%= link_to 'Logout', logout_path %>
 	</div>

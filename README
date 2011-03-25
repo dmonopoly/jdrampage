@@ -4,11 +4,11 @@ Uses Rails 3.0.3
 -TODO/Ideas-
 Prioritized
 -get the minimum of everything working
+    -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
+        o use content_for to clean up layout
     -types of accounts:
         o see notes in dropbox
     -image upload
-    -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
-        o use content_for to clean up layout
     -free space for sections
         o get styles working
 -only OLD articles in sidebars
@@ -31,4 +31,5 @@ Accomplished
 -sort functionality within scope of section, so you can order articles within a section / most recent = 1st
 	o accomplish this by creating a section_position:integer column in the articles table
 	o a newly created article should have this variable be 1, +1 to others
+-show most recent articles in sections first
 

@@ -3,7 +3,7 @@ module ApplicationHelper
 		current_user
 	end
 
-	# used by backside
+	# used by the back; probably should refactor w/content_for
 	def sidebar? # probably should change this - it doesn't follow rails conventions
 		params[:controller] == 'static' ||
 		(params[:controller] == 'admin/articles' && params[:action] == 'show') ||

@@ -21,11 +21,11 @@ Jdrampage::Application.routes.draw do
 		  collection { post 'sort' }
     end
 		resources :subscribers
-	  resources :free_spaces
+	  resources :free_spaces, :except => [ :new, :create ]
 #		resources :comments
 	end
 
-	match 'backside' => 'static#backside'
+	match 'admin' => 'static#admin_home'
 	match 'logout' => 'user_sessions#destroy'
 
 	# match ':controller(/:action(/:id(.:format)))'
