@@ -8,7 +8,6 @@ class Article < ActiveRecord::Base
 											:small => "150x150>",
 											:medium => "200x200" }
   acts_as_list
-	default_scope :order => :position
 
   validates_presence_of :section, :title, :author, :body, :date
   validates_format_of :date, :with => /\d\d\d\d-\d\d-\d\d/

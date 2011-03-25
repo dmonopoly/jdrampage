@@ -1,7 +1,7 @@
 class Admin::ArticlesController < AdminController
 
   def index
-    @articles = Article.all
+    @articles = Article.all(:order => :position)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,8 +29,7 @@ class Admin::ArticlesController < AdminController
       if @article.save
         flash[:notice] = 'Article was successfully created.'
 				@article.move_to_top # move article to first of all articles by changing its position to 1
-				move_to_top_in_section(@article) # defined in admin article helper
-				
+				move_to_top_in_section(@article)
         format.html { redirect_to(admin_article_path(@article)) }
       else
         format.html { render :action => "new" }
@@ -53,8 +52,10 @@ class Admin::ArticlesController < AdminController
 
   def destroy
     @article = Article.find(params[:id])
+		section = @article.section
     @article.destroy
-
+		update_section_positions(section)
+		flash[:notice] = 'Article was successfully deleted.'
     respond_to do |format|
       format.html { redirect_to(admin_articles_path) }
     end
@@ -66,5 +67,21 @@ class Admin::ArticlesController < AdminController
 		end
 		render :nothing => true
 	end
+	
+	private
+		def move_to_top_in_section(article)
+			articles = article.section.articles.all
+			articles.unshift(articles.pop) # makes last become first; like articles.rotate!(-1)
+			articles.each_with_index do |art, index|
+				Article.update_all ['section_position=?', index+1], ['id=?', art.id]
+			end
+		end
+		
+		def update_section_positions(section) # updates all section positions for articles in the given section
+			articles = section.articles.all
+			articles.each_with_index do |art, index|
+				Article.update_all ['section_position=?', index+1], ['id=?', art.id]
+			end
+		end
 end
 
