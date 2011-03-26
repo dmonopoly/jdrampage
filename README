@@ -6,11 +6,10 @@ Prioritized
 -get the minimum of everything working
     -nice design (improve sidebar, look & feel, ckeditor, maybe remove :styles)
         o use content_for to clean up layout
+				o sidebar for the back
     -types of accounts:
         o see notes in dropbox
     -image upload
-    -free space for sections
-        o get styles working
 -only OLD articles in sidebars
 -testing
 -users have images of their faces
@@ -32,4 +31,5 @@ Accomplished
 	o accomplish this by creating a section_position:integer column in the articles table
 	o a newly created article should have this variable be 1, +1 to others
 -show most recent articles in sections first
-
+-free space for sections
+		o get styles working... only inline styles allowed, actually.

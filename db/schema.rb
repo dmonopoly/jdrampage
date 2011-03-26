@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110323025616) do
+ActiveRecord::Schema.define(:version => 20110326034412) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(:version => 20110323025616) do
     t.integer  "position"
     t.text     "notes"
     t.text     "teaser"
-    t.text     "styles"
     t.string   "date",               :default => "2011-03-01"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -48,13 +47,11 @@ ActiveRecord::Schema.define(:version => 20110323025616) do
     t.boolean  "is_active",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "styles"
     t.text     "notes"
   end
 
   create_table "pages", :force => true do |t|
     t.string   "title"
-    t.text     "styles"
     t.text     "body"
     t.integer  "position"
     t.datetime "created_at"

@@ -1,17 +1,14 @@
 /* Show */
 div#free_space_content {
-    margin: 20px;
-    padding: 10px;
-    border: 1px dotted black;
+	margin: 20px;
+	padding: 10px;
+	border: 1px dotted black;
 }
 /* Index */
-div#free_space_index tr {
-
-}
 div#free_space_index tr:hover {
-
+	
 }
 div#free_space_index a.button_like, div#free_space_index a.button {
-    background: #E5ECF9;
+	background: #E5ECF9;
 }
 

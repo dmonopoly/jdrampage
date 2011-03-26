@@ -46,6 +46,7 @@ end
 puts "---guaranteed section position for articles"
 
 # Creating the comments
+=begin
 if Comment.count == 0
 	Article.all.each { |a|
 		3.times do Factory.create(:comment, :article => a) end
@@ -54,6 +55,7 @@ if Comment.count == 0
 else
 	puts "---no need to create comments"
 end
+=end
 
 # Creating the pages
 if Page.count == 0
