@@ -10,3 +10,13 @@
 	<% end %>
 </div>
 
+<% content_for :left_sidebar do %>
+	<%= show_free_space_if_active('HomeLeftSidebar') %>
+	<hr>
+<% end %>
+
+<% content_for :right_sidebar do %>
+	<%= show_free_space_if_active('HomeRightSidebar') %>
+	<hr>
+<% end %>
+

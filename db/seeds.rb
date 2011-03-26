@@ -43,7 +43,7 @@ Section.all.each do |section|
 		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
 	end
 end
-puts "---guaranteed article position within each section"
+puts "---guaranteed section position for articles"
 
 # Creating the comments
 if Comment.count == 0
@@ -74,9 +74,9 @@ end
 # Creating the free spaces
 if FreeSpace.count == 0
   content = 'Put desired content here.'
-  # Front free spaces
+  # Home page free spaces
   Factory.create(:free_space, :name => 'Notification', :content => 'The site is currently undergoing changes.',
-                  :styles => '', :notes => "This is the home page's notification area.")
+                  :notes => "This is the home page's notification area.")
   Factory.create(:free_space, :name => 'HomeLeftSidebar', :content => content,
                   :notes => "This is the home page's left sidebar content.")
   Factory.create(:free_space, :name => 'HomeRightSidebar', :content => content,
@@ -88,7 +88,7 @@ if FreeSpace.count == 0
     Factory.create(:free_space, :name => "#{section.name}RightSidebar", :content => content,
                     :notes => "This is the right sidebar content for the #{section.name} section.")
     Factory.create(:free_space, :name => "#{section.name}TopArea", :content => content,
-                    :notes => "This is the top-area-content for the #{section.name} section.")
+                    :notes => "This is the top area content for the #{section.name} section.")
   end
   puts "---created free spaces"
 else

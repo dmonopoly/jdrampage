@@ -1,23 +1,18 @@
 module FreeSpacesHelper
 
-  # Returns the content of the free space with name 'name' with html tags
-  # and a link to the back if the free space is active
-  # Used on front layout
+  # Used on front
   def show_free_space_if_active(name)
     fs = FreeSpace.find_by_name(name)
     if fs.is_active
-      fs.content.html_safe # may insert unaltered into output
-      # insert html link somehow...
-    else
-      ''
+      # This partial actually renders the admin partial and then adds a '>>' link
+      render :partial => "free_spaces/show", :locals => { :free_space => fs }
     end
   end
 
-  # Returns the content of the free space with name 'name' with html tags
   # Used on back
   def show_free_space(name)
     fs = FreeSpace.find_by_name(name)
-    fs.content.html_safe # may insert unaltered into output
+    render :partial => "admin/free_spaces/partials/show", :locals => { :free_space => fs }
   end
 end
 

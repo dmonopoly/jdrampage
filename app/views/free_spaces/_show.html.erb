@@ -1,0 +1,4 @@
+<!--free_space partial; requires variable 'free_space'; called by free_spaces_helper-->
+<%= render :partial => 'admin/free_spaces/partials/show', :locals => { :free_space => free_space } %>
+<%= link_to '<<', edit_admin_free_space_path(free_space), :style => "font-size: 10px" %>
+
