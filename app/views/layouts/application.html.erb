@@ -24,7 +24,7 @@
     <%= show_free_space_if_active('Notification') %>
   </div>
 
-	<% if current_user %>
+	<% if logged_in? %>
 		<div id="login_area">
 			Logged in as <b><%= current_user.login %></b> |
 			<%= link_to 'The Back', admin_path %> |

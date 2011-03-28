@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'authlogic', :git => "git://github.com/radar/authlogic.git"
+gem 'cancan'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 #gem 'ckeditor', '3.4.2.pre' - later
 gem 'acts_as_list', :git => "https://github.com/haihappen/acts_as_list.git"

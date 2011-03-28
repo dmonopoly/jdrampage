@@ -25,6 +25,9 @@ a#top_text:hover {
 #login_area{
 	float: right;
 }
+#notification_area {
+	float: left;
+}
 /* =============================================== */
 /* FOOTER  										   */
 /* =============================================== */
