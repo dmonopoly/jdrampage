@@ -5,12 +5,10 @@ class Admin::UsersController < AdminController
   end
 
   def new
-    require_user unless User.none?
     @user = User.new
   end
 
   def create
-    require_user unless User.none?
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Successfully made user account."
@@ -40,6 +38,4 @@ class Admin::UsersController < AdminController
     @user.destroy
     redirect_to admin_users_path
   end
-
 end
-
