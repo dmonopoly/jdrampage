@@ -19,7 +19,7 @@ require 'forgery'
 
 # Creating the users - User model specifies it acts_as_authentic, so no duplicates
 User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>"northandsouth",
-						:email=>"dmonopoly10@gmail.com", :full_name => "David Zhang")
+						:email=>"dmonopoly10@gmail.com",:full_name => "David Zhang",:role=>"admin")
 
 # Creating the sections
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|

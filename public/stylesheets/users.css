@@ -19,13 +19,18 @@ ul#user_list {
 }
 #user_list li.user_full_name {
 	position: relative;
-	margin-left: 100px;
+	margin-left: 75px;
 	width: 100px;
+}
+#user_list li.user_role {
+	position: relative;
+	margin-left: 50px;
+	width: 50px;
 }
 #user_list li.user_controls {
 	position: relative;
-	margin-left: 100px;
-	width: 200px;
+	margin-left: 75px;
+	width: 150px;
 }
 #user_list_headers li {
 	font-weight: bold;

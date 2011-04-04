@@ -13,6 +13,10 @@
 			<%= f.text_field :email %>
 		</p>
 		<p>
+			<%= f.label :role %><br>
+			<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+		</p>
+		<p>
 			<%= f.label :password %><br>
 			<%= f.password_field :password %><br>
 			<%= f.label :password_confirmation %><br>
