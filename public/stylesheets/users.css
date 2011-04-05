@@ -5,7 +5,7 @@ ul#user_list {
 	list-style-type: none;
 }
 #user_list ul {
-	width: 600px;
+	width: 700px;
 }
 #user_list ul li {
 	display: inline-block;
@@ -19,12 +19,12 @@ ul#user_list {
 }
 #user_list li.user_full_name {
 	position: relative;
-	margin-left: 75px;
-	width: 100px;
+	margin-left: 100px;
+	width: 150px;
 }
 #user_list li.user_role {
 	position: relative;
-	margin-left: 50px;
+	margin-left: 75px;
 	width: 50px;
 }
 #user_list li.user_controls {

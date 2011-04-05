@@ -18,8 +18,24 @@ require 'forgery'
 # like before_destroy.
 
 # Creating the users - User model specifies it acts_as_authentic, so no duplicates
-User.create(:login=>"dakota",:password=>"northandsouth",:password_confirmation=>"northandsouth",
-						:email=>"dmonopoly10@gmail.com",:full_name => "David Zhang",:role=>"admin")
+
+# # admins
+User.create(:login=>"superadmin",:password=>"password",:password_confirmation=>"password",
+						:email=>"david_zhang_21@yahoo.com",:full_name => "David Zhang",:role=>"admin")
+User.create(:login=>"advisor",:password=>"password",:password_confirmation=>"password",
+						:email=>"tmathis@jd.cnyric.org",:full_name => "Trinity Mathis",:role=>"admin")
+# # moderators
+User.create(:login=>"moderator1",:password=>"password",:password_confirmation=>"password",
+						:email=>"rahul@gmail.com",:full_name => "Rahul Raina",:role=>"moderator")
+User.create(:login=>"moderator2",:password=>"password",:password_confirmation=>"password",
+						:email=>"nick@gmail.com",:full_name => "Nick Harron",:role=>"moderator")
+User.create(:login=>"moderator3",:password=>"password",:password_confirmation=>"password",
+						:email=>"lyndon@gmail.com",:full_name => "Lyndon Pisansky",:role=>"moderator")
+# # posters
+1.upto(5) do |i|
+	User.create(:login=>"poster#{i}",:password=>"password",:password_confirmation=>"password",
+						:email=>"bobjoe#{i}@gmail.com",:full_name => "Bob Joe #{i}",:role=>"poster")
+end
 
 # Creating the sections
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|

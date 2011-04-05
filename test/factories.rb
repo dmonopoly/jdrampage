@@ -9,7 +9,6 @@ Factory.define :article do |t|
 	t.notes "notes here"
 	t.sequence(:position) { |n| n }
 	t.teaser "I am a teaser."
-	t.styles "styles here"
 	t.date "#{DateTime.now.to_s[0..9]}"
 end
 
@@ -22,7 +21,6 @@ end
 
 Factory.define :page do |t|
 	t.sequence(:title) { |n| "Page#{n}" }
-	t.styles "styles here"
 	t.body { Forgery::LoremIpsum.paragraphs(5) }
 	t.sequence(:position) { |n| n }
 end
