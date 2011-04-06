@@ -1,7 +1,7 @@
 class Admin::ArticlesController < AdminController
-
+	load_and_authorize_resource
   def index
-    @articles = Article.all(:order => :position)
+    @articles = Article.all(:order => :position)[0..9]
 
     respond_to do |format|
       format.html # index.html.erb

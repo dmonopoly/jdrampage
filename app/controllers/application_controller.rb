@@ -5,7 +5,13 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
 	protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  # following code is partly from the authlogic tutorial online:
+	# CanCan Code
+	rescue_from CanCan::AccessDenied do |exception|
+		flash[:notice] = "You do not have rights to access this page."
+    redirect_to '/admin', :alert => exception.message
+  end
+	
+  # Authlogic Code
   helper_method :current_user_session, :current_user
 
   private

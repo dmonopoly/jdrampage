@@ -1,3 +1,5 @@
+# not actively used
+
 class CommentsController < ApplicationController
 
   def index

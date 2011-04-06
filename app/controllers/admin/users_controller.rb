@@ -1,5 +1,6 @@
 class Admin::UsersController < AdminController
-  def index
+  load_and_authorize_resource
+	def index
     @users = User.all
   end
 
@@ -18,7 +19,7 @@ class Admin::UsersController < AdminController
   end
 
   def edit
-    @user = @current_user
+    @user = User.find(params[:id])
   end
 
   def update

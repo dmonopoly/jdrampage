@@ -21,7 +21,7 @@
 			    <li class="user_full_name"><%= user.full_name[0..19] %></li>
 					<li class="user_role"><%= user.role %></li>
 			    <li class="user_controls">
-						<% if user.login == current_user.login %>
+						<% if (can? :manage, User) || (user.login == current_user.login) %>
 							<%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
 						<% else %>
 							<i>no controls</i>

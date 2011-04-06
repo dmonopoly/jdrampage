@@ -6,8 +6,12 @@ class Ability
 			can :manage, :all
 		elsif user.role == "moderator"
 			can :manage, [FreeSpace, Article, Page]
+			can :read, User
+			can :update, User, :id => user.id
 		else # user is a poster
 			can :manage, Article
+			can :read, User
+			can :update, User, :id => user.id
 		end
 	
     # Define abilities for the passed in user here. For example:

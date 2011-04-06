@@ -1,3 +1,5 @@
+# not actively used
+
 class Admin::CommentsController < AdminController
 
   def index
