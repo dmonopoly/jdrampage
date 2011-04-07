@@ -8,10 +8,12 @@ class Ability
 			can :manage, [FreeSpace, Article, Page]
 			can :read, User
 			can :update, User, :id => user.id
+			can :read, Section
 		else # user is a poster
 			can :manage, Article
 			can :read, User
 			can :update, User, :id => user.id
+			can :read, Section
 		end
 	
     # Define abilities for the passed in user here. For example:
