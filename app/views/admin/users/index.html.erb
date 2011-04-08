@@ -1,9 +1,11 @@
 <!--admin/users/index-->
 <div id="users_index">
   <h3>All Users</h3>
+	<% if can? :create, User %>
 	<div id="user_new_area">
 		<%= link_to "New User", new_admin_user_path, :class => "button right" %>
 	</div>
+	<% end %>
 	
   <ul id="user_list">
 	  <li>
@@ -21,11 +23,21 @@
 			    <li class="user_full_name"><%= user.full_name[0..19] %></li>
 					<li class="user_role"><%= user.role %></li>
 			    <li class="user_controls">
-						<% if (can? :manage, User) || (user.login == current_user.login) %>
+					<% if current_user.role == 'superadmin' %>
+						<%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
+					<% elsif current_user.role == 'admin' %>
+						<% unless user.role == 'superadmin' %>
 							<%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
 						<% else %>
 							<i>no controls</i>
 						<% end %>
+					<% else %><!--moderator or poster-->
+						<% if user.login == current_user.login %>
+							<%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
+						<% else %>
+							<i>no controls</i>
+						<% end %>
+					<% end %>
 			    </li>
 			  </ul>
 		  <% end %>

@@ -22,11 +22,13 @@ a#top_text:hover {
 	font-weight: 650;
 	font-family: arial, times, serif;
 }
-#login_area{
+#login_area {
 	float: right;
 }
 #notification_area {
 	float: left;
+}
+div#subscribe {
 }
 /* =============================================== */
 /* FOOTER  										   */

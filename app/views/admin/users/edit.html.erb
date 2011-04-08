@@ -3,8 +3,7 @@
 	<%= form_for [:admin, @user] do |f| %>
 		<p>
 			<%= f.label :login %><br>
-			<%= f.text_field :login, :disabled => 'disabled' %> <!--or pass :readOnly => 'readOnly'-->
-			<!--Modification of this is disabled.-->
+			<%= f.text_field :login %> <!--or pass :readOnly => 'readOnly' or :disabled => 'disabled' -->
 		</p>
 		<p>
 			<%= f.label :full_name, "Full Name" %><br>
@@ -14,6 +13,18 @@
 			<%= f.label :email %><br>
 			<%= f.text_field :email %>
 		</p>
+		
+		<% if current_user.role == 'superadmin' %>
+			<p>
+				<%= f.label :role %><br>
+				<%= f.collection_select :role, User::ROLES, :to_s, :humanize %><br>
+			</p>
+		<% elsif current_user.role == 'admin' %>
+			<p>
+				<%= f.label :role %><br>
+				<%= f.collection_select :role, User::LIMITED_ROLES, :to_s, :humanize %>
+			</p>
+		<% end %>
 		
 		<p><a href="javascript:void(0)" id='change_pw_area_trigger' class='no_line small'>Change password >></a></p>
 		<div id='change_pw_area' style='display:none'>

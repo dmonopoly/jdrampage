@@ -3,7 +3,6 @@ Uses Rails 3.0.3
 
 -TODO/Ideas-
 Prioritized
--add checks for "little links" like in section header show
 -get the minimum of everything working
 		-improve design even more
 				o extract parts in layouts to partials!

@@ -21,7 +21,7 @@ require 'forgery'
 
 # # admins
 User.create(:login=>"superadmin",:password=>"password",:password_confirmation=>"password",
-						:email=>"david_zhang_21@yahoo.com",:full_name => "David Zhang",:role=>"admin")
+						:email=>"david_zhang_21@yahoo.com",:full_name => "David Zhang",:role=>"superadmin")
 User.create(:login=>"advisor",:password=>"password",:password_confirmation=>"password",
 						:email=>"tmathis@jd.cnyric.org",:full_name => "Trinity Mathis",:role=>"admin")
 # # moderators
@@ -36,6 +36,8 @@ User.create(:login=>"moderator3",:password=>"password",:password_confirmation=>"
 	User.create(:login=>"poster#{i}",:password=>"password",:password_confirmation=>"password",
 						:email=>"bobjoe#{i}@gmail.com",:full_name => "Bob Joe #{i}",:role=>"poster")
 end
+
+puts "---dealt with users"
 
 # Creating the sections
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|
