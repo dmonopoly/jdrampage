@@ -14,13 +14,13 @@
 <div id="header">
 	<div id="subscribe" class="right small no_line"><%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %></div>
 	<%= link_to "rampage", '/', :id => 'top_text' %>
-	<div id="top_subtext">The JDHS Student Newspaper</div>
+	<div id="top_subtext">The Jamesville Dewitt High School Student Newspaper</div>
 	<ul id="section_header_list">
 		<% for section in Section.all %>
 			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
 		<% end %>
 	</ul>
-	
+
   <div id="notification_area">
     <%= show_free_space_if_active('Notification') %>
   </div>
@@ -99,3 +99,4 @@
 
 </body>
 </html>
+
