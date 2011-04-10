@@ -14,7 +14,12 @@
 <div id="header">
 	<div id="subscribe" class="right small no_line"><%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %></div>
 	<%= link_to "rampage", '/', :id => 'top_text' %>
-	<div id="top_subtext">The Jamesville Dewitt High School Student Newspaper</div>
+	<div id="top_subtext">
+	  The
+	  <%= link_to "Jamesville Dewitt High School", "http://en.wikipedia.org/wiki/Jamesville-Dewitt_High_School",
+	  :class=>"nothing" %>
+	  Student Newspaper
+	</div>
 	<ul id="section_header_list">
 		<% for section in Section.all %>
 			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
