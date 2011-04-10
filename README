@@ -3,6 +3,9 @@ Uses Rails 3.0.3
 
 -TODO/Ideas-
 Prioritized
+-get f.error_messages working
+-add delete power to superadmin
+-limit sort capability of certain users
 -get the minimum of everything working
 		-improve design even more
 				o extract parts in layouts to partials!
