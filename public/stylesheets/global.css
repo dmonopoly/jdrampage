@@ -45,6 +45,10 @@ a.button:hover {
 a.no_line {
 	text-decoration: none;
 }
+a.nothing {
+	text-decoration: none;
+	color: #333; /* the regular color as defined in scaffold.css */
+}
 /* =============================================== */
 /* Other																					 */
 /* =============================================== */
