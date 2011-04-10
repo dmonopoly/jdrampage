@@ -7,10 +7,6 @@ Prioritized
 		-improve design even more
 				o extract parts in layouts to partials!
 				o ckeditor, sidebar, text alignment, image upload
--decide what you want on the back home. For now, it is just a redundant front page with controls.
-    o maybe: after login, you see the front page with login controls
-        o welcome screen?
-        o messages to posters? notes box in general?
 -only OLD articles in sidebars
 -testing
 
@@ -35,3 +31,7 @@ Accomplished
 		o sidebar for the back
 -types of accounts:
     o see notes in dropbox. use ryanb's cancan gem
+-decide what you want on the back home. For now, it is just a redundant front page with controls.
+	o maybe: after login, you see the front page with login controls
+			o welcome screen?
+			o messages to posters? notes box in general?

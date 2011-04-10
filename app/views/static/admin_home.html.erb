@@ -1,13 +1,24 @@
 <!--static#admin_home - the back's home page-->
 <div id="back_home">
-  <h2>Welcome, <%= current_user.full_name %>.</h2>
-  <p>
-    <b>Controls</b>
-  </p>
-	<p>
-		<%= link_to "New Article", new_admin_article_path, :class => "button" %>
-	</p>
-	<p>
-		<%= link_to "My Account", [:edit, :admin, current_user], :class => "button" %>
-	</p>
+  <h3>Welcome, <%= current_user.full_name %>.</h3>
+	<div class="right">
+		<p>
+			<b>Controls</b>
+		</p>
+		<p>
+			<%= link_to "New Article", new_admin_article_path, :class => "button" %>
+		</p>
+		<p>
+			<%= link_to "My Account", [:edit, :admin, current_user], :class => "button" %>
+		</p>
+	</div>
+	<div>
+		<p>
+			<b>Site details as of <%= DateTime.now.to_formatted_s(:long) %>:</b>
+		</p>
+		<p>
+			Number of articles: <%= Article.count %><br>
+			Number of subscribers: <%= Subscriber.count %><br>
+		</p>
+	</div>
 </div>
