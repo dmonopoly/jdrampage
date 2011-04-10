@@ -1,4 +1,5 @@
 class Admin::SectionsController < AdminController
+	load_and_authorize_resource
 	def index
 		@sections = Section.all
 	end

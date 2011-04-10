@@ -4,22 +4,16 @@ Uses Rails 3.0.3
 -TODO/Ideas-
 Prioritized
 -get the minimum of everything working
-    -types of accounts:
-        o see notes in dropbox. use cancan gem
-		-improve design even more
-				o ckeditor, sidebar, text alignment, image upload
--article form with errors checked/shown properly (click-and-disappear glitch with JS)
+    -improve design even more
+		o extract parts in layouts to partials!
+		o ckeditor, sidebar, text alignment, image upload
 -only OLD articles in sidebars
 -testing
+
+Unorganized
 -users have images of their faces
 -sidebar reload AJAX
 -comments
-
-Unorganized
--decide what you want on the back home. For now, it is just a redundant front page with controls.
-    o maybe: after login, you see the front page with login controls
-        o welcome screen?
-        o messages to posters? notes box in general?
 
 Accomplished
 -deal with subscribers
@@ -35,4 +29,10 @@ Accomplished
 -nice design (improve sidebar, look & feel, ckeditor)
 		o use content_for to clean up layout
 		o sidebar for the back
+-types of accounts:
+    o see notes in dropbox. use cancan gem of ryanb
+-decide what you want on the back home. For now, it is just a redundant front page with controls.
+	o maybe: after login, you see the front page with login controls
+		o welcome screen?
+		o messages to posters? notes box in general?
 

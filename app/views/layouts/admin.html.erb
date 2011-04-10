@@ -20,11 +20,11 @@
 		<% end %>
 	</ul>
 	<%= link_to 'Articles', admin_articles_path %> |
-	<%= link_to 'Sections', admin_sections_path %> |
-	<%= link_to 'Pages', admin_pages_path %> |
-	<%= link_to 'Users', admin_users_path %> |
-	<%= link_to 'Subscribers', admin_subscribers_path %> |
-	<%= link_to 'Free Spaces', admin_free_spaces_path %>
+	<% if can? :manage, Section %><%= link_to 'Sections', admin_sections_path %> |<% end %>
+	<% if can? :manage, Page %><%= link_to 'Pages', admin_pages_path %> |<% end %>
+	<% if can? :manage, FreeSpace %><%= link_to 'Free Spaces', admin_free_spaces_path %> |<% end %>
+	<% if can? :manage, Subscriber %><%= link_to 'Subscribers', admin_subscribers_path %> |<% end %>
+	<%= link_to 'Users', admin_users_path %>
 
 	<div id="login_area">
 		Logged in as <b><%= current_user.login %></b> |
@@ -40,25 +40,10 @@
 			<div id='notice'><%= flash[:notice] %></div>
 		<% end %>
 	</div>
-	<% if sidebar? %>
-		<div class="span-3 colborder" id="left_sidebar">
-			<h6>Sidebar content 1</h6>
-			I am some sidebar content. What should I put here?
-		</div>
 
-		<div class="span-14 colborder">
-			<%= yield %>
-		</div>
-
-		<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
-			<h6>Sidebar content 2</h6>
-			I am some sidebar content. What should I put here?
-		</div>
-	<% else %>
-		<div class="span-24 last">
-			<%= yield %>
-		</div>
-	<% end %>
+	<div class="span-24 last">
+		<%= yield %>
+	</div>
 </div>
 <hr>
 <div id="footer">
@@ -73,4 +58,3 @@
 
 </body>
 </html>
-
