@@ -5,10 +5,10 @@ Uses Rails 3.0.3
 Prioritized
 -get the minimum of everything working
     -types of accounts:
-        o see notes in dropbox. use ryanb's cancan gem
+        o see notes in dropbox. use cancan gem
 		-improve design even more
 				o ckeditor, sidebar, text alignment, image upload
-				
+-article form with errors checked/shown properly (click-and-disappear glitch with JS)
 -only OLD articles in sidebars
 -testing
 -users have images of their faces
@@ -35,3 +35,4 @@ Accomplished
 -nice design (improve sidebar, look & feel, ckeditor)
 		o use content_for to clean up layout
 		o sidebar for the back
+

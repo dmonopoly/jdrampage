@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/thoughtbot/paperclip.git
-  revision: aa55b952065f265b83fed0fc24a79799bd12ab8a
+  revision: 1738ea1dcaf65860c53088cc62ad7f0887e629ca
   specs:
     paperclip (2.3.8)
       activerecord
@@ -15,9 +15,9 @@ GIT
 
 GIT
   remote: https://github.com/haihappen/acts_as_list.git
-  revision: 2ce7d68388d35f297cf0cd65d11343240fd88f58
+  revision: 2d31225cb83e2c6867045ef9bd6d14cf5ff59059
   specs:
-    acts_as_list (0.0.2)
+    acts_as_list (0.0.3)
 
 GEM
   remote: http://rubygems.org/
@@ -49,17 +49,19 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    arel (2.0.7)
+    arel (2.0.9)
     builder (2.1.2)
     cancan (1.6.3)
-    cucumber (0.10.0)
+    cucumber (0.10.2)
       builder (>= 2.1.2)
-      diff-lcs (~> 1.1.2)
-      gherkin (~> 2.3.2)
-      json (~> 1.4.6)
-      term-ansicolor (~> 1.0.5)
-    cucumber-rails (0.3.2)
-      cucumber (>= 0.8.0)
+      diff-lcs (>= 1.1.2)
+      gherkin (>= 2.3.5)
+      json (>= 1.4.6)
+      term-ansicolor (>= 1.0.5)
+    cucumber-rails (0.4.0)
+      cucumber (>= 0.10.1)
+      nokogiri (>= 1.4.4)
+      rack-test (>= 0.5.7)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -67,15 +69,16 @@ GEM
     factory_girl_rails (1.0.1)
       factory_girl (~> 1.3)
       railties (>= 3.0.0)
-    forgery (0.3.6)
-    gherkin (2.3.3)
-      json (~> 1.4.6)
-    gherkin (2.3.3-x86-mingw32)
-      json (~> 1.4.6)
+    forgery (0.3.7)
+      nokogiri (~> 1.4)
+    gherkin (2.3.5)
+      json (>= 1.4.6)
+    gherkin (2.3.5-x86-mingw32)
+      json (>= 1.4.6)
     i18n (0.5.0)
-    json (1.4.6)
-    json (1.4.6-x86-mingw32)
-    mail (2.2.14)
+    json (1.5.1)
+    json (1.5.1-x86-mingw32)
+    mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -84,8 +87,8 @@ GEM
     nokogiri (1.4.4)
     nokogiri (1.4.4-x86-mingw32)
     polyglot (0.3.1)
-    rack (1.2.1)
-    rack-mount (0.6.13)
+    rack (1.2.2)
+    rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
       rack (>= 1.0)
@@ -103,14 +106,14 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
-    rspec (2.4.0)
-      rspec-core (~> 2.4.0)
-      rspec-expectations (~> 2.4.0)
-      rspec-mocks (~> 2.4.0)
-    rspec-core (2.4.0)
-    rspec-expectations (2.4.0)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.1)
+    rspec-expectations (2.5.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.4.0)
+    rspec-mocks (2.5.0)
     shoulda (2.11.3)
     sqlite3 (1.3.3)
     sqlite3 (1.3.3-x86-mingw32)
@@ -120,7 +123,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.24)
+    tzinfo (0.3.25)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)

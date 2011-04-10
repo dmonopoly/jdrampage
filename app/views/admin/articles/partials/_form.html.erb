@@ -1,5 +1,6 @@
 <!--assumes article and button_value variables-->
 <%= form_for [:admin, article], :html=>{ :multipart => true } do |f| %>
+	<%= f.error_messages %>
 	<p>
 		<%= f.label :title %>
 		<%= f.text_field :title %><br><br>
