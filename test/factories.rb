@@ -33,7 +33,7 @@ Factory.define :section do |t|
 end
 
 Factory.define :subscriber do |t|
-    t.sequence(:email) { |n| "subscriber#{n}@somewhere.com" }
+    t.sequence(:email) { |n| "xyz#{n}@abc.com" }
 end
 
 # not used by seeds

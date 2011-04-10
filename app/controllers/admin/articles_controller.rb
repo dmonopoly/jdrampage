@@ -30,7 +30,7 @@ class Admin::ArticlesController < AdminController
         flash[:notice] = 'Article was successfully created.'
 				@article.move_to_top # move article to first of all articles by changing its position to 1
 				move_to_top_in_section(@article)
-        format.html { redirect_to(admin_article_path(@article)) }
+        format.html { redirect_to @article }
       else
         format.html { render :action => "new" }
       end
@@ -43,7 +43,7 @@ class Admin::ArticlesController < AdminController
     respond_to do |format|
       if @article.update_attributes(params[:article])
         flash[:notice] = 'Article was successfully updated.'
-        format.html { redirect_to(admin_article_path(@article)) }
+        format.html { redirect_to @article }
       else
         format.html { render :action => "edit" }
       end
