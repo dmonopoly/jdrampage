@@ -1,7 +1,7 @@
 /* =============================================== */
-/* ARTICLE_PREVIEW								   */
+/* MEDIUM_PREVIEW								   */
 /* =============================================== */
-div.article_preview{
+div.medium_preview{
 	display: block;
 	width: 300px;
 	height: 150px;
@@ -29,9 +29,9 @@ div.article_teaser{
 
 }
 /* =============================================== */
-/* ARTICLE_PREVIEW_TOP	      					   */
+/* LARGE_PREVIEW    	      					   */
 /* =============================================== */
-div#article_preview_top{
+div#large_article_preview{
 display: block;
 width: 400px;
 height: 300px;

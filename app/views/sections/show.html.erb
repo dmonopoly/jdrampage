@@ -4,11 +4,11 @@
     <%= render :partial => "sections/partials/section_show_header", :locals => { :section => @section, :on_back => false } %>
   </div>
 	<%= show_free_space_if_active("#{@section.name}TopArea") %>
-	
+
   <hr>
   <div id="section_content">
     <% @articles.each do |article| %>
-      <%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
+      <%= render :partial => "articles/partials/medium_preview", :locals => { :article => article } %>
     <% end %>
 
     <%= will_paginate @articles %>
@@ -23,3 +23,4 @@
 <% content_for :right_sidebar do %>
 	<%= show_free_space_if_active("#{@section.name}RightSidebar") %>
 <% end %>
+

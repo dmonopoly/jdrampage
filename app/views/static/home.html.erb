@@ -1,11 +1,20 @@
 <!--static#home - the home page-->
+
+<!--Create partials for different style article previews, like one to the left, one to the right
+...
+-large - medium (large?) image + very big title + teaser + article beginning + author
+-medium - with [something larger than thumbnail, maybe medium] image + big title + teaser + author
+-small - with thumbnail image + teaser (sidebar) + small title
+-tiny - no image + teaser (sidebar)
+-->
+
 <div id="front_page">
-	<%= render :partial => "articles/partials/article_preview_top", :locals => { :article => @articles[0] } %>
+	<%= render :partial => "articles/partials/large_preview", :locals => { :article => @articles[0] } %>
 	<% @articles[1..-1].each_with_index do |article, index| %> <!--modify-->
 	  <% if index % 2 == 0 %>
-		  <%= render :partial => "articles/partials/article_preview", :locals => { :article => article } %>
+		  <%= render :partial => "articles/partials/medium_preview", :locals => { :article => article } %>
 		<% else %>
-  		<%= render :partial => "articles/partials/article_preview", :locals => { :article => article }, :class => "right" %>
+  		<%= render :partial => "articles/partials/medium_preview", :locals => { :article => article }, :class => "right" %>
 		<% end %>
 	<% end %>
 </div>
@@ -17,3 +26,4 @@
 <% content_for :right_sidebar do %>
 	<%= show_free_space_if_active('HomeRightSidebar') %>
 <% end %>
+

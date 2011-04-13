@@ -3,12 +3,12 @@ Uses Rails 3.0.3
 
 -TODO/Ideas-
 Prioritized
--add delete power to superadmin
--limit sort capability of certain users
 -get the minimum of everything working
     -improve design even more
 		o extract parts in layouts to partials!
 		o ckeditor, sidebar, text alignment, image upload
+-limit sort capability of certain users
+-add delete power to superadmin
 -only OLD articles in sidebars
 -testing
 
