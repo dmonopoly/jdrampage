@@ -50,8 +50,17 @@ a.nothing {
 	color: #333; /* the regular color as defined in scaffold.css */
 }
 /* =============================================== */
-/* Other																					 */
+/* Other																			 */
 /* =============================================== */
+.small {
+	font-size: 10px;
+}
+.italic {
+	font-style: italic;
+}
+.left {
+	float: left;
+}
 .right {
 	float: right;
 }

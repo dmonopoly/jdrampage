@@ -12,10 +12,19 @@
 			<%= f.label :email %><br>
 			<%= f.text_field :email %>
 		</p>
-		<p>
-			<%= f.label :role %><br>
-			<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
-		</p>
+		
+		<% if current_user.role == 'superadmin' %>
+			<p>
+				<%= f.label :role %><br>
+				<%= f.collection_select :role, User::ROLES, :to_s, :humanize %><br>
+			</p>
+		<% elsif current_user.role == 'admin' %>
+			<p>
+				<%= f.label :role %><br>
+				<%= f.collection_select :role, User::LIMITED_ROLES, :to_s, :humanize %>
+			</p>
+		<% end %>
+		
 		<p>
 			<%= f.label :password %><br>
 			<%= f.password_field :password %><br>

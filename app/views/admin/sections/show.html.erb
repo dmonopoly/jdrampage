@@ -26,7 +26,9 @@
 	</ul>
 	<%= will_paginate @articles %>
 
-	<%= sortable_element("admin_section_article_list", :url => sort_in_section_admin_articles_path,
-												:only => "sortable", :handle => "handle" ) %>
+	<% unless current_user.role == "poster" %><!--confining ability to sort-->
+		<%= sortable_element("admin_section_article_list", :url => sort_in_section_admin_articles_path,
+													:only => "sortable", :handle => "handle" ) %>
+	<% end %>
 </div>
 

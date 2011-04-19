@@ -14,4 +14,3 @@ class Article < ActiveRecord::Base
   validates_format_of :date, :with => /\d\d\d\d-\d\d-\d\d/
 
 end
-

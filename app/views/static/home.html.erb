@@ -10,11 +10,12 @@
 
 <div id="front_page">
 	<%= render :partial => "articles/partials/large_preview", :locals => { :article => @articles[0] } %>
+	
 	<% @articles[1..-1].each_with_index do |article, index| %> <!--modify-->
 	  <% if index % 2 == 0 %>
 		  <%= render :partial => "articles/partials/medium_preview", :locals => { :article => article } %>
 		<% else %>
-  		<%= render :partial => "articles/partials/medium_preview", :locals => { :article => article }, :class => "right" %>
+  		<%= render :partial => "articles/partials/medium_preview_2", :locals => { :article => article } %>
 		<% end %>
 	<% end %>
 </div>

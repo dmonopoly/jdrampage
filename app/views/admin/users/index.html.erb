@@ -25,9 +25,11 @@
 			    <li class="user_controls">
 					<% if current_user.role == 'superadmin' %>
 						<%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
+						<%= link_to 'Delete', [:admin, user], :class=>'button_like', :method=>:delete, :confirm=>"Are you sure?" %>
 					<% elsif current_user.role == 'admin' %>
 						<% unless user.role == 'superadmin' %>
 							<%= link_to 'Edit', edit_admin_user_path(user), :class => 'button_like' %>
+							<%= link_to 'Delete', [:admin, user], :class=>'button_like', :method=>:delete, :confirm=>"Are you sure?" %>
 						<% else %>
 							<i>no controls</i>
 						<% end %>
@@ -43,5 +45,4 @@
 		  <% end %>
 	  <% end %>
   </ul>
-
 </div>

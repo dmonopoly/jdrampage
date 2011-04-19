@@ -25,7 +25,10 @@
 		<% end %>
 	</ul>
 
-	<%= sortable_element("article_list", :url => sort_admin_articles_path,
+	<%= will_paginate @articles %>
+	
+	<% unless current_user.role == "poster" %><!--confining ability to sort--><!--confining ability to sort-->
+		<%= sortable_element("article_list", :url => sort_admin_articles_path,
 												:only => "sortable", :handle => "handle" ) %>
+	<% end %>
 </div>
-

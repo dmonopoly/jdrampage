@@ -6,7 +6,7 @@
 	</div>
 
 	<div id="article_image_top">
-		<%= link_to ( image_tag article.photo.url(:medium), :id => "article_image_top" ), article %>
+		<%= link_to ( image_tag article.photo.url(:large), :class => "article_image" ), article %>
 	</div>
 
 	<div id="article_teaser_top">
@@ -15,7 +15,7 @@
 
 	<div id="article_beginning">
     The beginning of the article is here.<br>
-    <%= article.body[0..150] %>...
+    <%= article.body[0..500] %>...<%= render :partial => "articles/partials/read_more_link", :locals=>{ :article => article } %>
 	</div>
 </div>
 

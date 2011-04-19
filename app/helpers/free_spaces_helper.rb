@@ -15,4 +15,3 @@ module FreeSpacesHelper
     render :partial => "admin/free_spaces/partials/show", :locals => { :free_space => fs }
   end
 end
-

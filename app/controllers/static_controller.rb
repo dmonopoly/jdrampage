@@ -4,7 +4,7 @@ class StaticController < ApplicationController
 
 	# front homepage
 	def home
-		@articles = Article.all(:limit => 6)
+		@articles = Article.all(:order => :position, :limit => 6)
 		render :layout => 'application'
 	end
 

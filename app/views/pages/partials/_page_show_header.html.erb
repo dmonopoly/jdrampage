@@ -3,8 +3,8 @@
   <%= page.title %>
   <% if logged_in? %>
 		<% if can? :manage, Page %>
-			<%= link_to 'Edit', edit_admin_page_path(page), :style => 'font-size: 10px' %>
-			<%= link_to "<<", admin_pages_path, :style => "font-size: 10px" %>
+			<%= link_to 'Edit', edit_admin_page_path(page), :class=>"small" %>
+			<%= link_to "<<", admin_pages_path, :class=>"small" %>
 		<% end %>
   <% end %>
 </h2>

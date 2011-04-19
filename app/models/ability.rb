@@ -13,7 +13,7 @@ class Ability
 			can :update, User, :id => user.id
 			can :read, Section
 		else # user is a poster
-			can :manage, Article
+			can :manage, Article # but cannot sort articles. You currently have an ad hoc solution: hide functionality in views
 			can :read, User
 			can :update, User, :id => user.id
 			can :read, Section

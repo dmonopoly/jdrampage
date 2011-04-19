@@ -2,9 +2,9 @@
 <h3>
   <%= section.name %>
   <% if on_back %>
-    <% if can? :update, Section %><%= link_to 'Edit', edit_admin_section_path(section), :style=>'font-size:10px' %><% end %>
-    <%= link_to '>>', section, :style=>'font-size:10px' %>
+    <% if can? :update, Section %><%= link_to 'Edit', edit_admin_section_path(section), :class=>"small" %><% end %>
+    <%= link_to '>>', section, :class=>"small" %>
   <% elsif logged_in? %><!--must be on front-->
-    <%= link_to '<<', admin_section_path(section), :style=>'font-size:10px' %>
+    <%= link_to '<<', admin_section_path(section), :class=>"small" %>
   <% end %>
 </h3>
