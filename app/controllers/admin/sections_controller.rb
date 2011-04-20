@@ -8,7 +8,8 @@ class Admin::SectionsController < AdminController
     @section = Section.find(params[:id])
 		@articles = @section.articles.paginate :page => params[:page], :per_page => 10, :order => 'articles.section_position ASC'
   end
-
+	
+	# Section names should not be altered. Doing so will cause issues with free spaces.
   def edit
   	@section = Section.find(params[:id])
   end
@@ -36,4 +37,3 @@ class Admin::SectionsController < AdminController
 	end
 
 end
-

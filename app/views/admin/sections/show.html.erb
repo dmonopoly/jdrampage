@@ -4,6 +4,10 @@
     <%= render :partial => "sections/partials/section_show_header", :locals => { :section => @section, :on_back => true } %>
   </div>
 
+	<div id="article_new_area">
+		<%= link_to "New Article", new_admin_article_path, :class => "button right" %>
+	</div>
+	
 	<ul id="admin_section_article_list">
 		<li>
 			<ul id="admin_section_article_list_headers">

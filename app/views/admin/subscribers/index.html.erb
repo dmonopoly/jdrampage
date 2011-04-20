@@ -24,9 +24,7 @@
 
 	<div id="subscriber_text_area">
 		<!--Add readonly="yes" or not (take it out if no readonly)-->
-		<textarea rows="10" cols="60" readonly="yes">
-			<%= @subscribers.map{|s| s.email}.join(", ") %>
-		</textarea>
+		<textarea rows="10" cols="60" readonly="yes"><%= @subscribers.map{|s| s.email}.join(", ") %></textarea>
     <p>
       A text area of all subscribers' emails separated by commas.
     </p>

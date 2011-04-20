@@ -4,14 +4,13 @@
 <div id="section_edit">
   <%= form_for [:admin, @section] do |f| %>
 		<%= f.label :name %>
-		<%= f.text_field :name %>
-		<%= f.submit "Update" %>
+		<%= f.text_field :name, :disabled => true %>
+		<%= f.submit "Update", :disabled => true %>
   <% end %>
 </div>
-
+<p>Section names should not be altered. Doing so will cause issues with free spaces.</p>
 <p>If you want more functionality, contact the jdrampage application developer.</p>
 
 <div id="directions">
 	<%= link_to "<< Back", admin_section_path(@section) %>
 </div>
-

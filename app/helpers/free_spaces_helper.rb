@@ -1,5 +1,4 @@
 module FreeSpacesHelper
-
   # Used on front
   def show_free_space_if_active(name)
     fs = FreeSpace.find_by_name(name)

@@ -4,7 +4,7 @@ Jdrampage::Application.routes.draw do
 	resources :articles, :only => :show, :has_many => :comments
 	resources :sections, :only => :show
 	resources :pages, :only => :show
-	resources :subscribers, :only => [ :new, :create ]#, :collection => { :thank_you => :get }
+	resources :subscribers, :only => [ :new, :create ]
 
 	resource :user_session
 
@@ -20,7 +20,7 @@ Jdrampage::Application.routes.draw do
 		resources :pages, :except => :show do
 		  collection { post 'sort' }
     end
-		resources :subscribers
+		resources :subscribers, :except => [ :show, :new, :create ]
 	  resources :free_spaces, :except => [ :new, :create ]
 #		resources :comments
 	end
