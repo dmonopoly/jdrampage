@@ -1,5 +1,6 @@
 Online student newspaper for JDHS
 Uses Rails 3.0.3
+Yet to be deployed
 
 Important ideas:
 Section names never change. Neither do free space names.
@@ -9,9 +10,7 @@ Prioritized
 -sorting problem: conflicts with paginate...
 	o if you go to a page > 1 and sort, the section_positions get screwed up
 	  b/c they're based on the indices in the array
-	o !! update_section_positions (private method) is wrong! it ends up sorting based on alphabetized name values...
-		You cannot trust section.articles.all!
-
+	o You have fixed move_to_top_in_section :]
 -date form for articles...
 
 -figure out how to seed database with images...

@@ -1,5 +1,6 @@
 class Admin::ArticlesController < AdminController
 	load_and_authorize_resource
+	
   def index
 		@articles = Article.all(:order => :position).paginate :page => params[:page], :per_page => 10
 
@@ -83,15 +84,14 @@ class Admin::ArticlesController < AdminController
 	private
 		def move_to_top_in_section(article) # NOT WORKING
 			articles = article.section.articles.all(:order => :section_position)
-			temp = article
-			Article.delete(article) # hmmm.
-			articles.unshift(temp)
+			articles.insert(0, articles.delete(article))
 			articles.each_with_index do |art, index|
 				Article.update_all ['section_position=?', index+1], ['id=?', art.id]
 			end
 		end
 
 		def update_section_positions(section) # updates all section positions for articles in the given section
+			# mainly for when there is a gap in section_positions, e.g. 1, 2, 4, 5 -> 1, 2, 3, 4
 			articles = section.articles.all(:order => :section_position)
 			articles.each_with_index do |art, index|
 				Article.update_all ['section_position=?', index+1], ['id=?', art.id]

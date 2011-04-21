@@ -1,5 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # Commands:
+# rake db:reset - drops the db, recreates the db, and loads current schema into db
+# rake db:schema:load - loads current schema into db; loads seed data also
 # rake db:seed - load seed data; defaults to development
 # rake db:seed RAILS_ENV=test - load seed data for the test db
 # rake db:setup - set up database by running migrations
