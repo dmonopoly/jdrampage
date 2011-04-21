@@ -7,6 +7,6 @@
 		<%= image_tag @article.photo.url(:display) %>
 	</div>
 	<div id="article_show">
-		<%= @article.body %>
+		<%= simple_format @article.body %>
 	</div>
 </div>

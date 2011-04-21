@@ -1,5 +1,5 @@
 <!--for #1 article; requires variable "article"-->
-<div id="large_article_preview">
+<div id="large_article_preview" class="my_border">
 	<div id="article_header_top">
 	  <%= link_to article.title, article, :id => "article_title_top" %><br>
 		<span id="article_author_top">by <%= article.author %></span>
@@ -14,8 +14,7 @@
 	</div>
 
 	<div id="article_beginning">
-    The beginning of the article is here.<br>
-    <%= article.body[0..500] %>...<%= render :partial => "articles/partials/read_more_link", :locals=>{ :article => article } %>
+    <%= simple_format article.body[0..500]+"..." %><%= render :partial => "articles/partials/read_more_link", :locals=>{ :article => article } %>
 	</div>
 </div>
 

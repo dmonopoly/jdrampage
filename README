@@ -7,17 +7,17 @@ Section names never change. Neither do free space names.
 
 -TODO/Ideas-
 Prioritized
+-date form for articles... add teaser to form (one-liner strictly - note this in view)
+
+-design issues involving simple_format, the read >> link, and article previews
+
 -sorting problem: conflicts with paginate...
 	o if you go to a page > 1 and sort, the section_positions get screwed up
 	  b/c they're based on the indices in the array
 	o You have fixed move_to_top_in_section :]
--date form for articles...
 
 -figure out how to seed database with images...
 
--get the minimum of everything working
-    -improve design even more
-		o ckeditor (?), sidebar, text alignment, image upload
 -only OLD articles in sidebars
 -testing
 
