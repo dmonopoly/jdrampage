@@ -11,7 +11,7 @@
 <div id="front_page">
 	<%= render :partial => "articles/partials/large_preview", :locals => { :article => @articles[0] } %>
 	
-	<% @articles[1..-1].each_with_index do |article, index| %> <!--modify-->
+	<% @articles[1..-1].each_with_index do |article, index| %>
 	  <% if index % 2 == 0 %>
 		  <%= render :partial => "articles/partials/medium_preview", :locals => { :article => article } %>
 		<% else %>

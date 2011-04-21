@@ -4,10 +4,9 @@
 	  <%= render :partial => 'articles/partials/article_show_header', :locals => { :article => @article } %>
 	</div>
 	<div id="article_image">
-		<%= image_tag @article.photo.url(:large), :class=>"article_image" %>
+		<%= image_tag @article.photo.url(:display) %>
 	</div>
 	<div id="article_show">
 		<%= @article.body %>
 	</div>
 </div>
-
