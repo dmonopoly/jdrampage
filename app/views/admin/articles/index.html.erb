@@ -27,7 +27,10 @@
 
 	<%= will_paginate @articles %>
 	
-	<% unless current_user.role == "poster" %><!--confining ability to sort--><!--confining ability to sort-->
+	<% unless current_user.role == "poster" %><!--confining ability to sort-->
+		<p class="small">
+			Please do not use the drag feature if you are on a page other than 1. Functionality is still in development.
+		</p>
 		<%= sortable_element("article_list", :url => sort_admin_articles_path,
 												:only => "sortable", :handle => "handle" ) %>
 	<% end %>

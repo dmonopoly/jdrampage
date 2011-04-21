@@ -1,7 +1,7 @@
 class Admin::SubscribersController < AdminController
   load_and_authorize_resource
 	def index
-    @subscribers = Subscriber.all
+    @subscribers = Subscriber.order("email asc").all
   end
 
   def edit

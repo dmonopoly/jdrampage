@@ -2,7 +2,7 @@ class Admin::ArticlesController < AdminController
 	load_and_authorize_resource
 	
   def index
-		@articles = Article.all(:order => :position).paginate :page => params[:page], :per_page => 10
+		@articles = Article.all(:order => :position).paginate :page => params[:page], :per_page => 20
 
     respond_to do |format|
       format.html # index.html.erb
@@ -65,6 +65,10 @@ class Admin::ArticlesController < AdminController
     end
   end
 
+	def show_more
+	
+	end
+	
 	def sort # for articles in general
 		params[:article_list].each_with_index do |id, index|
 			Article.update_all ['position=?', index+1], ['id=?', id]
@@ -72,7 +76,7 @@ class Admin::ArticlesController < AdminController
 		render :nothing => true
 	end
 
-	def sort_in_section # call update_section_positions(section) instead...
+	def sort_in_section # flaw here:
 		# this params hash is based on the list of that PAGE
 		# the top article of that PAGE has index 0
 		params[:admin_section_article_list].each_with_index do |id, index|
@@ -82,7 +86,7 @@ class Admin::ArticlesController < AdminController
   end
 
 	private
-		def move_to_top_in_section(article) # NOT WORKING
+		def move_to_top_in_section(article)
 			articles = article.section.articles.all(:order => :section_position)
 			articles.insert(0, articles.delete(article))
 			articles.each_with_index do |art, index|
