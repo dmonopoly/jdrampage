@@ -3,12 +3,13 @@
   <div id="section_show_header">
     <%= render :partial => "sections/partials/section_show_header", :locals => { :section => @section, :on_back => false } %>
   </div>
-	<%= show_free_space_if_active("#{@section.name}TopArea") %>
 
+	<%= show_free_space_if_active("#{@section.name}TopArea") %>
   <hr>
+
   <div id="section_content">
 		<%= render :partial => "articles/partials/large_preview", :locals => { :article => @articles[0] } %>
-	
+
     <% @articles[1..-1].each_with_index do |article, index| %>
 			<% if index % 2 == 0 %>
 				<%= render :partial => "articles/partials/medium_preview", :locals => { :article => article } %>
@@ -28,3 +29,4 @@
 <% content_for :right_sidebar do %>
 	<%= show_free_space_if_active("#{@section.name}RightSidebar") %>
 <% end %>
+

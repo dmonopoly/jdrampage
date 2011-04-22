@@ -9,8 +9,13 @@
 -->
 
 <div id="front_page">
+
+  <p><%= show_free_space_if_active("HomeTopArea1") %></p>
+
 	<%= render :partial => "articles/partials/large_preview", :locals => { :article => @articles[0] } %>
-	
+
+	<p><%= show_free_space_if_active("HomeTopArea2") %></p>
+
 	<% @articles[1..-1].each_with_index do |article, index| %>
 	  <% if index % 2 == 0 %>
 		  <%= render :partial => "articles/partials/medium_preview", :locals => { :article => article } %>

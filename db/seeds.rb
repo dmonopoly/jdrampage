@@ -1,7 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # Commands:
 # rake db:reset - drops the db, recreates the db, and loads current schema into db
-# rake db:schema:load - loads current schema into db; loads seed data also
+# rake db:schema:load - loads current schema into db; [sometimes] loads seed data also
 # rake db:seed - load seed data; defaults to development
 # rake db:seed RAILS_ENV=test - load seed data for the test db
 # rake db:setup - set up database by running migrations
@@ -103,6 +103,11 @@ if FreeSpace.count == 0
                   :notes => "This is the home page's left sidebar content.")
   Factory.create(:free_space, :name => 'HomeRightSidebar', :content => content,
                   :notes => "This is the home page's right sidebar content.")
+  Factory.create(:free_space, :name => 'HomeTopArea1', :content => content,
+                  :notes => "This is the home page's top area content, above the top article.")
+  Factory.create(:free_space, :name => 'HomeTopArea2', :content => content,
+                  :notes => "This is the home page's top area content, right below the top article.")
+
   # Section free spaces
   Section.all.each do |section|
     Factory.create(:free_space, :name => "#{section.name}LeftSidebar", :content => content,
