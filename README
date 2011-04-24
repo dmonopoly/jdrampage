@@ -1,22 +1,25 @@
 Online student newspaper for JDHS
 Uses Rails 3.0.3
-Yet to be deployed
+*Yet to be deployed*
 
 Important ideas:
 Section names never change. Neither do free space names.
 
 -TODO/Ideas-
 Prioritized
--date form for articles... add teaser to form (one-liner strictly - note this in view)
+-date form for articles: keep 2011-03-11 format?
+    -What about the default value? Date.today.to_s => "2011-04-24"
+    -How is the date entered?
+-deal with teasers (necessary? one-liner strictly - note this in view)
 
 -design issues involving simple_format, the read >> link, and article previews
 
+-transfer database content
+
 -sorting problem: conflicts with paginate...
 	o if you go to a page > 1 and sort, the section_positions get screwed up
-	  b/c they're based on the indices in the array
+	  b/c they are based on the indices in the array
 	o You have fixed move_to_top_in_section :]
-
--figure out how to seed database with images...
 
 -only OLD articles in sidebars
 -testing
@@ -48,3 +51,6 @@ Accomplished
 		o messages to posters? notes box in general?
 -delete power allocated
 -restricted sort functionality
+-figure out how to seed database with images...
+    *actually, you just need to transfer database content
+

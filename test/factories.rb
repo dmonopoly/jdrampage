@@ -9,7 +9,7 @@ Factory.define :article do |t|
 	t.notes "notes here"
 	t.sequence(:position) { |n| n }
 	t.teaser "I am a teaser."
-	t.date "#{DateTime.now.to_s[0..9]}"
+	t.date Date.today.to_s
 end
 
 Factory.define :comment do |t| # not used yet

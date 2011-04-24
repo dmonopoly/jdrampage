@@ -1,6 +1,6 @@
 class Admin::ArticlesController < AdminController
 	load_and_authorize_resource
-	
+
   def index
 		@articles = Article.all(:order => :position).paginate :page => params[:page], :per_page => 20
 
@@ -11,7 +11,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def new
-    @article = Article.new
+    @article = Article.new(:date => Date.today)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,11 +41,11 @@ class Admin::ArticlesController < AdminController
   def update
     @article = Article.find(params[:id])
 		update_section_positions(@article.section) # important if the article's section changed
-		
+
     respond_to do |format|
       if @article.update_attributes(params[:article])
 				update_section_positions(@article.section) # important if the article's section changed
-			
+
         flash[:notice] = 'Article was successfully updated.'
         format.html { redirect_to @article }
       else
@@ -66,9 +66,9 @@ class Admin::ArticlesController < AdminController
   end
 
 	def show_more
-	
+
 	end
-	
+
 	def sort # for articles in general
 		params[:article_list].each_with_index do |id, index|
 			Article.update_all ['position=?', index+1], ['id=?', id]
