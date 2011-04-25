@@ -31,16 +31,7 @@ ActiveRecord::Schema.define(:version => 20110424215558) do
     t.datetime "photo_updated_at"
     t.integer  "section_position"
   end
-
-  create_table "comments", :force => true do |t|
-    t.text     "body"
-    t.integer  "article_id"
-    t.string   "full_name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
+	
   create_table "free_spaces", :force => true do |t|
     t.string   "content",    :default => "Insert free space content here."
     t.string   "name",       :default => "Untitled"
