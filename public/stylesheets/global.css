@@ -6,7 +6,7 @@
 	background: white;
 }
 /* =============================================== */
-/*  Anchors (Links) 															 */
+/*  Anchors (Links) */
 /* =============================================== */
 a {
 	color: red;
@@ -50,7 +50,7 @@ a.nothing {
 	color: #333; /* the regular color as defined in scaffold.css */
 }
 /* =============================================== */
-/* Other																			 */
+/*  Other */
 /* =============================================== */
 .small {
 	font-size: 10px;

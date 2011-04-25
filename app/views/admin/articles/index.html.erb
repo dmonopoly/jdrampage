@@ -1,6 +1,6 @@
 <!--admin/articles/index-->
 <div id="article_index">
-	<h3>All Articles</h3>
+  <h3>All Articles</h3>
 	<div id="article_new_area">
 		<%= link_to "New Article", new_admin_article_path, :class => "button right" %>
 	</div>
@@ -26,7 +26,7 @@
 	</ul>
 
 	<%= will_paginate @articles %>
-	
+
 	<% unless current_user.role == "poster" %><!--confining ability to sort-->
 		<p class="small">
 			Please do not use the drag feature if you are on a page other than 1. Functionality is still in development.
@@ -35,3 +35,4 @@
 												:only => "sortable", :handle => "handle" ) %>
 	<% end %>
 </div>
+

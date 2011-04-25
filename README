@@ -7,10 +7,23 @@ Section names never change. Neither do free space names.
 
 -TODO/Ideas-
 Prioritized
--date form for articles: keep 2011-03-11 format?
-    -What about the default value? Date.today.to_s => "2011-04-24"
-    -How is the date entered?
--deal with teasers (necessary? one-liner strictly - note this in view)
+-deal with teasers (necessary? yes. one-liner strictly - note this in view)
+    -keep teasers b/c of tiny and small previews
+    -may not need to show teaser in medium & large previews
+
+-problematic article columns:
+    -author (:text)
+        -the current jdrampage site has the "by" included in the author field
+        -the author field of the current site is actually a text area, not a text field
+        idea:
+        -rename this to credits, still of type :text;
+        -new column author:string, which is actually shown in previews
+        -credits, which includes the authors and their positions, is shown in the :show
+        -*must be consistent for formality
+    -teaser (:text) - Definitely convert to :string! All teasers are short.
+    -notes (:text) - Delete this
+    -status  (:string) - Delete this
+    -comments_allowed (:boolean) - Delete this
 
 -design issues involving simple_format, the read >> link, and article previews
 
@@ -53,4 +66,7 @@ Accomplished
 -restricted sort functionality
 -figure out how to seed database with images...
     *actually, you just need to transfer database content
+-date form for articles: keep 2011-03-11 format?
+    -What about the default value? Date.today.to_s => "2011-04-24"
+    -How is the date entered? using f.date_select
 
