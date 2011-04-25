@@ -1,6 +1,11 @@
 <!--assumes article and button_value variables-->
 <%= form_for [:admin, article], :html=>{ :multipart => true } do |f| %>
 	<%= f.error_messages %>
+	<p class="right">
+  	<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
+		<label>Upload photo: </label>
+		<%= f.file_field :photo %>
+	</p>
 	<p>
 		<%= f.label :title %>
 		<%= f.text_field :title %><br><br>
@@ -17,16 +22,17 @@
     <%= f.label :teaser %>
     <%= f.text_field :teaser %>
   </p>
+  <p class='right'>
+    <%= f.label :credits %><br>
+    <%= f.text_area :credits, :size => "10x10"  %> <!--why won't this work? need to use css? what's the point of size, then?-->
+  </p>
 	<p>
 		<%= f.label :body %><br>
 		<%= f.text_area :body %>
 	</p>
-	<p>
-		<label>Upload photo: </label>
-		<%= f.file_field :photo %>
-		<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
-	</p>
+
 	<br>
+
 	<p>
 		<%= f.submit button_value %>
 	</p>

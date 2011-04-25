@@ -2,21 +2,12 @@
 Factory.define :article do |t|
 	t.association :section # belongs to a section
 	t.title {|x| "#{x.section.name}Article#{Factory.next(:count)}" }
-	t.author "Author Bob"
+	t.author "Adam Sue and James Merlin"
+	t.credits "By Adam Sue and James Merlin\n\nPhoto courtesy of BlankTown"
 	t.body { Forgery::LoremIpsum.paragraphs(5) }
-	t.status "status here"
-	t.comments_allowed false
-	t.notes "notes here"
 	t.sequence(:position) { |n| n }
 	t.teaser "I am a teaser."
 	t.date Date.today.to_s
-end
-
-Factory.define :comment do |t| # not used yet
-	t.association :article
-	t.body { Forgery::LoremIpsum.sentence }
-	t.full_name "Commenter Bob"
-	t.email "commenter@somewhere.com"
 end
 
 Factory.define :page do |t|

@@ -6,5 +6,8 @@
 		<%= link_to "<<", admin_articles_path, :class=>"small" %>
   <% end %>
 </h2>
-<%= @article.author %><br>
-<%= @article.date %>
+<div class="faded">
+  <p><%= @article.date.year %></p>
+  <%= simple_format @article.credits %>
+</div>
+

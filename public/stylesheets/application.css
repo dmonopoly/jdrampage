@@ -28,7 +28,9 @@ a#top_text:hover {
 #notification_area {
 	float: left;
 }
-div#subscribe {
+div#upper_right {
+    float: right;
+    font-family: serif;
 }
 /* =============================================== */
 /* FOOTER  										   */

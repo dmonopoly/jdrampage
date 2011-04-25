@@ -10,18 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110424215558) do
+ActiveRecord::Schema.define(:version => 20110425152706) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
-    t.text     "author"
+    t.text     "credits"
     t.text     "body"
-    t.string   "status"
-    t.boolean  "comments_allowed"
     t.integer  "section_id"
     t.integer  "position"
-    t.text     "notes"
-    t.text     "teaser"
+    t.string   "teaser"
     t.date     "date",               :limit => 255, :default => '2011-03-01'
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -30,8 +27,18 @@ ActiveRecord::Schema.define(:version => 20110424215558) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "section_position"
+    t.string   "author"
   end
-	
+
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "article_id"
+    t.string   "full_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "free_spaces", :force => true do |t|
     t.string   "content",    :default => "Insert free space content here."
     t.string   "name",       :default => "Untitled"

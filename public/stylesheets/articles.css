@@ -23,9 +23,6 @@ a#article_title_medium{
 a#article_title_medium:hover{
 	color: #FDD44A;
 }
-span.article_author{
-	color: gray;
-}
 div.article_teaser{
 }
 /* =============================================== */
@@ -48,9 +45,6 @@ text-decoration: none;
 }
 a#article_title_top:hover{
 color: #FDD44A;
-}
-#article_author_top{
-color: gray;
 }
 div#article_image_top{
 float: right;

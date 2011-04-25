@@ -12,14 +12,19 @@
 </head>
 <body>
 <div id="header">
-	<div id="subscribe" class="right small no_line"><%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %></div>
+	<div id="upper_right">
+	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %><br>
+	  <div class="faded">
+	    &copy; JD Rampage 2011
+	  </div>
+	</div>
 	<%= link_to "rampage", '/', :id => 'top_text' %>
 	<div id="top_subtext">
 	  The
 	  <%= link_to "Jamesville Dewitt High School", "http://en.wikipedia.org/wiki/Jamesville-Dewitt_High_School", :class=>"nothing" %>
 	  Student Newspaper
 	</div>
-	
+
 	<ul id="section_header_list">
 		<% for section in Section.all %>
 			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
@@ -32,7 +37,7 @@
 
 	<% if logged_in? %>
 		<div id="login_area">
-			Logged in as <b><%= current_user.login %></b> |
+			Logged in as <b><%= current_user.full_name %></b> |
 			<%= link_to 'The Back', admin_path %> |
 			<%= link_to 'The Front', root_path, :style=>"font-weight:bold" %> |
 			<%= link_to 'Logout', logout_path %>
