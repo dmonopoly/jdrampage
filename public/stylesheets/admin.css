@@ -8,7 +8,7 @@
 	padding: 0;
 }
 a#top_text {
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: bold;
 	text-decoration: none;
 	color: black;
@@ -28,7 +28,7 @@ a#top_text:hover {
 /* =============================================== */
 /* FOOTER																					 */
 /* =============================================== */
-#footer { 
+#footer {
 	width: 950px;
 	background: white;
 	margin:0 auto;
@@ -54,3 +54,4 @@ a#top_text:hover {
 #right_sidebar{
 
 }
+

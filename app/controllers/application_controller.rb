@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 		flash[:notice] = "You do not have rights to access this page."
     redirect_to '/admin', :alert => exception.message
   end
-	
+
   # Authlogic Code
   helper_method :current_user_session, :current_user
 
