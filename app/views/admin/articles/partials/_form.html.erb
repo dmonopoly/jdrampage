@@ -12,7 +12,7 @@
 		<%= f.label :author %>
 		<%= f.text_field :author %><br>
 		<%= f.label :date %>
-		<%= f.date_select :date %>
+		<%= f.date_select :date, :order => [ :month, :day, :year ] %>
 	</p>
 
 	<label>Section this article belongs to: </label>
@@ -21,6 +21,10 @@
   <p>
     <%= f.label :teaser %>
     <%= f.text_field :teaser %>
+  </p>
+  <p class='right'>
+    <i>Format:</i><br>
+    To be done.
   </p>
   <p class='right'>
     <%= f.label :credits %><br>

@@ -33,6 +33,8 @@ User.create(:login=>"moderator2",:password=>"password",:password_confirmation=>"
 						:email=>"nick@gmail.com",:full_name => "Nick Harron",:role=>"moderator")
 User.create(:login=>"moderator3",:password=>"password",:password_confirmation=>"password",
 						:email=>"lyndon@gmail.com",:full_name => "Lyndon Pisansky",:role=>"moderator")
+User.create(:login=>"editorandchief",:password=>"password",:password_confirmation=>"password",
+						:email=>"tomlang@gmail.com",:full_name => "Thomas Lang",:role=>"moderator")
 # # posters
 1.upto(5) do |i|
 	User.create(:login=>"poster#{i}",:password=>"password",:password_confirmation=>"password",

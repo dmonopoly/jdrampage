@@ -7,7 +7,7 @@
   <% end %>
 </h2>
 <div class="faded">
-  <p><%= @article.date.year %></p>
+  <p><%= @article.date.strftime('%m/%d/%Y') %></p>
   <%= simple_format @article.credits %>
 </div>
 

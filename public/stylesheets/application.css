@@ -8,7 +8,7 @@
 	padding: 0;
 }
 a#top_text {
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: bold;
 	text-decoration: none;
 	color: black;
@@ -31,6 +31,9 @@ a#top_text:hover {
 div#upper_right {
     float: right;
     font-family: serif;
+}
+a#subscribe {
+    font-size: 20px;
 }
 /* =============================================== */
 /* FOOTER  										   */
