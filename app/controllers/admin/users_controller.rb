@@ -23,7 +23,7 @@ class Admin::UsersController < AdminController
   end
 
   def update
-    @user = @current_user # makes our views "cleaner" and more consistent
+    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated."
       redirect_to admin_users_path

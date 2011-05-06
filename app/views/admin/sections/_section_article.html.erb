@@ -1,8 +1,8 @@
 <!--sections/section_article partial; requires variable 'article'-->
 <li class="article_position"><%= article.section_position %></li>
-<li class="article_title"><%= article.title %></li>
-<li class="article_author"><%= article.author %></li>
-<li class="article_date"><%= article.created_at.to_s[0..9] %></li>
+<li class="article_title"><%= truncate article.title, :length => 25 %></li>
+<li class="article_author"><%= truncate article.author, :length => 10 %></li>
+<li class="article_date"><%= article.date %></li>
 <li class="article_controls">
 	<%= render :partial => "admin/articles/partials/article_controls", :locals => { :article => article } %>
 </li>

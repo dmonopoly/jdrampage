@@ -4,7 +4,7 @@
     <%= render :partial => "pages/partials/page_show_header", :locals => { :page => @page } %>
   </div>
   <div id="page_body">
-    <%= @page.body %>
+    <%= simple_format @page.body %>
   </div>
 </div>
 

@@ -2,6 +2,7 @@
 <div id="user_new">
 	<h3>New User</h3>
 	<%= form_for [:admin, @user] do |f| %>
+		<%= f.error_messages %>
 		<p>
 			<%= f.label :login %><br>
 			<%= f.text_field :login %>

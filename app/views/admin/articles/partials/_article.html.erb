@@ -1,7 +1,7 @@
 <!--For each row in index; needs 'article' variable-->
 <li class="article_position"><%= article.position %></li>
-<li class="article_title"><%= article.title  %></li>
-<li class="article_author"><%= article.author %></li>
+<li class="article_title"><%= truncate article.title, :length => 25 %></li>
+<li class="article_author"><%= truncate article.author, :length => 10 %></li>
 <li class="article_section"><%= article.section.name %></li>
 <li class="article_date"><%= article.date %></li>
 

@@ -1,6 +1,8 @@
 <!--admin/users/edit-->
 <div id="user_edit">
+	<h3>Edit User</h3>
 	<%= form_for [:admin, @user] do |f| %>
+		<%= f.error_messages %>
 		<p>
 			<%= f.label :login %><br>
 			<%= f.text_field :login %> <!--or pass :readOnly => 'readOnly' or :disabled => 'disabled' -->

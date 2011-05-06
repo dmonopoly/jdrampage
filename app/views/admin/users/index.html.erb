@@ -19,8 +19,8 @@
 	  <% @users.each do |user| %>
 		  <%= content_tag_for :li, user do %>
 			  <ul class="items_within_user">
-			    <li class="user_login"><%= user.login %></li>
-			    <li class="user_full_name"><%= user.full_name[0..19] %></li>
+			    <li class="user_login"><%= truncate user.login, :length => 10 %></li>
+			    <li class="user_full_name"><%= truncate user.full_name, :length => 20 %></li>
 					<li class="user_role"><%= user.role %></li>
 			    <li class="user_controls">
 					<% if current_user.role == 'superadmin' %>
