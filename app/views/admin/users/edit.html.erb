@@ -1,8 +1,14 @@
 <!--admin/users/edit-->
 <div id="user_edit">
 	<h3>Edit User</h3>
-	<%= form_for [:admin, @user] do |f| %>
+	<%= form_for [:admin, @user], :html => { :multipart => true } do |f| %>
 		<%= f.error_messages %>
+		
+		<p class="right">
+			<label>Upload photo: </label>
+			<%= f.file_field :photo %><br>
+			<%= image_tag @user.photo.url(:thumb) %>
+		</p>
 		<p>
 			<%= f.label :login %><br>
 			<%= f.text_field :login %> <!--or pass :readOnly => 'readOnly' or :disabled => 'disabled' -->
@@ -14,6 +20,11 @@
 		<p>
 			<%= f.label :email %><br>
 			<%= f.text_field :email %>
+		</p>
+		
+		<p>
+			<%= f.label :bio %><br>
+			<%= f.text_area :bio %>
 		</p>
 		
 		<% if current_user.role == 'superadmin' %>

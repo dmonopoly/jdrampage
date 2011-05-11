@@ -14,5 +14,8 @@ class StaticController < ApplicationController
 		render :layout => 'admin'
 	end
 
+	# staff page
+	def staff
+		@users = User.all
+	end
 end
-

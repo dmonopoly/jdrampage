@@ -1,0 +1,20 @@
+<!--static/staff-->
+<h2>Meet the RamPage Staff</h2>
+
+<% @users.each do |user| %>
+
+<div class="staff_member">
+	<div class="member_name">
+		<%= user.full_name %>
+	</div>
+	
+	<div class="member_photo">
+		<%= image_tag user.photo.url(:thumb) %>
+	</div>
+	
+	<div class="member_bio">
+		<%= simple_format user.bio %>
+	</div>
+</div>
+
+<% end %>

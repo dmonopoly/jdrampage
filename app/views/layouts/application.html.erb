@@ -86,7 +86,9 @@
     <% end %>
 	</div>
 </div>
+
 <hr>
+
 <div id="footer">
 	<% unless logged_in? %>
 	<div id="login_area">
@@ -94,13 +96,7 @@
 	</div>
 	<% end %>
 
-	<ul id="pages_row">
-		<% Page.all.each do |page| %>
-			<%= content_tag_for :li, page do %>
-				<%= link_to page.title, page %>
-			<% end %>
-		<% end %>
-	</ul>
+	<%= render :partial => "layouts/footer_row" %>
 
 	<div id="login_form" style="display:none">
 		<%= render :partial => "user_sessions/new" %>
@@ -109,4 +105,3 @@
 
 </body>
 </html>
-

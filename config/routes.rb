@@ -25,6 +25,7 @@ Jdrampage::Application.routes.draw do
 #		resources :comments
 	end
 
+	match 'staff' => 'static#staff'
 	match 'admin' => 'static#admin_home'
 	match 'logout' => 'user_sessions#destroy'
 

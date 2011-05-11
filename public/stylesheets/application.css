@@ -78,4 +78,16 @@ a#login_activator:hover {
 #right_sidebar{
 
 }
-
+/* =============================================== */
+/* STAFF						                   */
+/* =============================================== */
+.staff_member {
+	margin-bottom: 10px;
+}
+.member_name {
+	font-weight: bold;
+}
+.member_photo {
+}
+.member_bio {
+}
