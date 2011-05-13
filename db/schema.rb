@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20110511214748) do
     t.integer  "section_id"
     t.integer  "position"
     t.string   "teaser"
-    t.date     "date",               :limit => 255, :default => '2011-03-01'
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -28,15 +28,6 @@ ActiveRecord::Schema.define(:version => 20110511214748) do
     t.datetime "photo_updated_at"
     t.integer  "section_position"
     t.string   "author"
-  end
-
-  create_table "comments", :force => true do |t|
-    t.text     "body"
-    t.integer  "article_id"
-    t.string   "full_name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "free_spaces", :force => true do |t|
