@@ -13,7 +13,7 @@
 <body>
 <div id="header">
 	<%= link_to "RamPage", '/', :id => 'top_text' %>
-	<div id="top_subtext">Admin Side</div>
+	<div id="top_subtext">Administrator Side</div>
 	<ul id="section_header_list">
 		<% for section in Section.all %>
 			<li class="section_item"><%= link_to section.name, admin_section_path(section) %></li>
@@ -54,3 +54,4 @@
 
 </body>
 </html>
+
