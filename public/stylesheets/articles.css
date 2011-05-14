@@ -1,5 +1,5 @@
 /* PREVIEWS IN GENERAL (except display) */
-img.article_image{
+img.article_image{ /* used by medium and large preview */
 	margin: 5px 10px 10px 10px;
 }
 div#article_beginning{
@@ -12,6 +12,9 @@ div.small_preview{
 }
 div.tiny_preview{
 	margin-bottom: 10px;
+}
+img.small_article_image{
+	margin: 5px 5px 2px 5px;
 }
 /* =============================================== */
 /* MEDIUM_PREVIEW								                 */

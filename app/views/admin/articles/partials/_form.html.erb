@@ -7,9 +7,9 @@
 		<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
 	</p>
 	<p>
-		<%= f.label :title %>
+		<%= f.label :title %><br>
 		<%= f.text_field :title %><br><br>
-		<%= f.label :author %>
+		<%= f.label :author %><br>
 		<%= f.text_field :author %><br>
 		<%= f.label :date %>
 		<%= f.date_select :date, :order => [ :month, :day, :year ] %>
@@ -19,15 +19,11 @@
 	<%= collection_select :article, :section_id, Section.all, :id, :name, { :prompt => "[Select section]" } %>
 
   <p>
-    <%= f.label :teaser %>
+    <%= f.label :teaser %><br>
     <%= f.text_field :teaser %>
   </p>
   <p class='right'>
-    <i>Format:</i><br>
-    To be done.
-  </p>
-  <p class='right'>
-    <%= f.label :credits %><br>
+    <%= f.label :credits %> <i>(be sure to use the correct format)</i><br>
     <%= f.text_area :credits, :size => "10x10"  %> <!--why won't this work? need to use css? what's the point of size, then?-->
   </p>
 	<p>
@@ -41,4 +37,3 @@
 		<%= f.submit button_value %>
 	</p>
 <% end %>
-
