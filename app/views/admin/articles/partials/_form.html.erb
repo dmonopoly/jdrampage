@@ -2,9 +2,9 @@
 <%= form_for [:admin, article], :html=>{ :multipart => true } do |f| %>
 	<%= f.error_messages %>
 	<p class="right">
-  	<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
 		<label>Upload photo: </label>
-		<%= f.file_field :photo %>
+		<%= f.file_field :photo %><br>
+		<%= image_tag article.photo.url(:thumb), :class=>"article_image" %>
 	</p>
 	<p>
 		<%= f.label :title %>

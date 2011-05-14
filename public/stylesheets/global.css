@@ -1,5 +1,5 @@
 /* =============================================== */
-/*  MAIN                                           */
+/*  LAYOUT                                         */
 /* =============================================== */
 #main{
 	margin: 0 auto;
@@ -52,6 +52,9 @@ a.nothing {
 /* =============================================== */
 /*  Other */
 /* =============================================== */
+.fancy_font {
+	font-family: Georgia, serif;
+}
 .faded {
     color: gray;
 }
@@ -74,3 +77,6 @@ a.nothing {
 li.inline { display: inline }
 li.no_bullet { list-style-type: none }
 
+#title {
+	line-height: 1.3em;
+}

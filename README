@@ -7,6 +7,10 @@ Important ideas:
 -The author column for articles is for previews and should be succinct like "John Wood and Jeremy Lin"
 -The credits column for articles is for articles/show. It is of type text because it contains multiple lines.
 
+Issues:
+-truncating teasers / beginnings of articles could cut right into html tags (leading to unbalanced html tags)
+-
+
 --TODO/Ideas--
 Prioritized
 -deal with teasers (necessary? yes. one-liner strictly - note this in view)
@@ -70,4 +74,3 @@ Accomplished
     -notes (:text) - Delete this
     -status  (:string) - Delete this
     -comments_allowed (:boolean) - Delete this
-

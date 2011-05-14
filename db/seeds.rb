@@ -19,8 +19,10 @@ require 'forgery'
 # Also: "delete" directly deletes the record, whereas "destroy" triggers callbacks
 # like before_destroy.
 
-# Creating the users - User model specifies it acts_as_authentic, so no duplicates
+# ---------------------------------------------------------------------------------
 
+# Creating the users - User model specifies it acts_as_authentic, so no duplicates
+# (essential)
 # # admins
 User.create(:login=>"superadmin",:password=>"password",:password_confirmation=>"password",
 						:email=>"david_zhang_21@yahoo.com",:full_name => "David Zhang",:role=>"superadmin")
@@ -52,32 +54,20 @@ puts "---found or created sections"
 # Creating the articles
 if Article.count == 0 # to prevent duplicate articles if rake db:seed is called > once; alternative to Article.delete_all, which causes id issues
 	Section.all.each { |s|
-		25.times do Factory.create(:article, :section => s) end
+		3.times do Factory.create(:article, :section => s) end
 	}
 	puts "---created articles"
 else
 	puts "---no need to create articles"
 end
 
-# Sorting articles by section_position within each section
+# Sorting articles by section_position within each section (essential; see word doc)
 Section.all.each do |section|
 	section.articles.each_with_index do |article, index|
 		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
 	end
 end
 puts "---guaranteed section position for articles"
-
-# Creating the comments
-=begin
-if Comment.count == 0
-	Article.all.each { |a|
-		3.times do Factory.create(:comment, :article => a) end
-	}
-	puts "---created comments"
-else
-	puts "---no need to create comments"
-end
-=end
 
 # Creating the pages
 if Page.count == 0
@@ -95,7 +85,7 @@ else
   puts "---no need to create subscribers"
 end
 
-# Creating the free spaces
+# Creating the free spaces (essential)
 if FreeSpace.count == 0
   content = 'Put desired content here.'
   # Home page free spaces

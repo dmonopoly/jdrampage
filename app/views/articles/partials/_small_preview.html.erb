@@ -1,10 +1,8 @@
 <!--partial used in sidebar; with image; requires 'article' variable-->
-<div>
+<div class="small_preview">
+	<%= link_to truncate(article.title, :length=>50, :separator=>" "), article %><br>
 	<div class="article_image">
 		<%= link_to ( image_tag article.photo.url(:thumb), :class => "article_image" ), article %>
 	</div>
-	<%= link_to article.title, article %><br>
-	<%= article.teaser %>
+	<%= truncate article.teaser, :length=>70, :separator=>" " %>
 </div>
-<hr>
-

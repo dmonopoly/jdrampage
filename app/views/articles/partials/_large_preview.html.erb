@@ -14,7 +14,6 @@
 	</div>
 
 	<div id="article_beginning">
-    <%= simple_format article.body[0..500]+"..." %><%= render :partial => "articles/partials/read_more_link", :locals=>{ :article => article } %>
+    <%= simple_format truncate(article.body, :length=>500, :separator=>" ") %>
 	</div>
 </div>
-

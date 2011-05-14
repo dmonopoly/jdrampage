@@ -1,6 +1,6 @@
 <!--partial for header of section#show; needs variable 'section'; used by front and back-->
 <h3>
-  <%= section.name %>
+  <span id="section_name" class="fancy_font"><%= section.name %></span>
   <% if on_back %>
     <% if can? :update, Section %><%= link_to 'Edit', edit_admin_section_path(section), :class=>"small" %><% end %>
     <%= link_to '>>', section, :class=>"small" %>

@@ -15,7 +15,6 @@
 
 	<div id="article_beginning">
     The beginning of the article is here.<br>
-    <%= simple_format article.body[0..200]+"..." %><%= render :partial => "articles/partials/read_more_link", :locals=>{ :article => article } %>
+    <%= simple_format truncate(article.body, :length=>200, :separator=>" ") %><%= render :partial => "articles/partials/read_more_link", :locals=>{ :article => article } %>
 	</div>
 </div>
-

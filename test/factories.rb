@@ -1,12 +1,12 @@
 # Factories
 Factory.define :article do |t|
 	t.association :section # belongs to a section
-	t.title {|x| "#{x.section.name}Article#{Factory.next(:count)}" }
+	t.title {|x| "Wellness Day for Students (#{x.section.name} Article #{Factory.next(:count)})" }
 	t.author "Adam Sue and James Merlin"
 	t.credits "By Adam Sue and James Merlin\n\nPhoto courtesy of BlankTown"
 	t.body { Forgery::LoremIpsum.paragraphs(5) }
 	t.sequence(:position) { |n| n }
-	t.teaser "I am a teaser."
+	t.teaser "The Corporate Communications Class will open the Rickey Casey Store on May 13th as its end-of-the-year project."
 	t.date Date.today.to_s
 end
 
