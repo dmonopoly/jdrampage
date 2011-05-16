@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20110514145649) do
     t.integer  "section_id"
     t.integer  "position"
     t.string   "teaser"
-    t.date     "date",               :limit => 255
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

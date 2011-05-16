@@ -12,7 +12,7 @@ development:
   #database: that_database
   #pool: 5
   #username: root
-  #password: bethankful
+  #password:
   #socket: /tmp/mysql.sock
   #port: 3306
 	

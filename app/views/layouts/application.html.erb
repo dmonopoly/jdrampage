@@ -9,13 +9,14 @@
 	<%= javascript_include_tag "jquery-1.4.2.min.js","jquery-ui-1.8.4.custom.min.js" %>
 	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %> <!-- prevents cross-site request forgery -->
+	<%= favicon_link_tag %><!--ensures correct favicon is used-->
 </head>
 <body>
 <div id="header">
 	<div id="upper_right">
 	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %><br>
 	  <div class="faded">
-	    &copy; JD Rampage 2011
+	    &copy; JD RamPage 2011
 	  </div>
 	</div>
 	<%= link_to "RamPage", '/', :id => 'top_text' %>
