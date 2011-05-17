@@ -1,0 +1,5 @@
+<!--author partial for articles; requires variable article-->
+<% unless article.author.strip == '' %>
+  <span class="faded">by <%= article.author %></span>
+<% end %>
+

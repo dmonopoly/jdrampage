@@ -2,7 +2,7 @@
 <div id="large_article_preview">
 	<div id="article_header_top">
 	  <%= link_to article.title, article, :id => "article_title_top" %><br>
-		<span class="faded">by <%= article.author %></span>
+		<%= render :partial => "articles/partials/author", :locals => { :article => article } %>
 	</div>
 
 	<div id="article_image_top">
@@ -17,3 +17,4 @@
     <%= simple_format truncate(article.body, :length=>500, :separator=>" ") %>
 	</div>
 </div>
+
