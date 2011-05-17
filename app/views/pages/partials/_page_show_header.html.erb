@@ -1,5 +1,5 @@
 <!--partial for header of page#show; needs variable 'page'; used by front and back-->
-<h2>
+<h2 id="title">
   <%= page.title %>
   <% if logged_in? %>
 		<% if can? :manage, Page %>

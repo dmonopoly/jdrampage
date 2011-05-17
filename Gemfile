@@ -9,6 +9,7 @@ gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'acts_as_list', :git => "https://github.com/haihappen/acts_as_list.git"
 gem "will_paginate", "~> 3.0.pre2"
 gem 'dynamic_form'
+gem 'mysql2'
 
 group :development, :test do
 	gem 'factory_girl_rails'

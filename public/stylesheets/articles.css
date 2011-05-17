@@ -1,8 +1,20 @@
 /* PREVIEWS IN GENERAL (except display) */
-img.article_image{
+img.article_image{ /* used by medium and large preview */
 	margin: 5px 10px 10px 10px;
 }
 div#article_beginning{
+}
+/* =============================================== */
+/* SMALL_PREVIEW, TINY_PREVIEW		                 */
+/* =============================================== */
+div.small_preview{
+	margin-bottom: 10px;
+}
+div.tiny_preview{
+	margin-bottom: 10px;
+}
+img.small_article_image{
+	margin: 5px 5px 2px 5px;
 }
 /* =============================================== */
 /* MEDIUM_PREVIEW								                 */
@@ -10,7 +22,7 @@ div#article_beginning{
 div.medium_preview{
 	display: block;
 	width: 550px; /* determined by span-14*/
-	height: 250px;
+	height: 300px;
 }
 div.article_header{
 	font-family: serif;
@@ -31,8 +43,8 @@ div.article_teaser{
 div#large_article_preview{
 display: block;
 width: 550px; /* determined by span-14*/
-height: 400px;
-margin-bottom: 10px;
+height: 450px;
+margin-bottom: 20px;
 }
 div#article_header_top{
 font-family: serif;
@@ -100,4 +112,3 @@ margin-bottom: 10px;
 #article_list_headers li {
 	font-weight: bold;
 }
-

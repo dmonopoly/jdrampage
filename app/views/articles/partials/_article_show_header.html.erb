@@ -1,5 +1,5 @@
 <!--partial for heading/title of article show; used by front and back-->
-<h2>
+<h2 id="title">
   <%= @article.title %>
   <% if logged_in? %>
     <%= link_to "Edit", edit_admin_article_path(@article), :class=>"small" %>
@@ -10,4 +10,3 @@
   <p><%= @article.date.strftime('%m/%d/%Y') %></p>
   <%= simple_format @article.credits %>
 </div>
-

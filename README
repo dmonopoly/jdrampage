@@ -5,15 +5,18 @@ Uses Rails 3.0.3
 Important ideas:
 -Section and free space names never change.
 -The author column for articles is for previews and should be succinct like "John Wood and Jeremy Lin"
+It is optional at the moment; if it is present, it will be shown; otherwise, it will not be shown.
 -The credits column for articles is for articles/show. It is of type text because it contains multiple lines.
+
+Issues:
+-truncating teasers / beginnings of articles could cut right into html tags (leading to unbalanced html tags)
 
 --TODO/Ideas--
 Prioritized
 -deal with teasers (necessary? yes. one-liner strictly - note this in view)
     -keep teasers b/c of tiny and small previews
     -may not need to show teaser in medium & large previews
-
--design issues involving simple_format, the read >> link, and article previews
+		-should change teaser:text to teaser:string
 
 -transfer database content
 
@@ -70,4 +73,4 @@ Accomplished
     -notes (:text) - Delete this
     -status  (:string) - Delete this
     -comments_allowed (:boolean) - Delete this
-
+-design issues involving simple_format, the read >> link, and article previews

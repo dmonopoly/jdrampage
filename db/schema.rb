@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110511214748) do
+ActiveRecord::Schema.define(:version => 20110517011531) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(:version => 20110511214748) do
     t.text     "body"
     t.integer  "section_id"
     t.integer  "position"
-    t.string   "teaser"
-    t.date     "date",               :limit => 255, :default => '2011-03-01'
+    t.text     "teaser"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -28,15 +28,6 @@ ActiveRecord::Schema.define(:version => 20110511214748) do
     t.datetime "photo_updated_at"
     t.integer  "section_position"
     t.string   "author"
-  end
-
-  create_table "comments", :force => true do |t|
-    t.text     "body"
-    t.integer  "article_id"
-    t.string   "full_name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "free_spaces", :force => true do |t|
@@ -58,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20110511214748) do
 
   create_table "sections", :force => true do |t|
     t.string   "name"
-    t.text     "free_space"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"

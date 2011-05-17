@@ -1,6 +1,5 @@
 <!--partial used in sidebar; no image; requires 'article' variable-->
-<div>
-	<%= link_to article.title, article %><br>
-	<%= article.teaser %>
+<div class="tiny_preview">
+	<%= link_to truncate(article.title, :length=>50, :separator=>" "), article %><br>
+	<%= truncate article.teaser, :length=>60, :separator=>" " %>
 </div>
-<hr>
