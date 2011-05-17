@@ -63,7 +63,7 @@ end
 
 # Sorting articles by section_position within each section (essential; see word doc)
 Section.all.each do |section|
-	section.articles.each_with_index do |article, index|
+	section.articles.each_with_index do |article, index| # Section.find(section_id).articles.order("created_at DESC")
 		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
 	end
 end
