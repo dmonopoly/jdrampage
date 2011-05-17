@@ -30,21 +30,22 @@ User.create(:login=>"advisor",:password=>"password",:password_confirmation=>"pas
 						:email=>"tmathis@jd.cnyric.org",:full_name => "Trinity Mathis",:role=>"admin")
 # # moderators
 User.create(:login=>"moderator1",:password=>"password",:password_confirmation=>"password",
-						:email=>"rahul@gmail.com",:full_name => "Rahul Raina",:role=>"moderator")
+						:email=>"myemail@somewhere.com",:full_name => "Rahul Raina",:role=>"moderator")
 User.create(:login=>"moderator2",:password=>"password",:password_confirmation=>"password",
-						:email=>"nick@gmail.com",:full_name => "Nick Harron",:role=>"moderator")
+						:email=>"thatemail@someplace.com",:full_name => "Nick Harron",:role=>"moderator")
 User.create(:login=>"moderator3",:password=>"password",:password_confirmation=>"password",
-						:email=>"lyndon@gmail.com",:full_name => "Lyndon Pisansky",:role=>"moderator")
+						:email=>"youremail@aplace.com",:full_name => "Lyndon Pisansky",:role=>"moderator")
 User.create(:login=>"editorandchief",:password=>"password",:password_confirmation=>"password",
-						:email=>"tomlang@gmail.com",:full_name => "Thomas Lang",:role=>"moderator")
+						:email=>"enteremail@emailplace.com",:full_name => "Your Name",:role=>"moderator")
 # # posters
-1.upto(5) do |i|
+1.upto(10) do |i|
 	User.create(:login=>"poster#{i}",:password=>"password",:password_confirmation=>"password",
-						:email=>"bobjoe#{i}@gmail.com",:full_name => "Bob Joe #{i}",:role=>"poster")
+						:email=>"poster#{i}@emailplace.com",:full_name => "Your Name #{i}",:role=>"poster")
 end
 
 puts "---dealt with users"
 
+=begin
 # Creating the sections
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|
 	Section.find_or_create_by_name(section_name)
@@ -60,15 +61,32 @@ if Article.count == 0 # to prevent duplicate articles if rake db:seed is called 
 else
 	puts "---no need to create articles"
 end
+=end
+
+# Setting articles' dates to be based on created_at
+Article.all.each do |article|
+  article.date = article.created_at.to_date
+end
+puts "---guaranteed date for articles"
 
 # Sorting articles by section_position within each section (essential; see word doc)
-Section.all.each do |section|
-	section.articles.each_with_index do |article, index| # Section.find(section_id).articles.order("created_at DESC")
+Section.all.each do |section| # Section.find(section_id).articles.order("created_at DESC")
+	section.articles.order("created_at DESC").each_with_index do |article, index|
 		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
 	end
 end
 puts "---guaranteed section position for articles"
 
+=begin This was the old way, for development
+Section.all.each do |section|
+	section.articles.each_with_index do |article, index|
+		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
+	end
+end
+puts "---guaranteed section position for articles"
+=end
+
+=begin
 # Creating the pages
 if Page.count == 0
 	4.times do Factory.create(:page) end
@@ -84,6 +102,7 @@ if Subscriber.count == 0
 else
   puts "---no need to create subscribers"
 end
+=end
 
 # Creating the free spaces (essential)
 if FreeSpace.count == 0
