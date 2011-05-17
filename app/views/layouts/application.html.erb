@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JD Rampage - The JDHS Student Newspaper</title>
+  <title>JD RamPage - The Jamesville Dewitt High School Student Newspaper</title>
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
 	<!--[if IE]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %><![endif]-->
@@ -9,7 +9,9 @@
 	<%= javascript_include_tag "jquery-1.4.2.min.js","jquery-ui-1.8.4.custom.min.js" %>
 	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %> <!-- prevents cross-site request forgery -->
-	<%= favicon_link_tag %><!--ensures correct favicon is used-->
+  <meta name="description" content="The Jamesville Dewitt High School Student Newspaper">
+  <meta name="keywords" content="Jamesville, Dewitt, Jamesville-Dewitt, high school, student, newspaper, rampage, journal, articles, sports, news, commentary, entertainment, features">
+	<%= favicon_link_tag %> <!--ensures correct favicon is used-->
 </head>
 <body>
 <div id="header">
@@ -109,3 +111,4 @@
 
 </body>
 </html>
+
