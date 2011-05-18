@@ -11,8 +11,6 @@
 # rake test:units, (...) - BEWARE: test db will be erased and re-generated from your development database when you run "rake"
 # ruby -I test test/unit/article_test.rb
 
-require 'forgery'
-
 # NOTE:
 # "create" calls save, whereas "create!" calls "save!"
 # The difference? "create!" will raise an exception if the record is invalid.
@@ -20,6 +18,8 @@ require 'forgery'
 # like before_destroy.
 
 # ---------------------------------------------------------------------------------
+
+#require 'forgery'
 
 # Creating the users - User model specifies it acts_as_authentic, so no duplicates
 # (essential)
