@@ -1,11 +1,12 @@
 <!--admin/users/index-->
 <div id="users_index">
-  <h3>All Users</h3>
 	<% if can? :create, User %>
 	<div id="user_new_area">
 		<%= link_to "New User", new_admin_user_path, :class => "button right" %>
 	</div>
 	<% end %>
+
+  <h3>All Users</h3>
 
   <ul id="user_list">
 	  <li>

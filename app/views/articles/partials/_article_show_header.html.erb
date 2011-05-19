@@ -2,11 +2,14 @@
 <h2 id="title">
   <%= @article.title %>
   <% if logged_in? %>
-    <%= link_to "Edit", edit_admin_article_path(@article), :class=>"small" %>
-		<%= link_to "<<", admin_articles_path, :class=>"small" %>
+    <div class="right">
+      <%= link_to "Edit", edit_admin_article_path(@article), :class=>"small" %>
+		  <%= link_to "<<", admin_articles_path, :class=>"small" %>
+		</div>
   <% end %>
 </h2>
 <div class="faded">
   <p><%= @article.date.strftime('%m/%d/%Y') %></p>
   <%= simple_format @article.credits %>
 </div>
+

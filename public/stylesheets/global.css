@@ -13,11 +13,10 @@ a {
 	text-decoration: underline;
 }
 a:hover {
-	color: #FDD44A;
+    color: red;
 	text-decoration: none;
 }
 a:visited {
-	color: red;
 	text-decoration: underline;
 }
 a.button_like {
@@ -79,4 +78,6 @@ li.no_bullet { list-style-type: none }
 
 #title {
 	line-height: 1.3em;
+	font-family: serif;
 }
+

@@ -3,11 +3,17 @@
   <h3>Stay in touch with JD RamPage.</h3>
   <p>
     Whenever we have a major release of articles (typically once a month during the school year), you'll get a friendly email.
-    You may always unsubscribe if you truly want to.
+    You may always unsubscribe* if you truly want to.
   </p>
   <%= form_for @subscriber do |f| %>
     <%= f.label :email %>
     <%= f.text_field :email %>
-    <%= f.submit 'Subscribe' %>
+    <%= f.submit 'Subscribe!' %>
   <% end %>
+  <br><br><br>
+  <p class="small">
+    *To unsubscribe, email tmathis@jd.cnyric.org with the email account that you want to unsubscribe.
+    Clearly state in the body or subject of the email that you want to unsubscribe that email account.
+  </p>
 </div>
+

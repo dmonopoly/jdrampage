@@ -45,7 +45,7 @@ end
 
 puts "---dealt with users"
 
-=begin
+
 # Creating the sections
 %w[ Sports News Commentary Entertainment Features ].each do |section_name|
 	Section.find_or_create_by_name(section_name)
@@ -61,7 +61,6 @@ if Article.count == 0 # to prevent duplicate articles if rake db:seed is called 
 else
 	puts "---no need to create articles"
 end
-=end
 
 # Setting articles' dates to be based on created_at
 Article.all.each do |article|

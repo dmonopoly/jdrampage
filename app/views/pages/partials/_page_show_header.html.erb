@@ -3,8 +3,11 @@
   <%= page.title %>
   <% if logged_in? %>
 		<% if can? :manage, Page %>
-			<%= link_to 'Edit', edit_admin_page_path(page), :class=>"small" %>
-			<%= link_to "<<", admin_pages_path, :class=>"small" %>
+		  <div class="right">
+			  <%= link_to 'Edit', edit_admin_page_path(page), :class=>"small" %>
+			  <%= link_to "<<", admin_pages_path, :class=>"small" %>
+			</div>
 		<% end %>
   <% end %>
 </h2>
+
