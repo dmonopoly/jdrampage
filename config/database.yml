@@ -29,10 +29,9 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: mydb
+  database: jdrampage
   pool: 5
-  username: root
-  password: bethankful
+  username: jdrampage
   socket: /var/run/mysqld/mysqld.sock
 
 cucumber:
