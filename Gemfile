@@ -14,10 +14,13 @@ gem 'capistrano' # we deploy with capistrano
 
 group :development, :test do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
-	gem 'factory_girl_rails'
-	gem 'forgery'
 	gem 'shoulda'
 	gem 'cucumber-rails'
 	gem 'webrat'
 	gem 'rspec'
 end
+
+# These typically shouldn't be for production, but you need it for seed data
+gem 'factory_girl_rails'
+gem 'forgery'
+
