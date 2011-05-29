@@ -12,7 +12,7 @@ set :repository, "git@github.com:dmonopoly/jdrampage.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
 
-set :use_sudo, true
+set :use_sudo, false
 set :user, 'jdrampage'
 set :ssh_options, { :forward_agent => true }
  
