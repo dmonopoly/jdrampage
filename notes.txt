@@ -50,14 +50,15 @@ sort_in_section_admin_articles POST   /admin/articles/sort_in_section(.:format) 
               admin_free_space GET    /admin/free_spaces/:id(.:format)          {:action=>"show", :controller=>"admin/free_spaces"}
                                PUT    /admin/free_spaces/:id(.:format)          {:action=>"update", :controller=>"admin/free_spaces"}
                                DELETE /admin/free_spaces/:id(.:format)          {:action=>"destroy", :controller=>"admin/free_spaces"}
+                         staff        /staff(.:format)                          {:action=>"staff", :controller=>"static"}
                          admin        /admin(.:format)                          {:action=>"admin_home", :controller=>"static"}
                         logout        /logout(.:format)                         {:action=>"destroy", :controller=>"user_sessions"}
                           root        /(.:format)                               {:controller=>"static", :action=>"home"}
 Loaded suite /home/daze/.rvm/gems/ruby-1.9.2-p136/bin/rake
 Started
 
-Finished in 0.004089 seconds.
+Finished in 0.004023 seconds.
 
 0 tests, 0 assertions, 0 failures, 0 errors, 0 skips
 
-Test run options: --seed 44516
+Test run options: --seed 46533

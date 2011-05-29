@@ -64,7 +64,7 @@ end
 
 # Setting articles' dates to be based on created_at
 Article.all.each do |article|
-  article.date = article.created_at.to_date
+  Article.update(article.id, { :date => article.created_at.to_date } )
 end
 puts "---guaranteed date for articles"
 

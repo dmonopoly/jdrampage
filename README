@@ -1,6 +1,5 @@
 Online student newspaper for JDHS
 Uses Rails 3.0.3
-*Yet to be deployed*
 
 Important ideas:
 -Section and free space names never change.
@@ -14,10 +13,7 @@ Issues:
 
 --TODO/Ideas--
 Prioritized
--transfer database content
 -search bar
--how do people unsubscribe?
-    o they would have to email a moderator on the staff to unsubscribe
 -sorting problem: conflicts with paginate...
 	o if you go to a page > 1 and sort, the section_positions get screwed up
 	  b/c they are based on the indices in the array
@@ -78,4 +74,6 @@ Accomplished
 -keep teasers b/c of tiny and small previews
 -should change teaser:text to teaser:string
 -users have images of their faces
+-how do people unsubscribe?
+    o they would have to email a moderator on the staff to unsubscribe
 
