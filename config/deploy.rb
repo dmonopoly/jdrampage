@@ -16,9 +16,9 @@ set :use_sudo, false
 set :user, 'jdrampage'
 set :ssh_options, { :forward_agent => true }
  
-role :app, "97.107.132.47"
-role :web, "97.107.132.47"
-role :db,  "97.107.132.47", :primary => true
+role :app, "jdrampage.com"
+role :web, "jdrampage.com"
+role :db,  "jdrampage.com", :primary => true
  
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
