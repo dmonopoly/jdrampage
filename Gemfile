@@ -8,12 +8,9 @@ gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'acts_as_list', :git => "https://github.com/haihappen/acts_as_list.git"
 gem "will_paginate", "~> 3.0.pre2"
 gem 'dynamic_form'
-
-group :production do
-	gem 'mysql2'
-	gem 'nokogiri'
-	gem 'capistrano' # we deploy with capistrano
-end
+gem 'mysql2'
+gem 'nokogiri'
+gem 'capistrano' # we deploy with capistrano
 
 group :development, :test do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
