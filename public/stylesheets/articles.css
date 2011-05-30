@@ -36,6 +36,7 @@ a#article_title_medium:hover{
 	color: #FDD44A;
 }
 div.article_teaser{
+    font-style: italic;
 }
 /* =============================================== */
 /* LARGE_PREVIEW    	      					             */
@@ -63,6 +64,7 @@ div#article_image_top{
 }
 div#article_teaser_top{
     margin-bottom: 10px;
+    font-style: italic;
 }
 /* =============================================== */
 /* Article Index								                 */
