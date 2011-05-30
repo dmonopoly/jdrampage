@@ -7,7 +7,7 @@
 	<div id="article_new_area">
 		<%= link_to "New Article", new_admin_article_path, :class => "button right" %>
 	</div>
-	
+
 	<ul id="admin_section_article_list">
 		<li>
 			<ul id="admin_section_article_list_headers">
@@ -30,12 +30,16 @@
 	</ul>
 	<%= will_paginate @articles %>
 
-	<% unless current_user.role == "poster" %><!--confining ability to sort-->
+	<% if current_user.role == "superadmin" %><!--confining ability to sort-->
 		<p class="small">
 			Please do not use the drag feature if you are on a page other than 1. Functionality is still in development.
 		</p>
 		<%= sortable_element("admin_section_article_list", :url => sort_in_section_admin_articles_path,
 													:only => "sortable", :handle => "handle" ) %>
+  <% else %>
+		<p class="small">
+			Sorting functionality is temporarily disabled for safety purposes.
+		</p>
 	<% end %>
 </div>
 
