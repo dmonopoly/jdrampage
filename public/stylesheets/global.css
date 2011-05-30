@@ -13,7 +13,7 @@ a {
 	text-decoration: underline;
 }
 a:hover {
-    color: red;
+  color: red;
 	text-decoration: none;
 }
 a:visited {

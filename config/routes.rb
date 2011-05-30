@@ -27,6 +27,7 @@ Jdrampage::Application.routes.draw do
 
 	match 'staff' => 'static#staff'
 	match 'admin' => 'static#admin_home'
+	match 'search' => 'static#search_page'
 	match 'logout' => 'user_sessions#destroy'
 
 	# match ':controller(/:action(/:id(.:format)))'

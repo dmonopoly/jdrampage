@@ -12,11 +12,25 @@
   <meta name="description" content="The Jamesville Dewitt High School Student Newspaper">
   <meta name="keywords" content="Jamesville, Dewitt, Jamesville-Dewitt, high school, student, newspaper, rampage, journal, articles, sports, news, commentary, entertainment, features">
 	<%= favicon_link_tag %> <!--ensures correct favicon is used-->
+	<!--Start Google Analytics-->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-11198579-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<!--End Google Analytics-->
 </head>
 <body>
 <div id="header">
 	<div id="upper_right">
-	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %><br>
+		<%= link_to "Search", search_path, :id=>'search_link' %> | 
+	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %><br><br>
 	  <div class="faded">
 	    &copy; JD RamPage 2011
 	  </div>
@@ -69,7 +83,7 @@
 			<%= render :partial => "articles/partials/tiny_preview", :locals => { :article => article } %>
 		<% end %>
 	</div>
-	<div class="span-14 colborder">
+	<div class="span-14 colborder">	
 		<%= yield %>
 	</div>
 	<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
@@ -111,4 +125,3 @@
 
 </body>
 </html>
-
