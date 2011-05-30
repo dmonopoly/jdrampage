@@ -2,9 +2,12 @@
 <!--used by _article & _section_article partials-->
 <%= link_to "Show", article, :class => "button_like" %>
 <%= link_to 'Edit', edit_admin_article_path(article), :class => "button_like" %>
-<%= link_to 'Delete', admin_article_path(article), :class => "button_like", :method => :delete, :confirm => "Are you sure you want to delete this article?" %>
 
-<% if current_user.role == "superadmin" %><!--confining ability to sort-->
+<% if can? :destroy, article %>
+  <%= link_to 'Delete', admin_article_path(article), :class => "button_like", :method => :delete, :confirm => "Are you sure you want to delete this article?" %>
+<% end %>
+
+<% if current_user.role == "superadmin" %><!--confining ability to sort; ad hoc-->
 	<span class="handle pointer">[drag]</span>
 <% end %>
 
