@@ -55,7 +55,7 @@ puts "---found or created sections"
 # Creating the articles
 if Article.count == 0 # to prevent duplicate articles if rake db:seed is called > once; alternative to Article.delete_all, which causes id issues
 	Section.all.each { |s|
-		3.times do Factory.create(:article, :section => s) end
+		60.times do Factory.create(:article, :section => s) end
 	}
 	puts "---created articles"
 else
@@ -76,16 +76,16 @@ Section.all.each do |section| # Section.find(section_id).articles.order("created
 end
 puts "---guaranteed section position for articles"
 
-=begin This was the old way, for development
+
 Section.all.each do |section|
 	section.articles.each_with_index do |article, index|
 		Article.update_all ['section_position=?', index+1], ['id=?', article.id]
 	end
 end
 puts "---guaranteed section position for articles"
-=end
 
-=begin
+
+
 # Creating the pages
 if Page.count == 0
 	4.times do Factory.create(:page) end
@@ -101,7 +101,7 @@ if Subscriber.count == 0
 else
   puts "---no need to create subscribers"
 end
-=end
+
 
 # Creating the free spaces (essential)
 if FreeSpace.count == 0
