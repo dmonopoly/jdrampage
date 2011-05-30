@@ -13,13 +13,18 @@ Issues:
 
 --TODO/Ideas--
 Prioritized
--search bar
 -sorting problem: conflicts with paginate...
 	o if you go to a page > 1 and sort, the section_positions get screwed up
 	  b/c they are based on the indices in the array
 	o You have fixed move_to_top_in_section :]
 
 -testing
+
+Things to revert later:
+-search link
+-pagination
+-sort
+-meet the staff
 
 Unorganized
 -may not need to show teaser in medium & large previews *
@@ -76,4 +81,5 @@ Accomplished
 -users have images of their faces
 -how do people unsubscribe?
     o they would have to email a moderator on the staff to unsubscribe
+-search bar
 
