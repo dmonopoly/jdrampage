@@ -5,17 +5,21 @@ class StaticController < ApplicationController
 	# front homepage
 	def home
 		@articles = Article.all(:order => :position, :limit => 6)
-		render :layout => 'application'
 	end
 
 	# back homepage
 	def admin_home
-		@articles = Article.all(:limit => 6)
-		render :layout => 'admin'
+		render :layout => 'admin' # needed, or else on the front (with sidebars)
 	end
 
 	# staff page
 	def staff
 		@users = User.all
 	end
+
+	# search page
+	def search_page
+  end
+
 end
+

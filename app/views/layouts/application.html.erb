@@ -29,7 +29,7 @@
 <body>
 <div id="header">
 	<div id="upper_right">
-		<%= link_to "Search", search_path, :id=>'search_link' %> | 
+		<%= link_to "Search", search_path, :id=>'search_link' %> |
 	  <%= link_to "Subscribe", new_subscriber_path, :id => "subscribe" %><br><br>
 	  <div class="faded">
 	    &copy; JD RamPage 2011
@@ -83,7 +83,7 @@
 			<%= render :partial => "articles/partials/tiny_preview", :locals => { :article => article } %>
 		<% end %>
 	</div>
-	<div class="span-14 colborder">	
+	<div class="span-14 colborder">
 		<%= yield %>
 	</div>
 	<div class="span-5 last" id="right_sidebar"> <!--keep span sum to < 23-->
@@ -125,3 +125,4 @@
 
 </body>
 </html>
+
