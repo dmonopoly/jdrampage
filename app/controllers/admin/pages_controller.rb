@@ -48,7 +48,9 @@ class Admin::PagesController < AdminController
   end
 
   def destroy
-    flash[:notice] = 'not implemented'
+    @page = Page.find(params[:id])
+    @page.destroy
+    redirect_to admin_pages_path, :notice => 'Page deleted.'
   end
 
 	def sort

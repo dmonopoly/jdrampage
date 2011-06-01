@@ -9,6 +9,7 @@ li.section_item{
 li.section_item a {
 	font-size: 16px;
 	text-decoration: none;
+	font-family: serif;
 }
 li.section_item a:hover {
 	color: #E9AB17;
@@ -78,3 +79,4 @@ div#admin_section_show {
 div#section_edit {
     margin-bottom: 25px;
 }
+
