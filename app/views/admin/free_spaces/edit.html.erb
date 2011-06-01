@@ -1,6 +1,22 @@
 <!--admin/free_spaces/edit-->
 <h3>Edit Free Space: <%= @free_space.name %></h3>
 
+<div class="right">
+  <b>Example code:</b><br>
+  <textarea disabled="disabled">For notification, consider:
+    <span style="color:green">The site is currently undergoing changes.</span>
+
+For sidebars, consider:
+    <hr>
+    <p>
+    <b>Did you know?</b><br>
+    Some interesting fact.
+    </p>
+    <hr>
+
+  </textarea>
+</div>
+
 <div id="free_space_edit">
   <%= render :partial => 'admin/free_spaces/partials/form', :locals => { :free_space => @free_space, :button_name => 'Update' } %>
 </div>
@@ -10,3 +26,4 @@
   <%= link_to "<< To all free spaces", admin_free_spaces_path %> |
   <%= link_to "Show", [:admin, @free_space] %> (changes will not be saved)
 </div>
+
