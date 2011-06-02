@@ -3,7 +3,7 @@
   <h3>Welcome, <%= current_user.full_name %>.</h3>
 	<div>
 		<p>
-			<b>Site details as of <%= Time.now.strftime("%B %d, %Y, at %I:%M %p") %>:</b>
+			<b>Site details as of <%= Time.now.strftime("%B %d, %Y, at %I:%M %p") %> (GMT):</b>
 		</p>
 		<p>
 			Number of articles: <%= Article.count %><br>

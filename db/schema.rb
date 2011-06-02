@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110517011531) do
+ActiveRecord::Schema.define(:version => 20110602195854) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -30,8 +30,17 @@ ActiveRecord::Schema.define(:version => 20110517011531) do
     t.string   "author"
   end
 
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "article_id"
+    t.string   "full_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "free_spaces", :force => true do |t|
-    t.string   "content",    :default => "Insert free space content here."
+    t.text     "content",    :default => "Insert free space content here."
     t.string   "name",       :default => "Untitled"
     t.boolean  "is_active",  :default => false
     t.datetime "created_at"
