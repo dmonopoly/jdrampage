@@ -41,6 +41,17 @@ a.button:hover {
 	border: 1px solid black;
 	background: #eebbaa;
 }
+a.huge_button {
+    padding: 12px;
+	border: 1px solid #aaa;
+	background: #ddbbaa;
+	color: black;
+	text-decoration: none;
+}
+a.huge_button:hover {
+	border: 1px solid black;
+	background: #eebbaa;
+}
 a.no_line {
 	text-decoration: none;
 }
@@ -79,5 +90,8 @@ li.no_bullet { list-style-type: none }
 #title {
 	line-height: 1.3em;
 	font-family: serif;
+}
+.centered {
+    text-align: center;
 }
 
