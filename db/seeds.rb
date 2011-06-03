@@ -47,7 +47,7 @@ puts "---dealt with users"
 
 
 # Creating the sections
-%w[ Sports News Commentary Entertainment Features ].each do |section_name|
+%w[ News Sports Commentary Entertainment Features ].each do |section_name|
 	Section.find_or_create_by_name(section_name)
 end
 puts "---found or created sections"

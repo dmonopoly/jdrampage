@@ -1,15 +1,23 @@
 Online student newspaper for JDHS
 Uses Rails 3.0.3
+http://jdrampage.com
 
 Important ideas:
 -Section and free space names never change.
+    o They are actually 'hard-coded' in a sense (i.e. seed data MUST be loaded)
 -The author column for articles is for previews and should be succinct like "John Wood and Jeremy Lin"
     o It is optional at the moment; if it is present, it will be shown ("By"); otherwise, it will not be shown (no "By").
--The credits column for articles is for articles/show. It is of type text because it contains multiple lines.
+-The credits column for articles is for articles/show. It is of type text because it could be very long.
+-The author column for articles is used solely for article previews
+-Seed data must be loaded for the app to run correctly (seeds.rb)
+
 
 Issues:
 -truncating teasers / beginnings of articles could cut right into html tags (leading to unbalanced html tags)
 -article previews are not robustly shown so the perfect spacing is determined between previews.
+-you have a discrepancy for your free_space content column (see ChangeColumnTypeForFreeSpaceContent migration)
+  o basically, sqlite3 free_space column content:text has :default set; mysql version does not
+-teaser really should be changed from type :text to :string
 
 --TODO/Ideas--
 Prioritized
@@ -27,11 +35,7 @@ Things to revert later:
 -meet the staff
 
 Unorganized
--may not need to show teaser in medium & large previews *
 -only OLD articles in sidebars
--change things that are unnecessarily :text to :string (i.e. teaser)
-
--sidebar reload AJAX
 -comments
 
 Accomplished
