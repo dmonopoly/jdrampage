@@ -22,8 +22,7 @@ Issues:
 --TODO/Ideas--
 Prioritized
 -meet the staff page... are you in it or not?
-
--highlighting sections to show what section you are in
+-about the site page
 
 -testing
 
@@ -99,4 +98,5 @@ Accomplished
 	      -still have to remove the [drag] if on different page
 	    o be smart about it... avoid unnecessary coding. Just show all articles at once? That is easy... but it takes time to load.
 	    o Chosen solution: disable sort on pages other than 1
+-highlighting sections to show what section you are in
 

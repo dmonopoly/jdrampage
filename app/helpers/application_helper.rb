@@ -23,12 +23,15 @@ module ApplicationHelper
     end
   end
 
+  # returns the current layout, but fails if render :layout is used in the controller
   def current_layout
-    controller.send :_layout # private method... dangerous
+    controller.send :_layout # private method
   end
 
+  # returns true if the current layout is admin
+  # not that elegant because you have one exception
   def admin?
-    current_layout == 'admin'
+    current_layout == 'admin' || (params[:controller] == 'static' && params[:action] == 'admin_home')
   end
 end
 
