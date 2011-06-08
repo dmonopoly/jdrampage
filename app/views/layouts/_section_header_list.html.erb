@@ -1,0 +1,13 @@
+<!--partial for the global section links at the top of every webpage-->
+<ul id="section_header_list">
+	<% Section.all.each do |section| %>
+		<li <% if section_selected?(section.name) %> class="section_item my_border" <% else %> class="section_item" <% end %>>
+		  <% if admin? %>
+  		  <%= link_to section.name, admin_section_path(section) %>
+  		<% else %>
+  		  <%= link_to section.name, section_path(section) %>
+  		<% end %>
+		</li>
+	<% end %>
+</ul>
+

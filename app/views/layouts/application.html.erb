@@ -40,11 +40,7 @@
 	  Student Newspaper
 	</div>
 
-	<ul id="section_header_list">
-		<% for section in Section.all %>
-			<li class="section_item"><%= link_to section.name, section_path(section) %></li>
-		<% end %>
-	</ul>
+  <%= render :partial => 'layouts/section_header_list' %>
 
   <div id="notification_area">
     <%= show_free_space_if_active('Notification') %>

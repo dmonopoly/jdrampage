@@ -29,11 +29,9 @@
 <div id="header">
 	<%= link_to "RamPage", '/', :id => 'top_text' %>
 	<div id="top_subtext">Administrator Side</div>
-	<ul id="section_header_list">
-		<% for section in Section.all %>
-			<li class="section_item"><%= link_to section.name, admin_section_path(section) %></li>
-		<% end %>
-	</ul>
+
+  <%= render :partial => 'layouts/section_header_list' %>
+
 	<%= link_to 'Articles', admin_articles_path %> |
 	<% if can? :manage, Section %><%= link_to 'Sections', admin_sections_path %> |<% end %>
 	<% if can? :manage, Page %><%= link_to 'Pages', admin_pages_path %> |<% end %>

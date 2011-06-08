@@ -9,5 +9,13 @@ module ArticlesHelper
   def current_page
     params[:page]
   end
+
+  def current_article
+    if params[:controller] == 'articles' # no need to check for admin/articles
+      Article.find(params[:id]) # check...
+    else
+      nil
+    end
+  end
 end
 
