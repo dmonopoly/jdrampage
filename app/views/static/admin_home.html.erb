@@ -5,9 +5,16 @@
 		<p>
 			<b>Site details as of <%= Time.now.strftime("%B %d, %Y, at %I:%M %p") %> (GMT):</b>
 		</p>
+		<div>
+			Total number of articles: <%= Article.count %><br>
+			<ul>
+			<% Section.all.each do |section| %>
+  			<li><%= section.name %>: <%= section.articles.count %></li>
+  		<% end %>
+  		</ul>
+		</div>
 		<p>
-			Number of articles: <%= Article.count %><br>
-			Number of subscribers: <%= Subscriber.count %><br>
+  		Number of subscribers: <%= Subscriber.count %>
 		</p>
 	</div>
 	<div>
