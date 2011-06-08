@@ -11,6 +11,25 @@ Important ideas:
 -The author column for articles is used solely for article previews
 -Seed data must be loaded for the app to run correctly (seeds.rb)
 
+--TODO/Ideas--
+Prioritized
+-NOW: add testing and fix up those articles so you can re-add search
+
+-meet the staff page... are you in it or not?
+    o yes, you will be in it. what is the order? just keep it - it is easier that way
+    o deal with this during the summer, when no one will be checking the site
+
+-about the site page - needed? not really. what would I say? well, that could actually be the place where I describe how I made the site,
+    ... the history of the site with Jeff Cox and myself, J-D RamPage and its transition from print to online, a history of J-D RamPage
+    o yes, create this page. it will not be static.
+
+Things to revert later:
+-search link
+-meet the staff
+
+Unorganized
+-only OLD articles in sidebars
+-comments
 
 Issues:
 -truncating teasers / beginnings of articles could cut right into html tags (leading to unbalanced html tags)
@@ -18,23 +37,6 @@ Issues:
 -you have a discrepancy for your free_space content column (see ChangeColumnTypeForFreeSpaceContent migration)
   o basically, sqlite3 free_space column content:text has :default set; mysql version does not
 -teaser really should be changed from type :text to :string
-
---TODO/Ideas--
-Prioritized
--meet the staff page... are you in it or not?
--about the site page
-
--testing
-
-Things to revert later:
--search link
--pagination
--sort
--meet the staff
-
-Unorganized
--only OLD articles in sidebars
--comments
 
 Accomplished
 -deal with subscribers
