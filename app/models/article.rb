@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+	ROLES_THAT_CAN_SORT = %w[ superadmin admin moderator ]
+
   belongs_to :section
 	has_attached_file :photo, :default_url=>"/system/photos/original/missing.png",#"/system/photos/original/default.jpg"
 										:styles => {

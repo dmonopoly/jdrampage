@@ -28,18 +28,12 @@
 		<% end %>
 
 	</ul>
+
 	<%= will_paginate @articles %>
 
-	<% if current_user.role == "superadmin" %><!--confining ability to sort-->
-		<p class="small">
-			Please do not use the drag feature if you are on a page other than 1. Functionality is still in development.
-		</p>
+  <% if okay_to_sort_articles? %>
 		<%= sortable_element("admin_section_article_list", :url => sort_in_section_admin_articles_path,
 													:only => "sortable", :handle => "handle" ) %>
-  <% else %>
-		<p class="small">
-			Sorting functionality is temporarily disabled for safety purposes.
-		</p>
 	<% end %>
 </div>
 

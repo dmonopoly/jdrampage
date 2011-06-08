@@ -7,10 +7,8 @@ class Ability
 		elsif user.role == "admin"
 			can :manage, :all
 			cannot :manage, User, :role => 'superadmin'
-			# temporary: cannot sort articles. You currently have an ad hoc solution: hide functionality in views
 		elsif user.role == "moderator"
 			can :manage, [FreeSpace, Article, Page]
-			# temporary: cannot sort articles. You currently have an ad hoc solution: hide functionality in views
 			can :read, User
 			can :update, User, :id => user.id
 			can :read, Section

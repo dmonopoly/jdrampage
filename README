@@ -21,18 +21,7 @@ Issues:
 
 --TODO/Ideas--
 Prioritized
--sorting problem: conflicts with paginate
-	o if you go to a page > 1 and sort, the section_positions get screwed up
-	  b/c they are based on the indices in the array
-	o possible solutions:
-	    o implement pageless (but if JS is disabled, pagination returns)
-	    o make the number of articles on a page very large
-	      -older pages are "archived"
-	      -on older pages, remove the [drag]
-	      -this still leaves you somewhat restricted in changing the order
-	    o make a 'show all articles at once' link
-	      -still have to remove the [drag] if on different page
-	o You have fixed move_to_top_in_section :]
+-meet the staff page... are you in it or not?
 
 -highlighting sections to show what section you are in
 
@@ -96,4 +85,18 @@ Accomplished
 -how do people unsubscribe?
     o they would have to email a moderator on the staff to unsubscribe
 -search bar
+-sorting problem: conflicts with paginate
+	o if you go to a page > 1 and sort, the section_positions get screwed up
+	  b/c they are based on the indices in the array
+	o You have fixed move_to_top_in_section :]
+	o possible solutions:
+	    o implement pageless (but if JS is disabled, pagination returns)
+	    o make the number of articles on a page very large
+	      -older pages are "archived"
+	      -on older pages, remove the [drag]
+	      -this still leaves you somewhat restricted in changing the order
+	    o make a 'show all articles at once' link
+	      -still have to remove the [drag] if on different page
+	    o be smart about it... avoid unnecessary coding. Just show all articles at once? That is easy... but it takes time to load.
+	    o Chosen solution: disable sort on pages other than 1
 
