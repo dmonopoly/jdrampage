@@ -12,15 +12,15 @@ module ApplicationHelper
     end
   end
 
-  # returns true if current section should be highlighted; used globally
+  # Returns true if current section should be highlighted; used globally.
+  # A section is only selected if one of the following controller/actions is active:
+  #   articles/show, admin/articles/edit
+  #   sections/show, admin/sections/show, admin/sections/edit
+  # Basically, whenever article id OR section id is available
   def section_selected?(section_name)
-    # a section is only selected if one of the following controller/actions is active:
-    # articles/show
-    # sections/show
-    # admin/sections/show
-    if params[:controller] == 'articles' && params[:action] == 'show'
+    if article_id_present?
       current_article.section.name == section_name
-    elsif (params[:controller] == 'sections' || params[:controller] == 'admin/sections') && params[:action] == 'show'
+    elsif section_id_present?
       current_section.name == section_name
     else # none of the necessary controllers/actions is active
       false

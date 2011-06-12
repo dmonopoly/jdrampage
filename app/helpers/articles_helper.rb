@@ -14,5 +14,9 @@ module ArticlesHelper
   def current_article
     Article.find(params[:id])
   end
+
+  def article_id_present?
+    (params[:controller] == 'articles' || params[:controller] == 'admin/articles') && !params[:id].nil?
+  end
 end
 
