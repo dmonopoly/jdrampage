@@ -25,6 +25,7 @@ Jdrampage::Application.routes.draw do
 #		resources :comments
 	end
 
+  # Use e.g. <%= link_to 'Admin place', admin_path %>
 	match 'staff' => 'static#staff'
 	match 'admin' => 'static#admin_home'
 	match 'search' => 'static#search_page'
