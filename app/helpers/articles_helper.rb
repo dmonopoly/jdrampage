@@ -10,12 +10,9 @@ module ArticlesHelper
     params[:page]
   end
 
+  # Precondition: article id is present
   def current_article
-    if params[:controller] == 'articles' # no need to check for admin/articles
-      Article.find(params[:id]) # check...
-    else
-      nil
-    end
+    Article.find(params[:id])
   end
 end
 

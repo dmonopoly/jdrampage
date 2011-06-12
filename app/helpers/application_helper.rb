@@ -14,11 +14,15 @@ module ApplicationHelper
 
   # returns true if current section should be highlighted; used globally
   def section_selected?(section_name)
-    if !current_article.nil?
+    # a section is only selected if one of the following controller/actions is active:
+    # articles/show
+    # sections/show
+    # admin/sections/show
+    if params[:controller] == 'articles' && params[:action] == 'show'
       current_article.section.name == section_name
-    elsif !current_section.nil?
+    elsif (params[:controller] == 'sections' || params[:controller] == 'admin/sections') && params[:action] == 'show'
       current_section.name == section_name
-    else # not using sections or articles controller
+    else # none of the necessary controllers/actions is active
       false
     end
   end
@@ -29,7 +33,7 @@ module ApplicationHelper
   end
 
   # returns true if the current layout is admin
-  # not that elegant because you have one exception
+  # not that elegant because you have one exception: admin_home
   def admin?
     current_layout == 'admin' || (params[:controller] == 'static' && params[:action] == 'admin_home')
   end

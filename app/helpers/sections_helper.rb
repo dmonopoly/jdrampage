@@ -1,10 +1,7 @@
 module SectionsHelper
+  # Precondition: section id is present
   def current_section
-    if params[:controller] == 'sections' || params[:controller] == 'admin/sections'
-      Section.find(params[:id])
-    else
-      nil
-    end
+    Section.find(params[:id])
   end
 end
 
