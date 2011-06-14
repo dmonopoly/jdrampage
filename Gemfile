@@ -15,9 +15,11 @@ gem 'capistrano' # we deploy with capistrano
 group :development, :test do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
 	gem 'shoulda'
-	gem 'cucumber-rails'
-	gem 'webrat'
-	gem 'rspec'
+	gem 'cucumber-rails', '>= 0.5.1'
+	gem 'database_cleaner'
+	#gem 'webrat'
+	gem 'capybara'
+    gem "rspec-rails", ">= 2.0.0"
 end
 
 # These typically shouldn't be for production, but you need it for seed data
