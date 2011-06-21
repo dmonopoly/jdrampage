@@ -4,11 +4,12 @@ Feature: Users have basic abilities
     As a user
     I have basic abilities
 
+    @wip
     Scenario: A user who logs in should see the back home page
         Given I am on the home page
-        And I am the registered poster John Doe
+        And I am the registered poster "John Doe"
         When I log in
-        Then I should see the back home page
+        Then I should be on the back home page
 
     @wip
     Scenario: A user who logs in should have article controls
@@ -21,4 +22,3 @@ Feature: Users have basic abilities
         Given I am on the home page
         When I log in
         Then I should see user controls
-

@@ -8,7 +8,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the home\s?page$/
+    when /^the home page$/ # /^the home\s?page$/
       '/'
     when /^the users page$/
       admin_users_path
@@ -32,4 +32,3 @@ module NavigationHelpers
 end
 
 World(NavigationHelpers)
-
