@@ -92,12 +92,19 @@
 		<%= yield :right_sidebar %>
 
 		<% sidebar_articles[10..15].each do |article| %>
-      <% if rand(2) == 0 %>
-	      <%= render :partial => "articles/partials/small_preview", :locals => { :article => article } %>
-      <% else %>
-	      <%= render :partial => "articles/partials/tiny_preview", :locals => { :article => article } %>
-      <% end%>
-    <% end %>
+	      <% if rand(2) == 0 %>
+		      <%= render :partial => "articles/partials/small_preview", :locals => { :article => article } %>
+	      <% else %>
+		      <%= render :partial => "articles/partials/tiny_preview", :locals => { :article => article } %>
+	      <% end%>
+	    <% end %>
+	
+  		<% random_articles = Article.all.sample(3) %> <!--variable declaration...-->
+
+		<% random_articles.each do |article| %>
+			<%= render :partial => "articles/partials/small_preview", :locals => { :article => article } %>
+		<% end %>
+		
 	</div>
 </div>
 
@@ -119,4 +126,3 @@
 
 </body>
 </html>
-
